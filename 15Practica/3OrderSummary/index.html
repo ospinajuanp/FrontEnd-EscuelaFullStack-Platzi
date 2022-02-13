@@ -7,31 +7,38 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Order summary card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
+  <main>
+    <section class="card">
+      <div class="card__img">
+        <img src="./images/illustration-hero.svg" alt="" srcset="">
+      </div>
+      <div class="card__summary">
+        <h1>Resumen del pedido</h1>
+        <p>Ahora puedes escuchar millones de canciones, audiolibros y podcasts en cualquier dispositivo y donde quieras.</p>
+      </div>
+      <div class="card__plan">
+        <span class="card__plan--one"><img src="./images/icon-music.svg"></span>
+        <div class="card__planSelect card__plan--two">
+          <h2>Plan Anual</h2>
+          <p>$59.99/year</p>
+        </div>
+        <a class="card__plan--three" href="#">Cambiar</a>
+      </div>
+      <div class="card__procced">
+        <input type="button" value="Proceder al pago">
+        <input type="button" value="Cancelar orden">
+      </div>
+    </section>
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Juan Pablo Ospina Restrepo</a>.
+    </div>
+  </footer>
 </body>
 </html>

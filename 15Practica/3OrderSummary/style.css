@@ -1,0 +1,99 @@
+/* ### Primary
+
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+
+### Neutral
+
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%) */
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color:  hsl(245, 75%, 90%);
+}
+.card{
+    margin: 5% auto;
+    width: 90%;
+    height: 88%;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: hsl(225, 100%, 98%);
+}
+.card__img img{
+    width: 100%;
+}
+.card__summary{
+    text-align: center;
+    padding: .3rem 2rem;
+    font-size: 1.5rem;
+}
+.card__plan{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background-color:  hsl(225, 100%, 88%);
+}
+.card__plan--one{
+    grid-column: 2/3;
+}
+.card__plan--one img{
+    width: 65%;
+}
+.card__plan--two{
+    grid-column: 3/5;
+    margin: 0 1rem;
+}
+.card__plan--three{
+    grid-column: 5/6;
+    color: hsl(245, 75%, 52%);
+    font-size: 1.5rem;
+}
+.card__planSelect > h2{
+    margin-bottom: 0.1rem;
+}
+.card__planSelect > p{
+    margin-top: 0rem;
+    padding: .1rem auto;
+}
+.card__procced{
+    display: flex;
+    flex-direction: column;
+    margin: 5% 10%;
+}
+.card__procced input{
+    border-radius: 1rem;
+    margin-bottom: 3%;
+    padding: 4%;
+    border: 0;
+}
+.card__procced input:nth-child(1){
+    background-color: hsl(245, 75%, 52%);
+    color: #fff;
+    text-decoration: none;
+    box-shadow: .5rem .5rem .5rem hsl(245, 35%, 62%);
+}
+.card__procced input:nth-child(1):hover{
+    box-shadow: .5rem .5rem .5rem hsl(245, 75%, 62%);
+}
+.card__procced input:nth-child(2):hover{
+    text-decoration: underline;
+}
+@media (min-width:376px){
+    .card{
+        width: 300px;
+        margin: 5% auto;
+    }
+}
