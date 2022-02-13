@@ -1,0 +1,97 @@
+/* PALETA COLORES
+COLOR   ID
+BLANCO  #FFFFFF
+NAGRO   #000000
+GRIS    #555555
+GRIS    #dde0d7
+BLANCO  #fff0d7 
+AZUL    #baeaf4
+VERDE   #4dabab
+AZUL    #1089b1
+MOSTASA #FFBD39
+*/
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    font-size: 16px;
+    margin: 0;
+    background-color:#1089b1;
+    
+}
+#titulo{
+    background-color: #810349;
+    margin: 0;
+    padding: .2rem .1rem;
+    font-size:1.3rem;
+    color: #FFFFFF;
+}
+#titulo h1{
+    text-align: center;
+}
+section{
+    width: 40%;
+    height: 359px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #4dabab;
+    border-radius: 0px 0px 15px 15px;
+}
+#resultadoOperacion{
+    width: 33rem;
+    height: 23px;
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 1rem 0 1rem 1rem;
+    border-radius: 0 0 1rem 1rem;
+    border: solid 1px #810349;
+}
+#operacion{
+    float: right;
+    margin-right: 1rem;
+}
+textarea{
+    
+    width: 99%;
+    resize: none;
+}
+.column{
+    margin: 10px 8px;
+    margin-left: 11px;
+    padding: 10px 0;
+    width: 20%;
+    height: 40px;
+}
+.left{
+    float: left;
+    width: 20%;
+}
+.rigth{
+    float: right;
+    width: 20%;
+}
+.button{
+    background-color: #baeaf4;
+    border: solid 1px #810349;
+    border-radius: .5rem;
+}
+.arregloButton{
+    margin-left: 28px;
+}
+.button:active{
+    background-color: #FFBD39;
+
+}
+.hidden{
+    visibility: hidden;
+}
+.igual{
+    margin: 10px 8px;
+    padding: 10px 0;
+    width: 40%;
+    height: 40px;
+}
+#igualApretado{
+    display: none;
+}

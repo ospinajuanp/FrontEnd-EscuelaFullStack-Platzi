@@ -1,0 +1,73 @@
+/* PALETA COLORES
+COLOR   ID
+BLANCO  #FFFFFF
+NAGRO   #000000
+GRIS    #555555
+GRIS    #dde0d7
+BLANCO  #fff0d7 
+AZUL    #baeaf4
+VERDE   #4dabab
+AZUL    #1089b1
+MOSTASA #FFBD39
+*/
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    font-size: 16px;
+    margin: 0;
+    background-color:#000000;
+    
+}
+#titulo{
+    background-color: #810349;
+    margin: 0;
+    padding: .2rem .1rem;
+    font-size:1.3rem;
+    color: #FFFFFF;
+}
+#titulo h1{
+    text-align: center;
+}
+.container{
+    margin-top:5%;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    display: flex;
+    /* width: 100%;
+    height: 10rem; */
+    padding: 0;
+    /* flex-wrap: wrap; */
+}
+.container-item{
+    background-color: #FFBD39;
+    margin: 1rem;
+    padding: 0;
+    width: 8rem;
+    /* height: 8rem; */
+    flex: 1 1 auto;
+    color: #555555;
+    font-size: 1.3rem;
+}
+.left{
+    border-radius: 1rem 0.2rem 0.2rem 1rem;
+}
+.right{
+    border-radius: 0.2rem 1rem 1rem 0.2rem;
+}
+li{
+    list-style: none;
+}
+#clearData{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9rem;
+    height: 5rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    background-color: #810349;
+    color: #baeaf4;
+}

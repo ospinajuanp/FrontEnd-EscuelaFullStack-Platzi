@@ -1,0 +1,65 @@
+/* PALETA COLORES
+COLOR   ID
+BLANCO  #FFFFFF
+NAGRO   #000000
+GRIS    #555555
+GRIS    #dde0d7
+BLANCO  #fff0d7 
+AZUL    #baeaf4
+VERDE   #4dabab
+AZUL    #1089b1
+MOSTASA #FFBD39
+*/
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    margin: 0;
+    background-color: #777;
+}
+
+header{
+    background-color: #364552;
+    color: #fff;
+    padding: 1rem .5rem;
+}
+header h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.container{
+    background-color: cornflowerblue;
+    border: 1px solid #222;
+    border-radius: 1rem;
+    margin: 10px auto;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 1.2rem;
+}
+.container .item-container{
+    width: 30%;
+    background-color: #dde0d7;
+    border: 1px solid #FFBD39;
+    margin: 0;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    
+}
+.container .item-container:nth-child(2n+1){
+    background-color: #555555;
+}
+.container .item-container a{
+    text-decoration: none;
+    color: #4dabab;
+    font-size: 1.6rem;
+}
+.container .item-container a:hover{
+    color: #FFBD39;
+}
+.container .item-container a{
+    transition: color 0.8s linear 0.2s;
+}

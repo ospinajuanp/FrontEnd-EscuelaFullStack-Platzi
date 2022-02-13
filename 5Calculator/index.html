@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- <meta http-equiv="Refresh" content="4"> -->
+    <title>Calculator | Juan Pablo Ospina Restrepo | ospinajuanp</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header id="titulo">
+        <h1>Calculadora</h1>
+    </header>
+    <section>
+        <div id="resultadoOperacion">
+            <label >Resultado: </label>
+            <label id="operacion"></label>
+        </div>
+        <div id="botones">
+            <button type="button" class="column left button" id="uno" onclick="operar('1')">1</button>
+            <button type="button" class="column left button" id="dos" onclick="operar('2')">2</button>
+            <button type="button" class="column left button" id="tres" onclick="operar('3')">3</button>
+            <button type="button" class="column left button" id="mas" onclick="operar('+')">+</button>
+            <button type="button" class="column left button" id="cuatro" onclick="operar('4')">4</button>
+            <button type="button" class="column left button" id="cinco" onclick="operar('5')">5</button>
+            <button type="button" class="column left button" id="seis" onclick="operar('6')">6</button>
+            <button type="button" class="column left button" id="menos" onclick="operar('-')">-</button>
+            <button type="button" class="column left button" id="siete" onclick="operar('7')">7</button>
+            <button type="button" class="column left button" id="ocho" onclick="operar('8')">8</button>
+            <button type="button" class="column left button" id="nueve" onclick="operar('9')">9</button>
+            <button type="button" class="column left button" id="por" onclick="operar('*')">*</button>
+            <button type="button" class="column left button" id="cero" onclick="operar('0')">0</button>
+            <button type="button" class="column left button" id="borrar" onclick="operar('A')">A</button>
+            <button type="button" class="column left button" id="eliminar" onclick="operar('AC')">AC</button>
+            <button type="button" class="column left button" id="dividir" onclick="operar('/')">/</button>
+        </div>
+        <div>
+            <button type="button" class="column left button" id="parentesisAbre" onclick="operar('(')">(</button>
+            <button type="button" class="column igual button" id="igual" onclick="calcular()">=</button>
+            <button type="button" class="column right button arregloButton" id="parentesisCierra" onclick="operar(')')">)</button>
+        </div>
+        <div id="igualApretado">false</div>
+        <script>
+            desactivarBotones()
+        </script>
+    </section>
+</body>
+</html>

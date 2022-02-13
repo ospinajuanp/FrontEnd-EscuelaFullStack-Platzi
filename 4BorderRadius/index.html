@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>BorderRadius | Juan Pablo Ospina Restrepo | ospinajuanp</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header id="titulo">
+        <h1>Generador de CSS Border Radius </h1>
+    </header>
+    <section>
+        <form id="formulario">
+            <div>
+                <label for="topBorder" class="izquierda">Arriba Izquierda</label>
+                <input type="range" min="0" max="50" step="1" value="0" name="topBorder" id="topBorder" class="derecha" onchange="showVal()" >
+            </div>
+            <div>
+                <label for="rightBorder" class="izquierda">Arriba Derecha</label>
+                <input type="range" min="0" max="50" step="1" value="0" name="rightBorder" id="rightBorder" class="derecha" onchange="showVal()" >
+            </div>
+            <div>
+            <label for="bottomBorder" class="izquierda">Abajo Derecha</label>
+            <input type="range" min="0" max="50" step="1" value="0" name="bottomBorder" id="bottomBorder" class="derecha" onchange="showVal()" >
+            </div>
+            <div>
+                <label for="leftBorder" class="izquierda">Abajo Izquierda</label>
+                <input type="range" min="0" max="50" step="1" value="0" name="leftBorder" id="leftBorder" class="derecha" onchange="showVal()" >
+            </div>
+        </form>
+    </section>
+    <footer>
+        <div id="borderRadius">
+            <p id="resultBorderRadius"></p>
+        </div>
+    </footer>
+    <!-- <script>
+        let topBorder = document.getElementById('topBorder');
+        topBorder.addEventListener('input',function(){
+            console.log(topBorder.value)
+        })
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* PALETA COLORES
+COLOR   ID
+BLANCO  #FFFFFF
+NAGRO   #000000
+GRIS    #555555
+GRIS    #dde0d7
+BLANCO  #fff0d7 
+AZUL    #baeaf4
+VERDE   #4dabab
+AZUL    #1089b1
+MOSTASA #FFBD39
+*/
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    font-size: 16px;
+    margin: 0;
+    background-color:#000000;
+    
+}
+#titulo{
+    background-color: #810349;
+    margin: 0;
+    padding: .2rem .1rem;
+    font-size:1.3rem;
+    color: #FFFFFF;
+}
+#titulo h1{
+    text-align: center;
+}
+#conteinerCirculo{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+}
+
+.circulo{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #baeaf4;
+    margin: .3rem;
+    border-radius: 50%;
+    list-style-type: none;
+    animation: blink 1s infinite;
+}
+.circulo:nth-child(even){
+    background-color: #FFBD39;
+    animation: blink-even 1s infinite;
+}
+@keyframes blink {
+    0%{
+        opacity: .1;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: .9;
+    }
+}
+@keyframes blink-even {
+    100%{
+        opacity: .1;
+    }
+    50%{
+        opacity: .5;
+    }
+    0%{
+        opacity: .9;
+    }
+}
+@keyframes blink {
+    0%{
+        opacity: var(--my-start-one);
+    }
+    50%{
+        opacity: var(--my-start-two);
+    }
+    100%{
+        opacity: var(--my-start-three);
+    }
+}
+@keyframes blink-even {
+    0%{
+        opacity: var(--my-start-four);
+    }
+    50%{
+        opacity: var(--my-start-five);
+    }
+    100%{
+        opacity: var(--my-start-six);
+    }
+}
+section{
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 0px 0px 15px 15px;
+}
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.column{
+    margin: 10px 8px;
+    margin-left: 11px;
+    padding: 10px 0;
+    width: 20%;
+    height: 40px;
+}
+.left{
+    float: left;
+    width: 20%;
+}
+.button{
+    background-color: #baeaf4;
+    border: solid 1px #810349;
+    border-radius: .5rem;
+}
+.rangeButton{
+    margin-right: -1rem;
+    margin-left: 2.1rem;
+}

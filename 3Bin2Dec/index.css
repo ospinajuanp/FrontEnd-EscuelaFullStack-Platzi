@@ -1,0 +1,63 @@
+/* PALETA COLORES
+COLOR   ID
+AZUL    #090088 
+MORADO  #930077
+ROSADO  #E4007C
+MOSTASA #FFBD39
+*/
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    font-size: 16px;
+    margin: 0;
+    background-color:#090088;
+    color: #FFBD39;
+}
+#titulo{
+    background-color: #930077;
+    margin: 0;
+    padding: 1.5rem 1rem;
+    font-size:1.3rem;
+}
+#titulo h1{
+    text-align: center;
+}
+section{
+    margin: 2rem
+}
+#formulario{
+    transition: all .3s;
+    font-size:2rem;
+    width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #E4007C;
+    color: #090088;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 5px 5px rgba(255, 255, 255, 0.2);
+}
+#formulario:hover{
+    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.2);
+}
+button{
+    transition: all .3s;
+    background-color: #FFBD39;
+    color: #fff;
+    cursor: pointer;
+    width: 12rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    font-size:1.3rem;
+}
+button:hover{
+    background-color: #000;
+    color: #FFBD39;
+}
+input{
+    border-radius: .5rem;
+    width: 24rem;
+    margin: .3rem 0;
+    padding: .5rem;
+}

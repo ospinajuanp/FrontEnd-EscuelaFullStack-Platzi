@@ -1,0 +1,59 @@
+/* PALETA COLORES
+COLOR   ID
+BLANCO  #FFFFFF
+NAGRO   #000000
+GRIS    #555555
+GRIS    #dde0d7
+BLANCO  #fff0d7 
+AZUL    #baeaf4
+VERDE   #4dabab
+AZUL    #1089b1
+MOSTASA #FFBD39
+*/
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    font-size: 16px;
+    margin: 0;
+    background-color:#000000;
+    color: #FFFFFF;
+}
+#titulo{
+    background-color: #810349;
+    margin: 0;
+    padding: .2rem .1rem;
+    font-size:1.3rem;
+    color: #FFFFFF;
+    border-radius: 0px 0px 1rem 1rem;
+}
+#titulo h1{
+    text-align: center;
+}
+.container{
+    padding: 1.5rem;
+}
+.container-color{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 20rem;
+    border-radius: 1rem;
+    animation-name: colorchange;
+    animation-duration: 9s;
+    animation-delay: 0s;
+    animation-iteration-count:infinite;
+}
+@keyframes colorchange{
+    0%{background-color: #FFBD39;}
+    14.2%{background-color: #1089b1;}
+    28.5%{background-color: #4dabab;}
+    42.8%{background-color: #baeaf4;}
+    57.1%{background-color: #dde0d7;}
+    71.4%{background-color: #555555;}
+    85.7%{background-color: #000000;}
+    100%{background-color: #FFFFFF;}
+}
+.prueba:hover ~ .container > .container-color{
+    animation-play-state: paused;
+}

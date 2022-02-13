@@ -1,0 +1,186 @@
+body{
+    color: tomato;
+    background-color: black;
+}
+h1{
+    color: white;
+}
+#titulo{
+    color: violet;
+}
+p{
+    color: turquoise;
+}
+.texto{
+    color: teal;
+}
+p.texto{
+    color: white;
+}
+p.especial{
+    color: mediumseagreen;
+}
+
+p.texto.especial{
+    color: red;
+}
+div p{
+    color: aquamarine;
+}
+div h2, div h3{
+    color: bisque;
+}
+*{
+    font-size: 24px;
+    /* color: white; */
+}
+/* esto es un comentario para enterder el codgio */
+/* .color{
+    color: #ff0000;
+} */
+/* .color{
+    color: rgb (0, 255, 255);
+} */
+.color{
+    /* border: 2px white dotted;
+    
+        dotted
+        dashed
+        solid
+        double
+        groove
+        ridge
+        inset
+        outsed
+        none
+        hidden
+    */
+    border-style: solid;
+    border-color: yellowgreen;
+    border-radius: 5px;
+    border-width: 2rem;
+}
+
+#fondo{
+    background-color: rgba(0,255,250,0.3);
+    opacity: 0.75;
+}
+
+.margen{
+    background-color:chocolate ;
+    color: white;
+    margin: 15px ;
+    padding: 30px 25px 20px ;
+    border: solid 1px white;
+    height: 100px;
+    width: 10px;
+    overflow: hidden /*visible,hidden and scroll */;
+    outline: 1px solid red;
+}
+.text{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-decoration: overline;
+    text-shadow: 3px 5px 5px white;
+}
+a{
+    background-color: white;
+    text-align: center;
+    border: solid 2px white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+a:link{
+    color:violet;
+}
+a:visited{
+    color: tomato;
+}
+a:hover{
+    background-color: rebeccapurple;
+    color: yellow;
+    border: solid 2px white;
+}
+a:active{
+    color: crimson;
+}
+ul{
+    background-color: cyan;
+    list-style-type: none;
+    /* padding-left: 0px; */
+    /* list-style-position: inside; */
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th,td{
+    border: solid 1px #eee;
+    padding: 5px;
+}
+tr:nth-child(even){
+    background-color: #333;
+}
+tr:hover{
+    background-color: #aaa;
+    cursor: pointer;
+}
+th{
+    background-color: rebeccapurple;
+    color: white;
+    text-align: left;
+    cursor: auto;
+}
+span{
+    display: block;
+    /* display: none; */
+    /* visibility: hidden; */
+    max-width: 300px;
+    background-color: blueviolet;
+    /* margin-bottom: 2px; */
+}
+.inline{
+    display: inline;
+}
+#position{
+    /* position: static; */
+    /* position: relative; */
+    /* left: 20px; */
+    /* position: fixed; */
+    /* left: 20px; */
+    /* position: absolute; */
+    /* left: 20px; */
+    position: sticky;
+    left: 20px;
+    top: 20px;
+    /* top: 25px; */
+}
+.container{
+    height: 200px;
+}
+.left{
+    float: left;
+    width: 100px;
+}
+.right{
+    float: right;
+    width: 100px;
+}
+.column{
+    margin: 0;
+    padding: 10px 0;
+    width: 33.3%;
+}
+.inline-block{
+    display: inline-block;
+    height: 55px;
+    background-color: cornflowerblue;
+    color: darkblue;
+}
+.center{
+    padding: 50px 0;
+    width: 200px;
+    margin: 0 auto;
+    background-color: darkmagenta;
+    text-align: center;
+}

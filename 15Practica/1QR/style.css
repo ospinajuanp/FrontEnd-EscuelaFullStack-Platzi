@@ -1,0 +1,50 @@
+/* White: hsl(0, 0%, 100%)
+Light gray: hsl(212, 45%, 89%)
+Grayish blue: hsl(220, 15%, 55%)
+Dark blue: hsl(218, 44%, 22%) */
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background: hsl(212, 45%, 89%);
+}
+main .containerQr{
+    background: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.containerQr{
+    width: 150px;
+    height: auto;
+    margin: 3rem auto;
+}
+.containerQr-img img{
+    width: 90%;
+    margin: 5% 5%;
+    border-radius: 1rem;
+}
+.containerQr .containerQr-content{
+    font-size: .8rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 5%;
+}
+@media (min-width:376px) {
+    .containerQr{
+        width: 350px;
+        height: auto;
+        margin: 4rem auto;
+    }
+    .containerQr .containerQr-content{
+        font-size: 1.4rem;
+    }
+}

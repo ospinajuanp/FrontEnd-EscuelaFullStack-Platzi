@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- <meta http-equiv="Refresh" content="4"> -->
+    <title>Calculator | Juan Pablo Ospina Restrepo | ospinajuanp</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header id="titulo">
+        <h1>Christmas Lights</h1>
+    </header>
+    <section>
+        <ol id="conteinerCirculo">
+            <li class="circulo"></li>
+            <li class="circulo"></li>
+            <li class="circulo"></li>
+            <li class="circulo"></li>
+            <li class="circulo"></li>
+            <li class="circulo"></li>
+            <li class="circulo"></li>
+            <li class="circulo"></li>
+            <li class="circulo"></li>
+            <li class="circulo"></li>
+        </ol>
+        <div class="conteinerButton">
+            <input type="button" value="ON" class="column left button" onclick="encenderLuces()">
+            <input type="button" value="OFF" class="column left button" onclick="apagarLuces()">
+        </div>
+        <div class="conteinerButton" style="visibility: hidden" >
+            <input type="range" id="vol" name="vol" min="1" max="10" step="1">
+            <input type="button" onclick="velocidadLuces()" value="SEND" class="column left button rangeButton">
+          </div>
+    </section>
+</body>
+</html>

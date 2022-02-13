@@ -1,0 +1,75 @@
+/* PALETA COLORES
+COLOR   ID
+BLANCO  #FFFFFF
+NAGRO   #000000
+AZUL    #090088 
+MORADO  #930077
+ROSADO  #E4007C
+MOSTASA #FFBD39
+*/
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    font-size: 16px;
+    margin: 0;
+    background-color:#E4007C;
+    color: #FFFFFF;
+}
+#titulo{
+    background-color: #930077;
+    margin: 0;
+    padding: 1.5rem 1rem;
+    font-size:1.3rem;
+}
+#titulo h1{
+    text-align: center;
+}
+section{
+    margin: 2rem
+}
+#formulario{
+    transition: all .3s;
+    font-size:2rem;
+    width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #FFFFFF;
+    color: #090088;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 5px 5px rgba(49, 49, 49, 0.2);
+}
+#formulario:hover{
+    box-shadow: 10px 10px 5px 5px rgb(147, 0, 119, 0.8);
+}
+div{
+    width: 400px;
+    display: inline-block;
+}
+.izquierda{
+    margin: auto 0;
+    float: left;
+}
+.derecha{
+    margin: 1rem 0;
+    float: right;
+}
+footer{
+    width: 400px;
+    margin: 0 auto;
+}
+#borderRadius{
+    width: 400px;
+    height: 100px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    box-shadow: 10px 10px 5px 5px rgb(147, 0, 119, 0.8);
+    /* border-radius: 25px; */
+}
+#resultBorderRadius{
+    width: 75%;
+    height: 70%;
+    color: #000;
+    margin: 35px auto;
+}

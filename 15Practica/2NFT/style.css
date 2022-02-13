@@ -1,0 +1,112 @@
+/* 
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%) */
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: hsl(217, 54%, 11%);
+    color: hsl(215, 51%, 70%);
+    
+}
+.containerCardNft{
+    width: 150px;
+    background: hsl(216, 50%, 16%);
+    height: auto;
+    margin: 3rem auto;
+    border-radius: 1rem;
+    font-size: 1rem;
+    box-shadow: 3px 3px 25px hsl(216, 50%, 26%);
+    
+}
+.containerCardNft:hover{
+    box-shadow: 3px 3px 25px hsl(0, 0%, 70%);
+}
+.containerCardNft-img{
+    width: 90%;
+    height: 135px;
+}
+.containerCardNft .containerCardNft-img img{
+    width: 115px;
+    margin: 5%;
+    border-radius: 1rem;
+    border: 0.5px solid white;
+    position: absolute;
+}
+.containerCardNft .containerCardNft-img .containerCardNft-img--view{
+    display: none;    
+}
+.containerCardNft-img--Equilibium:active +.containerCardNft-img--view{
+    display: block;    
+    opacity: 30%;
+}
+.containerCardNft .containerCardNft-content,.containerCardNft .containerCardNft-value,.containerCardNft .containerCardNft-creator{
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+}
+.containerCardNft .containerCardNft-creator{
+padding-bottom: .3rem;
+}
+.containerCardNft .containerCardNft-content h1{
+    color: hsl(0, 0%, 100%);
+}
+.containerCardNft .containerCardNft-value{
+    display: flex;
+    justify-content: space-between;
+}
+.containerCardNft .containerCardNft-value div:nth-child(1){
+    color: hsl(178, 100%, 50%);
+}
+.containerCardNft-creator{
+    border-top: 1px solid hsl(215, 32%, 27%);
+}
+.containerCardNft-creator span{
+    color: hsl(0, 0%, 70%);
+}
+@media (min-width:376px) {
+    .containerCardNft{
+        width: 300px;
+        height: auto;
+        font-size: 2rem;
+    }
+    .containerCardNft-img{
+        width: 90%;
+        height: 270px;
+    }
+    .containerCardNft .containerCardNft-img img{
+        width: 270px;
+        margin: 5%;
+        border-radius: 1rem;
+        border: 0.5px solid white;
+        position: absolute;
+        top: -15px;
+        left: 367px;
+    }
+    
+}
