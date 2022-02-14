@@ -1,0 +1,73 @@
+/* ### Primary
+
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%) */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+.container{
+  color: hsl(300, 43%, 22%);
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+.container__tittle{
+  margin: 1.2rem 2rem;
+}
+.container__tittle > p{
+  color: hsl(300, 13%, 52%);
+  padding: 0rem 1rem;
+}
+.container__rated--item{
+  background: hsl(303, 23%, 93%);
+  padding: .7rem;
+  margin: 1rem;
+  border-radius: .5rem;
+}
+.container__rated--item img{
+  margin: .2rem .2rem 0rem .2rem;
+}
+.container__experiences{
+  color: hsl(0, 0%, 100%);
+}
+.container__experiences--item{
+  background: hsl(300, 43%, 22%);
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr;
+  border-radius: 1rem;
+  margin: 1.2rem 3rem;
+}
+.container__experiences--item img{
+  border-radius: 10rem;
+  width: 4rem;
+  height: 4rem;
+}
+.container__experiences--item > div{
+  grid-column: 1/3;
+  margin: 1.3rem;
+  display: flex;
+}
+.container__experiences--item > div > div > h3,.container__experiences--item > div > div > p{
+  margin: 0;
+  padding: 0;
+}
+.container__experiences--item p{
+  grid-column: 1/4;
+  padding: 1.3rem;
+  justify-content: space-between;
+  align-items: center;
+} 
