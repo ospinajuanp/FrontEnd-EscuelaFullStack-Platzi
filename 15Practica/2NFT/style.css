@@ -99,14 +99,11 @@ padding-bottom: .3rem;
         width: 90%;
         height: 270px;
     }
-    .containerCardNft .containerCardNft-img img{
-        width: 270px;
-        margin: 5%;
+    .containerCardNft .containerCardNft-img .containerCardNft-img--Equilibium{
+        width: 100%;
         border-radius: 1rem;
         border: 0.5px solid white;
-        position: absolute;
-        top: -15px;
-        left: 367px;
+        position: relative;
     }
     
 }
