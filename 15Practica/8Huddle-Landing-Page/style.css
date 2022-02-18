@@ -1,0 +1,125 @@
+
+:root{    
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+
+    --sm:20px;
+    --md:24px;
+    --lg:28px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+body footer div,main footer a { color: hsl(228, 45%, 44%); }
+
+main section article{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Violet);
+    background-image: url("./images/bg-mobile.svg");
+    background-repeat: no-repeat ;
+    background-size: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.container{
+    width: 90%;
+    margin: 50px auto 0px;
+}
+.container .container-content{
+    width: 85%;
+    height: auto;
+    padding: 8%;
+}
+.content-img>img:nth-child(1){
+    width: 48%;
+    margin-bottom: 16px;
+}
+.content-img figure{
+    display: flex;
+    place-content: center;
+}
+.content-img figure img{
+    width: 96%;
+}
+.content-text{
+    margin-top: 88px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.content-text h1{
+    font-weight: bold;
+    font-size: var(--md);
+}
+.content-text p{
+    font-weight: 300;
+    font-size: var(--sm);
+    padding-bottom: 60px;
+}
+.btn-register{
+    border-radius: 32px;
+    padding: 4% 28%;
+    border: 1px solid white;
+    color: var(--Violet);
+    box-shadow: 2px 2px 10px 3px var(--Soft-Magenta);
+}
+.btn-register:active{
+    background-color: var(--Soft-Magenta);
+    color: white;
+    box-shadow: 2px 2px 20px 3px var(--Soft-Magenta);
+}
+.content-redes {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.content-redes img{
+    margin: 0 12px;
+    width: 40%;
+}
+footer{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+@media (min-width:640px) {
+    body{
+        background-image: url("./images/bg-desktop.svg");
+    }
+    main .container{
+        margin: 0;
+        padding: 0;
+    }
+    main .container .container-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr auto;
+    }
+    .content-img{
+        display: flex;
+        flex-direction: column;
+        grid-column: 1/3;
+    }
+    .content-img figure {
+        margin-top: 48%;
+    }
+    .content-img figure img{
+        width: 100%;
+    }
+    .content-redes {
+        width: 250px;
+        grid-column: 3/4;
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+    }
+}
+@media (min-width:840px) {
+    .content-img figure {
+        margin-top: 0%;
+    }
+}
