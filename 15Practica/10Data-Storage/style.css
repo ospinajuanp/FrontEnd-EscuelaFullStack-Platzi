@@ -23,6 +23,7 @@
 }
 body{
     background-image: url("./images/bg-mobile.png");
+    background-color: var(--Very-Dark-Blue);
     background-repeat: no-repeat ;
     background-size: 100%;
     color: var(--Pale-Blue);
@@ -129,6 +130,10 @@ body{
 }
 
 @media (min-width:375px) {
+    body{
+        background-image: url("./images/bg-mobile.png");
+        
+    }
     .container{
         display: flex;
         align-items: flex-end;
