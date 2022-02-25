@@ -44,7 +44,7 @@
     font-size: 4rem;
     font-weight: 700;
     color: var(--Dark-Grayish-Blue);
-    margin-bottom: 2.4rem;
+    margin-bottom: 2.8rem;
     text-align: center;
   }
   .subtittle {
@@ -58,7 +58,7 @@
   .header__container {
     width: 100%;
     height: auto;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
   }
   .header__container figure img {
     width: 50%;
@@ -90,6 +90,7 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    padding-top: 3.2rem;
   }
   .buttons {
     width: 100%;
@@ -109,7 +110,7 @@
     box-shadow: 0rem 1rem 1.3rem -0.7rem var(--Light-Blue);
   }
   
-  /* Se trabaja el primer contenido de la web */
+  /* Se trabaja el track contenido de la web */
   .contendor__track {
     text-align: center;
     margin-bottom: 10rem;
@@ -122,9 +123,30 @@
     display: block;
     margin: 0rem auto 8rem;
   }
+
+  /* Se trabaja el clipboard contenido de la web*/
+  .contendor__clipboard{
+    padding: 12rem 0 8rem;
+    text-align: center;
+  }
+
+  .contendor__devices figure img{
+    width: 90%;
+    display: block;
+    margin: 0rem auto 8rem;
+  }
   
+  /*Se trabaja el supercarger contenido de la web*/
+  .super__charger{
+    text-align: center;
+  }
+  .super__bloques{
+    margin-top: 4rem;
+  }
+
   /* Se trabaja el footer */
   .footer {
+    width: 100%;
     background-color: #f5f6f8;
   }
   .footer figure img {
@@ -171,3 +193,88 @@
     gap: 3rem;
   }
   
+@media (min-width:640px) {
+  body{
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-content: center;
+  }
+  header,main{
+    max-width: 74rem;
+    margin: 0 auto;
+  }
+  .header__container figure img {
+    width: 25%;
+    display: block;
+    margin: 8rem auto 4rem;
+  }
+  .contenedor__buttons {
+    flex-direction: row;
+  }
+  .contendor__track {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .contendor__desktop{
+    display: flex;
+    flex-direction: row;
+  }
+  .contendor__desktop-img {
+    width: 110rem;
+  }
+  .contendor__desktop-img figure img{
+    width: 100%;
+    margin: 0;
+    position: relative;
+    left: -10rem;
+  }
+  .super__bloques{
+    display: flex;
+    flex-direction: row;
+  }
+  .section__company{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .section__company img{
+    min-width: 7.6rem;
+  }
+  main,footer{
+    width: 100%;
+  }
+  .footer,.footer-left{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer .footer__links{
+    display: inline-block;
+  }
+  .footer div{
+    margin-right: 4rem;
+  }
+  .footer__logo{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-top: 1.2rem;
+  }
+  .footer__redes{
+    margin: 0;
+  }
+  .footer figure img{
+    margin: 0 auto;
+  }
+}
+
+@media (min-width:1024px) {
+  body{
+    place-content: unset;
+  }
+  header,main{
+    max-width: 90rem;
+    width: 100%;
+  }
