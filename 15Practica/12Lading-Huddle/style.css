@@ -1,0 +1,161 @@
+/* 
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+:root{
+    --Pink: #ff52bf;
+
+    --Very-Pale-Cyan: #ebfbff;
+    --Very-Dark-Cyan: #00252e;
+    --Grayish-Blue: #808d99;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.buttons a{
+    text-decoration: none;
+    border-radius: 1.5rem;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Open Sans','Poppins', sans-serif;
+}
+.main-header{
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 4rem;
+    text-align: center;
+    background-image: url('./images/bg-hero-mobile.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: var(--Very-Pale-Cyan);
+}
+.main-header .header-nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+.main-header .header-nav figure{
+    width: 50%;
+    height: auto;
+}
+.main-header .header-nav figure img{
+    width: 18rem;
+    height: auto;
+}
+.main-header .header-nav .header-nav__button{
+    padding: .4rem;
+}
+.main-header .header-nav .header-nav__button a{
+    padding: 1rem 3rem;
+    color: black;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: white;
+    box-shadow: 0 .4rem .8rem ;
+}
+.main-header .header-content{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 8rem auto 0;
+}
+.main-header .header-content .header-content__tittle{
+    margin-bottom: 4rem;
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: var(--Very-Dark-Cyan);
+}
+.main-header .header-content .header-content__body{
+    margin-bottom: 4rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--Grayish-Blue);
+}
+.main-header .header-content .header-content__button{
+    margin: 6.4rem auto ;
+}
+.main-header .header-content .header-content__button a{
+    padding: 1rem 3rem;
+    color: var(--Very-Pale-Cyan);
+    font-size: 1.6rem;
+    background-color: var(--Pink);
+}
+.main-header .header-content figure{
+    width: 100%;
+    height: auto;
+    margin-top: 3.2rem;
+}
+.main-header .header-content figure img{
+    width: 100%;
+    max-width: 620px;
+}
+
+
+
+main .main-body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-bottom: 4rem;
+    /* margin-top: 12rem; */
+}
+main .main-body .main-body-card{
+    width: 90%;
+    height: auto;
+    padding: 8rem 3.2rem;
+    margin: 4rem auto 0;
+    text-align: center;
+    border-radius: .6rem;
+    box-shadow: 0rem 0.1rem .8em;
+}
+main .main-body .main-body-card figure{
+    width: 100%;
+    height: auto;
+    margin-bottom: 4rem;
+}
+main .main-body .main-body-card figure img{
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+}
+main .main-body .main-body-card .main-body-card__content .main-body-card__content-tittle{
+    margin: 2.4rem 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--Very-Dark-Cyan);
+}
+main .main-body .main-body-card .main-body-card__content .main-body-card__content-body{
+    font-size: 1.8rem;
+    color: var(--Grayish-Blue);
+}
+
+main .main-body .main-body-card .main-body-card__content .header-content__button{
+    margin: 1.2rem auto 0;
+}
+main .main-body .main-body-card .main-body-card__content .header-content__button a{
+    padding: 1rem 3rem;
+    color: var(--Very-Pale-Cyan);
+    font-size: 1.6rem;
+    background-color: var(--Pink);
+}
+main .main-body .float{
+    position: relative;
+    /* bottom: -10rem; */
+    width: auto;
+    height: auto;
+    padding: 1.2rem 2.4rem 3.2rem;
+    
+}
