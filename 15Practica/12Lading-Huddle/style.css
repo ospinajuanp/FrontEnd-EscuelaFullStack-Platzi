@@ -197,3 +197,38 @@ main .main-body .float{
     font-size: 1.2rem;
     text-align: center;
 }
+
+@media (min-width:740px) {
+    .main-header{
+        width: 100%;
+        height: auto;
+    }
+    .main-header .header-content{
+        display: flex;
+        flex-direction: row;
+    }
+    .main-header .header-content figure{
+        margin-left: 5%;
+        max-width: 330px;
+    }
+    main .main-body .main-body-card figure{
+        max-width: 320px;
+    }
+    main .main-body .main-body-card .right{
+        float: right;
+    }
+    main .main-body .main-body-card .left{
+        float: left;
+    }
+    main .main-body .main-body-card{
+        max-width: 940px;
+    }
+    .main-footer {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+    }
+    .main-footer-cr{
+        grid-column: 1/3;
+    }
+}
