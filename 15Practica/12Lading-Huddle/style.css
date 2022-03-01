@@ -27,6 +27,13 @@ html{
     font-size: 62.5%;
     font-family: 'Open Sans','Poppins', sans-serif;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    list-style: none;
+}
 .main-header{
     width: 100%;
     height: 100vh;
@@ -153,9 +160,40 @@ main .main-body .main-body-card .main-body-card__content .header-content__button
 }
 main .main-body .float{
     position: relative;
-    /* bottom: -10rem; */
+    bottom: -11rem;
     width: auto;
     height: auto;
     padding: 1.2rem 2.4rem 3.2rem;
-    
+    background-color: white;
+}
+
+.main-footer{
+    width: 100%;
+    height: auto;
+    padding: 14rem 5% 4rem;
+    font-size: 1.8rem;
+    color: var(--Very-Pale-Cyan);
+    background-color: var(--Very-Dark-Cyan);    
+}
+
+.main-footer .main-footer-data-body__location,
+.main-footer .main-footer-data-body__phone, 
+.main-footer .main-footer-data-body__email{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 2.8rem 0;
+}
+.main-footer .main-footer-data-body__location figure,
+.main-footer .main-footer-data-body__phone figure, 
+.main-footer .main-footer-data-body__email figure{
+    margin-right: 3.6rem;
+}
+.main-footer .main-footer-nav li{
+    margin-bottom: 1.2rem;
+}
+.main-footer .main-footer-cr{
+    margin-top: 6rem;
+    font-size: 1.2rem;
+    text-align: center;
 }
