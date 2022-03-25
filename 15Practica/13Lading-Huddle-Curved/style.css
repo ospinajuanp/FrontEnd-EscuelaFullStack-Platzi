@@ -1,0 +1,81 @@
+/* 
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+:root{
+    --Pink: hsl(322, 100%, 66%);
+    --Light-Pink: hsl(321, 100%, 78%);
+    --Light-Red: hsl(0, 100%, 63%);
+    --Very-Dark-Cyan: hsl(192, 100%, 9%);
+    --Very-Pale-Blue: hsl(207, 100%, 98%);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+html{
+    font-size: 62.2%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+    margin: 8px 16px;
+    font-size: 1.5rem;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    border-radius: 24px;
+}
+.nav-btn{
+    padding: 0 28px;
+    padding-top: 2px;
+    border: 1px solid var(--Pink);
+    color: var(--Pink);
+}
+.nav-logo {
+    width: 132px;
+}
+.nav-logo img{
+    width: 100%;
+}
+.header-container{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 32px;
+}
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+.header-body{
+    padding: 0 32px;
+}
+.header-body-tittle{
+    margin-bottom: 32px;
+    font-size: 18px;
+}
+.header-body-content{
+    margin-bottom: 64px;
+    font-size: 14px;
+}
+.header-body-btn{
+    padding: 12px 32px;
+    color: var(--Very-Pale-Blue);
+    background-color: var(--Pink);
+}
+.header-body{
+    margin-bottom: 100px;
+}
+.header-img figure img{
+    width: 100%;
+}
