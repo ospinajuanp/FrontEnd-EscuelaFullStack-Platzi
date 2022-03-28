@@ -1,0 +1,101 @@
+/* 
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+html{
+    font-size: 62.2%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+    margin: 8px 16px;
+    font-size: 1.5rem;
+}
+.item{
+    border: 5px solid #00e1ff;
+    font-size: 4rem;
+    border-radius: 16px;
+}
+.contenedor{
+    border: 5px solid #00ff4c;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 75px);
+    place-content: center;
+    grid-template-areas:
+        "header header header"
+        "side main main"
+        "side main main"
+    ;
+    gap: 4px;
+}
+.item-1{
+    border: 5px solid #f8bbd0;
+    background-color: #ffeeff;
+    grid-area: header;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.item-2{
+    grid-row: 2 / 4;
+    border: 5px solid #e1bee7;
+    background-color: #fff1ff;
+    grid-area: side;
+}
+.item-3{
+    grid-area: 2 / 2 / 4 / 4;
+    border: 5px solid #84f1ff;
+    background-color: #e5ffff;
+    grid-area: main;
+}
+.contenedorReto{
+    margin-top: 16px;
+    border: 5px solid #000000;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 75px);
+    place-content: center;
+    grid-template-areas:
+        "one two two"
+        "three three four"
+        "five six seven"
+    ;
+    gap: 4px;
+    color: slategray;
+}
+.items-1{
+    grid-area: one;
+    background-color: #a7fd44;
+    
+}
+.items-2{
+    grid-area: two;
+    background-color: #68c003;
+}
+.items-3{
+    grid-area: three;
+    background-color: #2e5700;
+}
+.items-4{
+    grid-area: four;
+    background-color: #a7fd44;
+}
+.items-5{
+    grid-area: five;
+    background-color: #a7fd44;
+}
+.items-6{
+    grid-area: six;
+    background-color: #68c003;
+}
+.items-7{
+    grid-area: seven;
+    background-color: #2e5700;
+}
