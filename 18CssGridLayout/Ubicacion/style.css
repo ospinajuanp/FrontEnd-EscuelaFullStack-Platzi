@@ -26,8 +26,8 @@ body{
 .contenedor{
     border: 5px solid #00ff4c;
     display: grid;
-    grid-template-columns: repeat(3, 150px);
-    grid-template-rows: repeat(3, 75px);
+    grid-template-columns: repeat(5, 20px);
+    grid-template-rows: repeat(5, 75px);
     place-content: center;
     grid-template-areas:
         "header header header"
