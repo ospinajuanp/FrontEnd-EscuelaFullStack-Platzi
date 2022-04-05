@@ -79,3 +79,31 @@ a{
 .header-img figure img{
     width: 100%;
 }
+.stat-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stat-container-item{
+    display: flex;
+    flex-direction: column;    
+    min-width: 180px;
+    max-width: 250px;
+    margin-bottom: 48px;
+}
+.stat-container-item__img{
+    margin-left: 16px;
+    width: 38px;
+    text-align: start;
+}
+.stat-container-item__img img{
+    width: 100%;
+}
+.stat-container-item__tittle{
+    font-size: 6rem;
+    font-weight: bold;
+}
+.stat-container-item__content{
+    font-weight: 300;
+    color: #8c8c8c;
+}
