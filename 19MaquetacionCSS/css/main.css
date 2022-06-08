@@ -12,6 +12,7 @@
     --link-pague-a:black;
     --primary-pague-color:#47afac;
     --accentuate-pague-color:white;
+    --accentuate-pague-background: #cdd2da;
 }
 
 html{
@@ -92,7 +93,7 @@ nav .profile-link{
 nav .profile-link a{
     color: var(--link-pague-a);
     font-weight: bold;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--link-pague-a);
 }
 .home-main{
     display: grid;
@@ -162,7 +163,7 @@ nav .profile-link a{
     padding: 0 50px 40px;
 }
 .blogs-posts-container h3{
-    border-bottom: 1px solid #cdd2da;
+    border-bottom: 1px solidvar(--accentuate-pague-background);
     margin: 28px 0;
     padding-bottom: 20px ;
     text-align: center;    
@@ -194,4 +195,49 @@ footer{
 footer p{
     color: var(--accentuate-pague-color);
     margin-top: 30px;
+}
+
+.blogpost-img-container,.blogpost-main-container{
+    padding: 0 50px 40px;
+}
+.blogpost-img-container img{
+    width: 100%;
+}
+.blogpost-main-container h3{
+    border-bottom: 1px solidvar(--accentuate-pague-background);
+    padding-bottom: 32px;
+}
+.blogpost-main-container article p{
+    margin-bottom: 16px;
+
+}
+.blogpost-main-container article h1{
+    margin:20px 0;
+    font-size: 35px;
+}
+.contact-main-container{
+    width: 100%;
+    min-height: 250px;
+    background-color:var(--accentuate-pague-background);
+    text-align: center;
+    padding-bottom: 52px;
+}
+.contact-main-container div{
+    display: inline-block;
+    width: 49.5%;
+    height: 100%;
+}
+.contact-main-container div a{
+    border-bottom: 1px solid var(--link-pague-a);
+    padding-bottom: 5px;
+}
+.contact-main-container div p{
+    margin-top: 16px;
+}
+.contact-main-container .contact-left, .contact-right{
+    text-align: initial;
+    margin-top: 85px;
+}
+.contact-main-container img{
+    width: 100px;
 }
