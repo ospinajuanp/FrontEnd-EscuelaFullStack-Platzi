@@ -25,44 +25,83 @@
 .element1 {
   background: papayawhip;
   position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .element2 {
   background: papayawhip;
   position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  /* top: calc(50% - 30px); */
 }
 
 .element3 {
   background: papayawhip;
   position: absolute;
+  left: 0;
+  top: 100%;
+  transform: translate(0, -100%);
+  /* top: calc(100% - 30px); */
 }
 
 .element4 {
   background: pink;
   position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 0;  
+  /* lef: calc(50% - 30px); */
+  /* top: 0; */
 }
 
 .element5 {
   background: pink;
   position: absolute;
+  left: 50%;
+  top: 50%;  
+  transform: translate(-50%, -50%);
+  /* lef: calc(50% - 30px); */
+  /* top: calc(50% - 30px); */
 }
 
 .element6 {
   background: pink;
   position: absolute;
+  left: 50%;
+  top: 100%;  
+  transform: translate(-50%, -100%);
+  /* lef: calc(100% - 30px); */
+  /* top: calc(100% - 30px); */
 }
 
 .element7 {
   background: lightcyan;
   position: absolute;
+  left: 100%;
+  top: 0;  
+  transform: translate(-100%, 0);
+  /* lef: calc(100% - 30px); */
 }
 
 .element8 {
   background: lightcyan;
   position: absolute;
+  left: 100%;
+  top: 50%;  
+  transform: translate(-100%, -50%);
+  /* lef: calc(100% - 30px); */
+  /* top: calc(50% - 30px); */
 }
 
 .element9 {
   background: lightcyan;
   position: absolute;
+  left: 100%;
+  top: 100%;  
+  transform: translate(-100%, -100%);
+  /* lef: calc(100% - 30px); */
+  /* top: calc(100% - 30px); */
 }
