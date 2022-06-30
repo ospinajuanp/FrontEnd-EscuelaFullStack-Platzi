@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.element, .element3, .element2, .element1 {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+.element1 {
+  background: papayawhip;
+}
+
+.element2 {
+  background: pink;
+}
+
+.element3 {
+  background: lightcyan;
+}
+
+.container, .container9, .container8, .container7, .container6, .container5, .container4, .container3, .container2, .container1 {
+  background: turquoise;
+  border: 1px solid white;
+  width: 180px;
+  height: 180px;
+}
+
+.container1 {
+  display: table-cell;
+}
+
+.container2 {
+  display: table-cell;
+}
+
+.container3 {
+  display: table-cell;
+}
+
+.container4 {
+  display: table-cell;
+}
+
+.container5 {
+  display: table-cell;
+}
+
+.container6 {
+  display: table-cell;
+}
+
+.container7 {
+  display: table-cell;
+}
+
+.container8 {
+  display: table-cell;
+}
+
+.container9 {
+  display: table-cell;
+}
