@@ -1,0 +1,42 @@
+/*
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+
+html{
+    font-size: 62.2%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.5rem;
+}
+
+.container{
+    width:100%;
+    height: 100vh;
+}
+.primerpadre, .segundopadre, .tercerpadre{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+}
+.primerpadre > div, .segundopadre> div, .tercerpadre> div{
+    border: 1px solid white;
+}
+.primerpadre{
+    background-color: purple;
+}
+.segundopadre{
+    background-color: pink;
+}
+.tercerpadre{
+    background-color: aquamarine;
+}
