@@ -1,0 +1,120 @@
+/*
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+
+html{
+    font-size: 62.2%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.5rem;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #ff0000;
+}
+.head{
+    width: 120px;
+    height: 260px;
+    position: relative;
+    background-color: #fdddca;
+    border-radius: 60px 60px 40px 40px;
+}
+.eye{    
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: calc(50% - 30px);
+    border-radius: 0 0 50% 50%;
+    background-color: #fff;
+}
+.eye-left{
+    left: calc(50% - 50px);
+}
+.eye-right{
+    left: calc(50% + 10px);
+}
+.pupil{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+    border-radius: 50%;
+    background-color: #000;
+}
+.pupil-left{
+    background-color: #205ca0;
+}
+.pupil-right{
+    background-color: #0e8741;
+}
+.ears{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: calc(50% - 17px);
+    background-color: #fdddcab7;
+}
+.ears-left{
+    left: -20px;
+    border-radius: 50%;
+}
+.ears-right{
+    left: 110px;
+    border-radius: 50%;
+}
+.bottom{
+    width: 120px;
+    height: 60%;
+    position: relative;
+    top: 57%;
+    border-radius: 30px 30px 50% 50%;
+    background-color: #000;
+}
+.nose{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 20px);
+    border-radius: 50%;
+    background-color: #fdddca;
+}
+.mouth{
+    width: 60px;
+    height: 35px;
+    position: relative;
+    top: 40px;
+    left: calc(50% - 30px);
+    border-radius: 0 0 50% 50%;
+    background-color: #a20000;
+    overflow: hidden;
+}
+.teeth{
+    width: 40px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 0 0 5px 0;
+}
+.tongue{
+    width: 35px;
+    height: 20px;
+    position: absolute;
+    top: 55%;
+    border-radius: 0 5px;
+    background-color: #ff0000;
+}
