@@ -77,6 +77,21 @@ body{
     left: 110px;
     border-radius: 50%;
 }
+/* .hole-ears{
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: calc(50%-5px);
+    left: calc(50%-5px);
+    border-radius: 50%;
+    background-color: #000;
+}
+.hole-ears .hole-ears-left{
+    top: 25px;
+}
+.hole-ears-right{
+
+} */
 .bottom{
     width: 120px;
     height: 60%;
