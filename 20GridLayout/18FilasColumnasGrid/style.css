@@ -17,3 +17,17 @@ html{
 body{
     font-size: 1.5rem;
 }
+
+main{
+    display: grid;
+    grid-template: repeat(5,50px) / repeat(5,50px);
+    gap: 5px 5px;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+}
+main div {
+    background-color: gray;
+}
