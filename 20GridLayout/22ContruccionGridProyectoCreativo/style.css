@@ -1,0 +1,54 @@
+/*
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+:root {
+  --blue: #81ccf1;
+  --yellow: #efc66a;
+  --pink: #d8a6cb;
+  --dark-pink: #c59ece;
+  --purple: #9996cb;
+}
+
+html{
+    font-size: 62.2%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    background-image: linear-gradient(
+        to bottom,
+        #06283D,
+        #242F9B,
+        #1363DF,
+        #646FD4,
+        #47B5FF
+        /* #9BA3EB
+        #DFF6FF,
+        #DBDFFD,
+        #371B58,
+        #4C3575,
+        #5B4B8A,
+        #7858A6,
+        #6E85B7 */
+    );
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+  height: 100vh;
+}
