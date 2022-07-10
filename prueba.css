@@ -32,85 +32,60 @@ html{
 body{
     margin: 8px 16px;
     font-size: 2.4rem;
-    background-color: var(--quinario);
-    
+    color: var(--cuaternario);
+    background-color: var(--quinario);    
 }
 a{
     text-decoration: none;
+    color: var(--cuaternario);
 }
-header{
-    margin-top: 200px;
+header .redes{
     display: grid;
-    grid-template-rows: repeat(2, minmax(200px,auto));
-    grid-auto-columns: 640px;
-    grid-auto-flow: row;
+    grid-auto-columns: minmax(50px,100px);
+    grid-auto-rows: minmax(50px,100px);
+    grid-auto-flow: column;
     place-content: center;
     place-items: center;
+    margin-block-start: 48px;
+    margin-block-end: 48px;
     color: var(--cuaternario);
+}
+h2{
+    color: var(--primario);
+}
+h3{
+    color: var(--terciario);
 }
 header h1 span{
     color: var(--terciario);
-}
-
-header .redes{
-    display: grid;
-    grid-template-columns: repeat(5, 90px);
-    grid-template-rows: repeat(5, 90px);
-    grid-template-areas: 
-    "1 1 a 2 2"
-    "b 3 3 3 3"
-    "4 4 4 c 5"
-    "6 d 7 7 7"
-    "8 8 8 8 e"
-    ;
-    grid-auto-flow: row;
-    place-content: center;
-    place-items: center;
-    margin-bottom: 128px;
-}
-header .redes div img:hover{
-    /* border: 1px solid var(--terciario); */
-    border-radius: 20%;
-    overflow: hidden;
-    background-color: var(--terciario);
-    transform: scale(1.5,1.5) ;
-    transition:all 1.1s;
-}
-header .redes .redes-1{
-    grid-area: a;
-}
-header .redes .redes-2{
-    grid-area: b;
-}
-header .redes .redes-3{
-    grid-area: c;
-}
-header .redes .redes-4{
-    grid-area: d;
-}
-header .redes .redes-5{
-    grid-area: e;
-}
-header .redes div{
-    width: 90px;
 }
 header .redes img{
     width: 100%;
     height: 100%;
 }
-main .container, main .container article{
+header .redes .redes-1,header .redes .redes-2,header .redes .redes-3,header .redes .redes-4,header .redes .redes-5{
+    width: 100%;
+    height: 100%;
+}
+header .redes-presentacion{
     display: flex;
-    flex-direction: column;    
-    margin-bottom: 66px;
-    font-size: var(--lg);
-    color: var(--terciario);
+    width: 100%;
+    margin: 40px 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-main .container article{
-    width: 80%;
-    margin: 0 auto;
+main .container{
+    display: grid;
+    width: 90%;
+    grid-auto-columns: minmax(500px, 630px);
+    grid-auto-rows: auto;
+    grid-auto-flow: row;
 }
-main .container article a{
-    margin: 24px 0;
-    color: var(--primario);
-    cursor: pointer;
+main .container article, main .container article div{
+    margin-inline-start: 40px;
+}
+main .container a{
+    display: block;
+    margin-inline-start:40px;
 }
