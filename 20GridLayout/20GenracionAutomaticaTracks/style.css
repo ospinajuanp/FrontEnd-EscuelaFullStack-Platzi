@@ -1,0 +1,58 @@
+/*
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+
+html{
+    font-size: 62.2%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.5rem;
+}
+main{
+    display: grid;
+    width: 200px;
+    height: 200px;
+    grid-template-columns: 60px;
+    grid-template-rows: 90px 90px;
+    /* Respuesta del quiz - ¿Con que propiedad(es) de CSS Grid podemos darle tamaño a tracks implicitos? */
+    grid-auto-columns: 60px;
+    grid-auto-rows: 90px;
+    /* grid-auto-flow: row | column | row dense | column dense; dense solo cambia el orden visual de sus elementos */
+    grid-auto-flow: column;
+    place-items: center;
+    background-color: #dd9c95;
+    border: 1px solid black;
+}
+main div{
+    width: 25px;
+    height: 25px;
+    background-color: #8859a9;
+}
+.a{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.b{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.c{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+.d{
+    width: 25px;
+    height: 50px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    background-color: #643a3a;
+}
