@@ -1,6 +1,3 @@
-#Carpeta design
-*/design
-
 # JPEG
 *.jpg
 *.jpeg
@@ -64,3 +61,6 @@
 # 3D Images
 *.3dm
 *.max
+
+#Carpeta design
+design
