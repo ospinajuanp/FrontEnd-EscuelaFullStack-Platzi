@@ -1,0 +1,87 @@
+/*
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+
+html{
+    font-size: 62.2%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.5rem;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.container-chat{
+    width: 275px;
+    display: grid;
+    /* grid-template-columns: repeat(5,20px);
+    grid-template-rows: repeat(10,20px); */
+    grid-template-areas: 
+    "chat-user  chat-user   chat-user   chat-user   chat-user"
+    "chat-1     chat-1      chat-1      limpio-1    limpio-1"
+    "chat-2     chat-2      chat-2      limpio-1    limpio-1"
+    "limpio-2   limpio-2    img-1       img-2       img-3"
+    "limpio-2   limpio-2    chat-3      chat-3      chat-3"
+    "limpio-3   limpio-3    limpio-3    chat-4      chat-4"
+    "chat-5     chat-5      chat-5      limpio-4    limpio-4"
+    "chat-6     chat-6      chat-6      limpio-4    limpio-4"
+    "chat-7     chat-7      chat-7      limpio-4    limpio-4"
+    "chat       chat        chat        chat        chat"
+    ;
+    grid-auto-columns: 50px;
+    grid-auto-rows: 50px;
+    gap: 5px;
+    margin: 48px auto;
+}
+.container-chat > div{
+    width: 100%;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+.container-chat .user{
+    grid-area: chat-user;
+}
+.container-chat .chat1{
+    grid-area: chat-1;
+}
+.container-chat .chat2{
+    grid-area: chat-2;
+}
+.container-chat .img1{
+    grid-area: img-1;
+}
+.container-chat .img2{
+    grid-area: img-2;
+}
+.container-chat .img3{
+    grid-area: img-3;
+}
+.container-chat .chat3{
+    grid-area: chat-3;
+}
+.container-chat .chat4{
+    grid-area: chat-4;
+}
+.container-chat .chat5{
+    grid-area: chat-5;
+}
+.container-chat .chat6{
+    grid-area: chat-6;
+}
+.container-chat .chat7{
+    grid-area: chat-7;
+}
+.container-chat .chat{
+    grid-area: chat;
+}
