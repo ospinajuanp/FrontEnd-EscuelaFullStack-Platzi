@@ -17,3 +17,104 @@ html{
 body{
     font-size: 1.5rem;
 }
+img{
+    width: 100%;
+}
+.prueba{
+    background-color: black;
+    background-image:url('./img/fondo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    background-color:rgba(0,0, 0, 0.8);
+    
+}
+.container .fondo .container-card{
+    display: flex;
+    width: 335px;
+    flex-direction: column;
+    align-items: flex-start;
+    border: .5px solid gray;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #ffffff;
+    filter: none;
+}
+.container .fondo .container-card .header-card{
+    display: grid;
+    grid-auto-columns: 50px;
+    grid-auto-rows: 50px;
+    grid-auto-flow: column;
+    place-items: center;
+    gap: 8px;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 24px 0px 12px 12px;
+}
+.container .fondo .container-card .header-card .avatar-card{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.container .fondo .container-card .img-card{
+    margin: 12px 0px 12px 0px;
+}
+
+.container .fondo .container-card .buttos-card{
+    width: 100%;
+    display: grid;
+    grid-auto-columns: 50%;
+    grid-auto-flow: column;
+    margin: 40px 0 20px 0;
+}
+.container .fondo .container-card .buttos-card .button-left-card{
+    width: 100%;
+    display: grid;
+    grid-auto-columns: 25%;
+    grid-auto-flow: column;
+    place-items: center;
+}
+.container .fondo .container-card .buttos-card .button-right-card{
+    width: 100%;
+    display: grid;
+    justify-items: end;
+    align-items: center;
+    padding: 0 12px 0 0;
+}
+.container .fondo .container-card .insert-comment-card{
+    width: 335px;
+}
+.container .fondo .container-card .insert-comment-card input{
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+}
+.button-like:hover > svg{
+    cursor: pointer;
+    fill: gray;
+    color: gray;
+}
+.button-comment:hover> svg{
+    cursor: pointer;
+    fill: gray;
+    color: gray;
+}
+.button-share:hover> svg{
+    cursor: pointer;
+    fill: gray;
+    color: gray;
+}
+.button-save:hover> svg{
+    cursor: pointer;
+    fill: gray;
+    color: gray;
+}
