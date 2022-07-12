@@ -89,3 +89,22 @@ main .container a{
     display: block;
     margin-inline-start:40px;
 }
+.redes-1:hover{
+    background-color: #0a66c2;
+}
+.redes-2:hover{
+    background-color: #2d333b;
+}
+.redes-3:hover{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+.redes-4:hover{
+    background: linear-gradient(to bottom, #3A5795 0%, #2B4886 100%);
+}
+.redes-5:hover{
+    background-color: #1DA1F2;
+}
+
+.redes > div:hover{
+border-radius: 12px;
+}
