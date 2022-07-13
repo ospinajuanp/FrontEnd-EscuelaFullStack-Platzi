@@ -21,6 +21,13 @@ body{
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+.neu{
+    border-radius: 15px;
+    background: #e0e0e0;
+    box-shadow:  17px 17px 80px #9b9b9b,
+                -17px -17px 80px #ffffff;  
+}
+
 .container .container-chat .chat-left{
     margin-left: 12px;
     color: #9241c8;
@@ -124,7 +131,9 @@ body{
     border-top-right-radius: 20px;
     padding: 0 10px;
 }
-
+.container-chat .user .user-name div:nth-child(2){
+    color: #dab8fb;
+}
 .container-chat .user .user-avatar img{
     width: 35px;
     border: 1px solid white;
@@ -139,4 +148,15 @@ body{
     color: white;
 }
 
-
+.container-footer{
+    width: 40rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+}
+.container-footer p{
+    font-size: 1.5rem;
+    margin-block-start: 2rem;
+    margin-block-end: 2rem;
+    color: #b0a8b8;
+}
