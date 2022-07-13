@@ -134,6 +134,9 @@ body{
     color: #3e2753;
     font-size: 70%;
 }
-
+.container .container-chat .chat6,.container .container-chat .chat7{
+    background: linear-gradient(90deg, rgba(136,56,255,1) 0%, rgba(233,66,255,1) 35%);
+    color: white;
+}
 
 
