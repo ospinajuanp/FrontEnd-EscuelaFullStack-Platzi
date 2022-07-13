@@ -8,6 +8,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
+:root{
+    --primaria:#222831;
+    --secundaria:#393E46;
+    --terciaria:#00ADB5;
+    --acentuacion:#EEEEEE;
+    --acentuacion-gray:#bebebe;
+}
+
 html{
     font-size: 62.2%;
     font-family: "Roboto", sans-serif;
@@ -19,4 +27,43 @@ html{
 }
 body{
     font-size: 1.5rem;
+    color: var(--acentuacion);
+}
+.center-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.numorphis{
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  10px 10px 20px #878787,
+             -10px -10px 20px #ffffff;
+}
+.wrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(375px, 1fr);
+    grid-template-rows: 100px 320px 100px 150px;
+    margin: 0 auto;
+    background-color: var(--acentuacion-gray);
+}
+.header{
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--secundaria);
+    border-radius: 0 0 24px 24px;
+}
+.cards div{
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    background-color: var(--primaria);
+}
+.progress-bar{
+    border-radius: 24px 24px 0 0;
+    background-color: var(--secundaria);
+}
+.buttons{
+    background-color: var(--primaria);
 }
