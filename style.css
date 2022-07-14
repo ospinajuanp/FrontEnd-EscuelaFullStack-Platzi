@@ -62,11 +62,12 @@ main{
 .container article a{
     color: var(--cuatro);
     text-decoration: none;
+    transition: font-size 2s;
 }
 .container article a:hover{
     text-decoration: underline var(--dos);
     font-size: 18px;
-    transition: 2s;
+    transition: font-size .5s;
 }
 
 @media (min-width:740px) {

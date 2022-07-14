@@ -100,12 +100,11 @@ main .container a{
 }
 .redes-4:hover{
     background: linear-gradient(to bottom, #3A5795 0%, #2B4886 100%);
+    transition: background-color 1s;
 }
 .redes-5:hover{
     background-color: #1DA1F2;
 }
-
-.redes > div:hover{
-border-radius: 12px;
-
+.redes > div{
+    border-radius: 12px;
 }
