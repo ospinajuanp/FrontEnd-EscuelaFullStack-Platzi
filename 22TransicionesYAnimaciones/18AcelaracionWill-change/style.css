@@ -1,0 +1,41 @@
+/*
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+html{
+    font-size: 62.2%;
+    font-family: "Roboto", sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.5rem;
+}
+button{
+    width: 100px;
+    height: 30px;
+    background: palegoldenrod;
+}
+.better{
+    will-change: transform;
+    transition: transform 1s;
+}
+.better:hover{
+    transform: translate(0,5px);
+}
+.worst{
+    will-change: margin-block-start;
+    transition: margin-block-start 1s;
+}
+.worst:hover{
+    margin-block-start: 5px;
+}
