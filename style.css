@@ -56,7 +56,8 @@ main{
     margin: 0 10%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
 }
 .container article a{
     color: var(--cuatro);
@@ -64,7 +65,8 @@ main{
 }
 .container article a:hover{
     text-decoration: underline var(--dos);
-    font-size: var(--md);
+    font-size: 18px;
+    transition: 2s;
 }
 
 @media (min-width:740px) {
