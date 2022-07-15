@@ -89,9 +89,11 @@ body{
         height: 10px;
     }
     5%{
+        transform: translate(0,-2px);
         height: 5px;
     }
     10%{
+        transform: translate(0,0);
         height: 10px;
     }
 }
