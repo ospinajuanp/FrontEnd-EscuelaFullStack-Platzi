@@ -327,7 +327,7 @@ body{
     }
     
 }
-
+/* GENERANDO INTERACION SCORE AL JUEGO */
 .layer-1 input:checked{
     counter-increment: gameAnimaland;
     
