@@ -27,7 +27,7 @@ body{
 body{
     background: gray;
 }
-/* REUTILIZACION GENERACION DE CONEJO */
+/* GENERACION DE CONEJO */
 .conejo{
     width: 80px;
 }
@@ -71,6 +71,7 @@ body{
 
 }
 .head__eye{
+    display: inline-block;
     position: relative;
     width: 10px;
     height: 10px;
@@ -78,14 +79,29 @@ body{
     border: 3px solid black;
     background: white;
     
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+/* ANIMACION CREADA CON UNA ALTERACION EN EL INTERMEDIO */
+@keyframes blink {
+    0%{
+        height: 10px;
+    }
+    5%{
+        height: 5px;
+    }
+    10%{
+        height: 10px;
+    }
 }
 .head__eye--left{
-    left: 18px;
+    left: 20px;
     top: 20px;
 }
 .head__eye--right{
-    left: 40px;
-    top: 10px;
+    right: -25px;
+    top: 20px;
 }
 /* REUTILIZACION GENERACION DE TERRENO */
 .terreno{
