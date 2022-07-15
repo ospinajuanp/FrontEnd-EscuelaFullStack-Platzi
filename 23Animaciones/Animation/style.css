@@ -79,23 +79,7 @@ body{
     border: 3px solid black;
     background: white;
     
-    animation-name: blink;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-/* ANIMACION CREADA CON UNA ALTERACION EN EL INTERMEDIO */
-@keyframes blink {
-    0%{
-        height: 10px;
-    }
-    5%{
-        transform: translate(0,-2px);
-        height: 5px;
-    }
-    10%{
-        transform: translate(0,0);
-        height: 10px;
-    }
+    
 }
 .head__eye--left{
     left: 20px;
@@ -128,11 +112,6 @@ body{
     background: linear-gradient(-135deg, #008000 25%, transparent 25%) -15px 0,
     linear-gradient(135deg, #008000 25%, transparent 25%) -15px 0;
 }
-/* .cesped div:nth-child(2n+1){
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, #008000 25%,#a52a2a 25%);
-} */
 /* FORMA DEL PHONE */
 .phone{
     width: 300px;
@@ -153,7 +132,9 @@ body{
     bottom: 0;
     right: 55px;
     z-index: 2;
+    
 }
+
 .layer-2{
     height: 470px;
     bottom: 0;
@@ -284,4 +265,60 @@ body{
 }
 .nube-right div:nth-child(1){
     right: 0;
+}
+
+/* ANIMACIONES */
+/* ANIMANDO LOS OJOS */
+.animation-eye{
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    0%{
+        height: 10px;
+    }
+    5%{
+        transform: translate(0,-2px);
+        height: 5px;
+    }
+    10%{
+        transform: translate(0,0);
+        height: 10px;
+    }
+}
+/* ANIMANDO EL MOVIMIENTO */
+.animation-hidden{
+    animation-name: layer;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.animation-hidden-1s{
+    animation-duration: 1s;
+}
+.animation-hidden-2s{
+    animation-duration: 2s;
+}
+.animation-hidden-3s{
+    animation-duration: 3s;
+}
+.animation-hidden-4s{
+    animation-duration: 4s;
+}
+
+@keyframes layer {
+    0%{
+        bottom: 0;
+    }
+    25%{
+        bottom: -70px;
+    }
+    100%{
+        bottom: 0;
+    }
+    
+}
+
+.layer-1 input[type=checkbox] {
+
 }
