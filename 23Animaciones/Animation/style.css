@@ -30,7 +30,62 @@ body{
 /* REUTILIZACION GENERACION DE CONEJO */
 .conejo{
     width: 80px;
+}
+.ear--outer{
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    border-radius: 90%;
     background: white;
+}
+.ear--inner{
+    position: absolute;
+    width: 10px;
+    height: 40px;
+    border-radius: 90%;
+    background: pink;
+}
+.left-ear--outer{    
+    left: 10px;
+}
+.left-ear--inner{    
+    top: 8px;
+    left: 15px;
+
+}
+.right-ear--outer{
+    right: 10px;
+}
+.right-ear--inner{
+    top: 8px;
+    right: 15px;
+}
+.head{
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    border-radius: 55%;
+    background: white;
+    left: 5px;
+    top: 30px;
+
+}
+.head__eye{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid black;
+    background: white;
+    
+}
+.head__eye--left{
+    left: 18px;
+    top: 20px;
+}
+.head__eye--right{
+    left: 40px;
+    top: 10px;
 }
 /* REUTILIZACION GENERACION DE TERRENO */
 .terreno{
@@ -43,10 +98,23 @@ body{
 }
 /* REUTILIZACION GENERACION DE CESPED */
 .cesped{
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    height: 20px;
-    background: #008000;
+    height: 55px;
+    
 }
+.cesped div{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-135deg, #008000 25%, transparent 25%) -15px 0,
+    linear-gradient(135deg, #008000 25%, transparent 25%) -15px 0;
+}
+/* .cesped div:nth-child(2n+1){
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #008000 25%,#a52a2a 25%);
+} */
 /* FORMA DEL PHONE */
 .phone{
     width: 300px;
@@ -63,13 +131,13 @@ body{
     position: absolute;
 }
 .layer-1{
-    height: 450px;
+    height: 470px;
     bottom: 0;
     right: 55px;
     z-index: 2;
 }
 .layer-2{
-    height: 450px;
+    height: 470px;
     bottom: 0;
     left: 55px;
     z-index: 2;
@@ -83,7 +151,7 @@ body{
     z-index: 4;
 }
 .layer-4{
-    height: 350px;
+    height: 370px;
     bottom: 0;
     left: 35px;
     z-index: 6;
@@ -96,7 +164,7 @@ body{
     z-index: 8;
 }
 .layer-6{
-    height: 250px;
+    height: 270px;
     bottom: 0;
     right: 35px;
     z-index: 10;
