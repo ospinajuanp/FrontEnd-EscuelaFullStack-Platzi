@@ -24,35 +24,41 @@ body{
     place-content: center;
     font-size: 1.5rem;
 }
+body{
+    background: gray;
+}
+/* REUTILIZACION GENERACION DE CONEJO */
 .conejo{
     width: 80px;
     background: white;
 }
+/* REUTILIZACION GENERACION DE TERRENO */
 .terreno{
     bottom: 0;
     border: 1px solid black;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     overflow: hidden;    
-    background: brown;
+    background: #a52a2a;
 }
+/* REUTILIZACION GENERACION DE CESPED */
 .cesped{
     width: 100%;
     height: 20px;
-    background: green;
+    background: #008000;
 }
-.nubes{
-
-}
+/* FORMA DEL PHONE */
 .phone{
     width: 300px;
     height: 600px;
     position: relative;
     border: 8px solid black;
     border-radius: 40px;
-    background: #CCEEFF;
-    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.4),0 15px 12px rgb(0, 0, 0, 0.4);
+    /* background: #CCEEFF; */
+    background: linear-gradient(100deg, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+    box-shadow: 0 19px 38px rgb(255, 255, 255, 0.4),0 15px 12px rgb(255, 255, 255, 0.4);
 }
+/* POSICIONAMIENTO DE ELEMENTOS */
 .layer-1,.layer-2,.layer-3,.layer-4,.layer-5,.layer-6,.layer-7,.layer-8,.layer-9,.layer-10{
     position: absolute;
 }
@@ -103,6 +109,8 @@ body{
     z-index: 12;
 }
 .layer-8{
+    width: 284px;
+    height: 100px;
     bottom: 0;
     z-index: 14;
 }
@@ -115,6 +123,52 @@ body{
     bottom: 0;
     z-index: 16;
 }
+
+/* GENERACION DE CESPED CENTRAL */
+.cesped-central{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.cesped-central div:nth-child(1){
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    background: #008000;
+    border-radius: 50%;
+    bottom: 0;
+    left: 50px;
+}
+.cesped-central div:nth-child(2){
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: #008000;
+    border-radius: 50%;
+    bottom: 0;
+    left: 90px;
+}
+.cesped-central div:nth-child(3){
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    background: #008000;
+    border-radius: 50%;
+    bottom: 0;
+    right: 50px;
+}
+.cesped-central div:nth-child(4){
+    width: 284px;
+    height: 30px;
+    position: absolute;
+    background: #008000;
+    bottom: 0;
+}
+
+/* GENERACION DE NUBES */
 .nube{
     width: 100px;
     height: 80px;    
@@ -130,12 +184,6 @@ body{
     border-radius: 50%;
     background: #CCEEFF;
 }
-.nube-left div:nth-child(1){
-    left: 4px;
-}
-.nube-right div:nth-child(1){
-    right: 0;
-}
 .nube div:nth-child(2){
     position: absolute;
     width: 100%;
@@ -143,4 +191,11 @@ body{
     border-radius: 40px;
     background: #CCEEFF;
     bottom: 0;
+}
+/* UBICACION DE NUBES */
+.nube-left div:nth-child(1){
+    left: 4px;
+}
+.nube-right div:nth-child(1){
+    right: 0;
 }
