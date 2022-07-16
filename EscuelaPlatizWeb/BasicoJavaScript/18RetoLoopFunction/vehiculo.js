@@ -1,6 +1,3 @@
-// prompt
-
-
 function vehiculo (marca,modelo,annio,color){
     this.marca=marca;
     this.modelo=modelo;
