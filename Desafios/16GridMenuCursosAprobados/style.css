@@ -1,0 +1,115 @@
+/*
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+html{
+    font-size: 62.2%;
+    font-family: "Roboto", sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.5rem;
+}
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #797373 , #676767);
+}
+img{
+    width: 100%;
+    filter: grayscale(0);
+    opacity: 1;
+    transition: all 2s;
+}
+.container{
+    min-width: 80%;
+    max-width: 90%;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    place-content: center;
+    gap: 16px;
+}
+.item{
+    width: 142px;
+    height: 200px;
+    padding: 16px;
+    font-size: 1.3rem;    
+    font-weight: bolder;
+    border-radius: 20px;
+    transition: all 2s;
+}
+.curso{
+    padding: 8px;    
+}
+.curso p{
+    text-align: center;
+}
+
+.item {
+    border: 1.5px solid white;    
+    transition: all 2s;
+}
+.curso{
+    display: block;
+}
+.item-img-container{
+    transform: scale(1);
+    transition: all 2s;
+}
+.item-img-container{
+    transform: scale(.5);
+    transition: all 2s;
+}
+
+
+
+@media (min-width:769px) {
+    img{
+        filter: grayscale(1);
+        opacity: .5;
+        transition: all 2s;
+    }
+
+    .item {
+        border: 1px solid transparent;
+    }
+    .curso{
+        display: none;
+    }    
+    
+    .item:hover {
+        border: 1.5px solid white;    
+        transition: all 2s;
+    }
+    .item:hover > .curso{
+        display: block;
+    }
+    .item:hover > .item-img-container{
+        transform: scale(1);
+        transition: all 2s;
+    }
+    .item-img-container{
+        transform: scale(.5);
+        transition: all 2s;
+    }
+    .item:hover .item-img-container a > img{
+        filter: grayscale(0);
+        opacity: 1;
+        transition: all 2s;
+    }
+}
+
+
