@@ -69,7 +69,9 @@ body,a{
 /* LOADER - ANIMATION */
 /* FONDO */
 .loader{
-    animation: loader 2s linear forwards;
+    animation: loader 3s linear forwards;
+    opacity: 1;   
+    visibility: visible;
 }
 @keyframes loader{
     0%,95%{
@@ -84,6 +86,7 @@ body,a{
 /* PUNTOS DE CARGA */
 .loader div{
     animation: scaling 1.5s linear infinite;
+    transform: scale(1);
 }
 .loader div:nth-child(1){
     animation-delay: 0.2s;
@@ -153,7 +156,8 @@ body,a{
 
 /* NAVBAR - ANIMATION */
 .navbar__content{
-    animation: 1.5s navbar 3s ease-in-out ;
+    animation: 1.5s navbar 3s ease-in-out forwards;
+    transform: translateY(-20rem);
 }
 @keyframes navbar {
     0%{
@@ -190,11 +194,12 @@ body,a{
 
 /* MAIN CONTENT - ANIMATION */
 .main-content{
-    animation: 1.5s main-content 3s ease-in-out;
+    animation: 1.5s main-content 3s ease-in-out forwards;
+    transform: translatex(-50rem);
 }
 @keyframes main-content {
     0%{
-        transform: translatex(-20rem);
+        transform: translatex(-50rem);
     }
     100%{
         transform: translateY(0);
@@ -214,13 +219,13 @@ body,a{
     font-size: 3.6rem;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-    opacity: 0;
     transform: rotate(-90deg);
 }
 
 /* MAIN CONTENT TEXT - ANIMATION */
 .side-content p{
     animation: 1.5s side-content-text 4s ease-in-out forwards;
+    opacity: 0;
 }
 @keyframes side-content-text {
     0%{
@@ -241,7 +246,8 @@ body,a{
 
 /* MAIN CONTENT IMG - ANIMATION */
 .side-content img{
-    animation: 1.5s side-content-img 4s ease-in-out;
+    animation: 1.5s side-content-img 4s ease-in-out forwards;
+    transform: translateX(200rem);
 }
 @keyframes side-content-img {
     0%{
@@ -263,4 +269,28 @@ body,a{
     grid-row: 1 / 2;
     grid-column: 4 / 7;
     background: var(--acentuar);
+}
+
+/* FOOTER */
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    border-radius: 0 8rem 0 0;
+    background: var(--acentuar);
+}
+
+/* FOOTER - ANIMATION */
+.footer{
+    animation: 1.5s footer 4s ease-in-out forwards;
+    transform: translateY(200rem);
+}
+@keyframes footer{
+    0%{
+        transform: translateY(200rem);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
+    
 }
