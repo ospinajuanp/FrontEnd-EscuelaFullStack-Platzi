@@ -400,7 +400,95 @@ body,a{
     z-index: 3;
 }
 .modal__content{
+    display: grid;
+    place-items: center;
     width: 50%;
     height: 50%;
     background:var(--secundario);
+}
+
+/* SLIDER */
+.modal__content--slider{
+    width: 40rem;
+    height: 30rem;
+    transform-style: preserve-3d;
+}
+
+/* GENERACION DE CONTENEDOR CARDS */
+.cards{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/* GENERACION DE DISEÑO DE LAS CARDS */
+.card{
+    width: 50%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: pointer;
+    background: var(--acentuar);
+    border-radius: .1rem;
+    transition:  transform 0.5s ease-in-out;    
+}
+/* TAMAÑO DE LA IMG */
+.card img{
+    width: 100%;
+}
+/* POSICION CARD SELECIONADA */
+/* CERRAR */
+.modal__content--close{
+    width: 4rem;
+    place-self: start;
+    margin: 1.6rem 0 0 1.6rem;
+    cursor: pointer;
+}
+/* RADIO HIDDEN */
+#radio-1, #radio-2, #radio-3{
+    visibility: hidden;
+}
+
+/* POSICIONAMIENTO CHECKED FRONT */
+#radio-1:checked ~ .cards #card-1,
+#radio-2:checked ~ .cards #card-2,
+#radio-3:checked ~ .cards #card-3
+{
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+/* MOVIMIENTO DE LAS CARD DEL FONDO */
+/* DERECHA */
+#radio-1:checked ~ .cards #card-2,
+#radio-2:checked ~ .cards #card-3,
+#radio-3:checked ~ .cards #card-1
+{
+    transform: translateX(40%) scale(0.8);
+    opacity: 0.5;
+    z-index: 0;
+}
+/* IZQUIERDA */
+#radio-1:checked ~ .cards #card-3,
+#radio-2:checked ~ .cards #card-1,
+#radio-3:checked ~ .cards #card-2
+{
+    transform: translateX(-40%) scale(0.8);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.wanna{
+    margin: 4rem 0;
+    padding: 1.2rem 2rem;
+    font-weight: 700;
+    color: var(--acentuar);
+    background: var(--terciario);
+    border-radius: 1.2rem;
+    cursor: pointer;
 }
