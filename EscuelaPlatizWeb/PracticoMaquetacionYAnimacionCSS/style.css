@@ -59,8 +59,8 @@ body,a{
     z-index: 3;
 }
 .loader div{
-    width: 80px;
-    height: 80px;
+    width: 8rem;
+    height: 8rem;
     /* border-radius: 50%; */
     margin: 1rem;
     background-image: url();
@@ -69,7 +69,7 @@ body,a{
 /* LOADER - ANIMATION */
 /* FONDO */
 .loader{
-    animation: loader 4s linear forwards;
+    animation: loader 0.2s linear forwards;
 }
 @keyframes loader{
     0%,95%{
@@ -114,4 +114,51 @@ body,a{
     "nav        aside"
     "section    aside"
     "footer     aside"
+}
+
+/* NAVBAR */
+.navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-content: center;
+    grid-area: nav;
+}
+/* POSICIONAMIENTO DE NAVBAR */
+.navbar__content{
+    width: 100%;
+    padding: 0 0 0 8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+/* ORGANIZANDO EL LOGO */
+.navbar__content img{
+    width: 6rem;
+    padding: .8rem;
+    border: .1rem solid var(--acentuar);
+    border-radius: 1.2rem;
+    background: var(--spiderman);    
+}
+/* ORGANIZANDO LAS RUTAS/URL/OPCIONES DE NUESTRO MENU */
+.navbar__content ul{
+    width: 100%;
+    margin-block-start: .8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* NAVBAR - ANIMATION */
+.navbar__content{
+    animation: 2s navbar 0.5s ease-in-out 
+}
+@keyframes navbar {
+    0%{
+        transform: translateY(-20rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
 }
