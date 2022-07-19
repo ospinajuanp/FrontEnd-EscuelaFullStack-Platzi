@@ -69,7 +69,7 @@ body,a{
 /* LOADER - ANIMATION */
 /* FONDO */
 .loader{
-    animation: loader 3s linear forwards;
+    animation: loader .3s linear forwards;
     opacity: 1;   
     visibility: visible;
 }
@@ -153,6 +153,24 @@ body,a{
     display: flex;
     justify-content: space-between;
 }
+.navbar__content ul li{
+    padding: .8rem;
+    border-radius: 1rem;
+    font-weight: 700;
+}
+.navbar__content ul li:first-child{
+    border: .1rem solid var(--acentuar);
+    color: var(--secundario);
+    background: var(--terciario);
+}
+.navbar__content ul li:hover{
+    border: .1rem solid var(--acentuar);
+    background: var(--terciario);
+}
+.navbar__content ul li:hover > a {
+    color: var(--primario);
+}
+
 
 /* NAVBAR - ANIMATION */
 .navbar__content{
@@ -195,11 +213,11 @@ body,a{
 /* MAIN CONTENT - ANIMATION */
 .main-content{
     animation: 1.5s main-content 3s ease-in-out forwards;
-    transform: translatex(-50rem);
+    transform: translateX(-100rem);
 }
 @keyframes main-content {
     0%{
-        transform: translatex(-50rem);
+        transform: translatex(-100rem);
     }
     100%{
         transform: translateY(0);
@@ -294,3 +312,74 @@ body,a{
     }
     
 }
+/* FOOTER DIV */
+.footer div {
+    display: flex;
+    justify-content: center;
+    width: 12rem;
+    height: 50%;
+    border-radius: 2rem 2rem 0 0;
+    background-color: var(--terciario);
+}
+
+/* FOOTER DIV - ANIMATION */
+.footer div {
+    animation: 1.5s footer-div 5s ease-in-out forwards;
+    transform: translateY(200rem);
+}
+.footer div:nth-child(1){
+    animation-delay: 5s;
+}
+.footer div:nth-child(2){
+    animation-delay: 5.3s;
+}
+.footer div:nth-child(3){
+    animation-delay: 5.6s;
+}
+@keyframes footer-div{
+    0%{
+        transform: translateY(200rem);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
+    
+}
+
+/* FOOTER IMG */
+.footer div img{
+    width: 16rem;
+    position: absolute;
+    bottom: 6.5rem;
+    transform: translateY(0rem) scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+.footer div:hover > img{
+    cursor: pointer;
+    transform: translateY(-2rem) scale(1.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* FOOTER IMG - ANIMATION
+.footer div img{
+    animation: 1.5s footer-img 6.5s ease-in-out forwards;
+    transform: translateY(200rem);
+}
+.footer div:nth-child(1) > img{
+    animation-delay: 6.5s;
+}
+.footer div:nth-child(2) > img{
+    animation-delay: 6.8s;
+}
+.footer div:nth-child(3) > img{
+    animation-delay: 7s;
+}
+@keyframes footer-img{
+    0%{
+        transform: translateY(200rem);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
+    
+} */
