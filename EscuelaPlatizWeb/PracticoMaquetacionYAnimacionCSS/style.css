@@ -360,19 +360,19 @@ body,a{
     transition: transform 0.3s ease-in-out;
 }
 
-/* FOOTER IMG - ANIMATION
+/* FOOTER IMG - ANIMATION */
 .footer div img{
     animation: 1.5s footer-img 6.5s ease-in-out forwards;
     transform: translateY(200rem);
 }
 .footer div:nth-child(1) > img{
-    animation-delay: 6.5s;
+    animation-delay: 6s;
 }
 .footer div:nth-child(2) > img{
-    animation-delay: 6.8s;
+    animation-delay: 6.3s;
 }
 .footer div:nth-child(3) > img{
-    animation-delay: 7s;
+    animation-delay: 6.6s;
 }
 @keyframes footer-img{
     0%{
@@ -382,4 +382,4 @@ body,a{
         transform: translateY(0rem);
     }
     
-} */
+}
