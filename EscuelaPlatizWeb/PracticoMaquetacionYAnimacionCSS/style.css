@@ -69,7 +69,7 @@ body,a{
 /* LOADER - ANIMATION */
 /* FONDO */
 .loader{
-    animation: loader 0.2s linear forwards;
+    animation: loader .3s linear forwards;
 }
 @keyframes loader{
     0%,95%{
@@ -132,6 +132,7 @@ body,a{
     flex-direction: row;
     align-items: center;
     gap: 2rem;
+    font-weight: 300;
 }
 /* ORGANIZANDO EL LOGO */
 .navbar__content img{
@@ -139,7 +140,7 @@ body,a{
     padding: .8rem;
     border: .1rem solid var(--acentuar);
     border-radius: 1.2rem;
-    background: var(--spiderman);    
+    background: var(--spiderman);   
 }
 /* ORGANIZANDO LAS RUTAS/URL/OPCIONES DE NUESTRO MENU */
 .navbar__content ul{
@@ -151,11 +152,48 @@ body,a{
 
 /* NAVBAR - ANIMATION */
 .navbar__content{
-    animation: 2s navbar 0.5s ease-in-out 
+    animation: 5.5s navbar 0.5s ease-in-out 
 }
 @keyframes navbar {
     0%{
         transform: translateY(-20rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+
+/* MAIN CONTENT */
+.main-content{
+    grid-area:section ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 8rem; 
+}
+.main-content p:first-child{
+    margin: 0 0 -1.4rem 2.8rem;
+    font-size: 3.6rem;
+    font-weight: 300;
+}
+.main-content h1{
+    margin: 0 0 2.8rem 0;
+    font-size: 4.8rem;
+    font-weight: 700;
+}
+.main-content p:last-child{
+    width: 80%;
+    font-weight: 100;
+}
+
+/* MAIN CONTENT - ANIMATION */
+.main-content{
+    animation: 5.5s main-content 2s cubic-bezier(.02,.96,.57,.98);
+}
+@keyframes main-content {
+    0%{
+        transform: translateY(-200rem);
     }
     100%{
         transform: translateY(0);
