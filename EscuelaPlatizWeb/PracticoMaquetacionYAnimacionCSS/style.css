@@ -69,7 +69,7 @@ body,a{
 /* LOADER - ANIMATION */
 /* FONDO */
 .loader{
-    animation: loader .3s linear forwards;
+    animation: loader 2s linear forwards;
 }
 @keyframes loader{
     0%,95%{
@@ -123,6 +123,7 @@ body,a{
     display: flex;
     place-content: center;
     grid-area: nav;
+    border-bottom: .1rem solid var(--acentuar);
 }
 /* POSICIONAMIENTO DE NAVBAR */
 .navbar__content{
@@ -152,7 +153,7 @@ body,a{
 
 /* NAVBAR - ANIMATION */
 .navbar__content{
-    animation: 5.5s navbar 0.5s ease-in-out 
+    animation: 1.5s navbar 3s ease-in-out ;
 }
 @keyframes navbar {
     0%{
@@ -189,14 +190,77 @@ body,a{
 
 /* MAIN CONTENT - ANIMATION */
 .main-content{
-    animation: 5.5s main-content 2s cubic-bezier(.02,.96,.57,.98);
+    animation: 1.5s main-content 3s ease-in-out;
 }
 @keyframes main-content {
     0%{
-        transform: translateY(-200rem);
+        transform: translatex(-20rem);
     }
     100%{
         transform: translateY(0);
     }
     
+}
+
+/* SIDE CONTENT  */
+.side-content{
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    align-items: center;
+}
+/* SIDE CONTENT TEXT */
+.side-content p{
+    font-size: 3.6rem;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+/* MAIN CONTENT TEXT - ANIMATION */
+.side-content p{
+    animation: 1.5s side-content-text 4s ease-in-out forwards;
+}
+@keyframes side-content-text {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+/* SIDE CONTENT IMG */
+.side-content img{
+    width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 2 / 6;
+}
+
+/* MAIN CONTENT IMG - ANIMATION */
+.side-content img{
+    animation: 1.5s side-content-img 4s ease-in-out;
+}
+@keyframes side-content-img {
+    0%{
+        transform: translateX(200rem);
+    }
+    80%{
+        transform: translateX(-5rem);
+    }
+    100%{
+        transform: translateX(0rem);
+    }
+    
+}
+
+/* SIDE CONTENT DIV */
+.side-content div{
+    width: 100%;
+    height: 100%;
+    grid-row: 1 / 2;
+    grid-column: 4 / 7;
+    background: var(--acentuar);
 }
