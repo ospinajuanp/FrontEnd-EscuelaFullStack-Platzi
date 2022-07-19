@@ -58,11 +58,11 @@ body,a{
     z-index: 3;
 }
 .loader div{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    /* border-radius: 50%; */
     margin: 1rem;
-    background: var(--acentuar);
+    background-image: url();
 }
 
 /* LOADER - ANIMATION */
@@ -98,6 +98,8 @@ body,a{
         transform: scale(1);
     }
     30%,80%{
-        transform: scale(0.2);
+        transform: scale(0.5);
     }
 }
+
+/*  */
