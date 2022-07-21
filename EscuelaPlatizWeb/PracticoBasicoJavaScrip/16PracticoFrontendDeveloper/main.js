@@ -5,25 +5,36 @@ const mobileMenu  =  document.querySelector('.mobile-menu');
 const menuCarrito  =  document.querySelector('.navbar-shooping-cart');
 const aside  =  document.querySelector('.product-detail');
 const containerCards  =  document.querySelector('.cards-container');
+const productDetailitem  =  document.querySelector('.product-detail-item');
+const productDetailitemClose  =  document.querySelector('.product-detail-close-item');
 
 
 menuEmail.addEventListener('click',toggleDesktopMenu);
 menuHam.addEventListener('click',toggleMobileMenu);
 menuCarrito.addEventListener('click',toggleCarritoAside);
+productDetailitemClose.addEventListener('click',closeProductDetailAside);
 
 
 function toggleDesktopMenu (){
     // desktopMenu.classList.contains('inactive') ? desktopMenu.classList.remove('inactive') : desktopMenu.classList.add('inactive'); //esta fue la forma como yo lo hice que era un reto
     const isAsideOpen = aside.classList.contains('inactive');
+    const isProducDetailOpen = productDetailitem.classList.contains('inactive');
     if(!isAsideOpen){
         aside.classList.add('inactive');
+    }
+    if(!isProducDetailOpen){
+        productDetailitem.classList.add('inactive');
     }
     desktopMenu.classList.toggle('inactive')
 }
 function toggleMobileMenu (){
     const isAsideOpen = aside.classList.contains('inactive');
+    const isProducDetailOpen = productDetailitem.classList.contains('inactive');
     if(!isAsideOpen){
         aside.classList.add('inactive');
+    }
+    if(!isProducDetailOpen){
+        productDetailitem.classList.add('inactive');
     }
     mobileMenu.classList.toggle('inactive')
     
@@ -31,13 +42,25 @@ function toggleMobileMenu (){
 function toggleCarritoAside (){
     const isDesktopMenuOpen = desktopMenu.classList.contains('inactive');
     const isMobileMenuOpen = mobileMenu.classList.contains('inactive');
+    const isProducDetailOpen = productDetailitem.classList.contains('inactive');
     if(!isDesktopMenuOpen){
         desktopMenu.classList.add('inactive');
     } 
     if(!isMobileMenuOpen){
         mobileMenu.classList.add('inactive');
     }
+    if(!isProducDetailOpen){
+        productDetailitem.classList.add('inactive');
+    }
     aside.classList.toggle('inactive')
+}
+function openProductDetailAside (){
+    productDetailitem.classList.remove('inactive')
+    desktopMenu.classList.add('inactive');
+    aside.classList.add('inactive')
+}
+function closeProductDetailAside (){
+    productDetailitem.classList.add('inactive')
 }
 
 const productListRender = [];
@@ -73,6 +96,7 @@ function renderProducts (productList){
         productCard.classList.add('product-card');
         const imgCard = document.createElement('img');
         imgCard.setAttribute('src',`${product.img}`)
+        imgCard.addEventListener('click',openProductDetailAside)
         
         
         const productInfo = document.createElement('div');

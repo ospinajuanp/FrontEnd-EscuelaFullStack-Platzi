@@ -315,7 +315,7 @@ nav{
     align-items: center;
     justify-content: center;
 }
-.product-detail-item-close{
+.product-detail-close-item{
     background-color: var(--white);
     width: 14px;
     height: 14px;
@@ -325,15 +325,13 @@ nav{
     z-index: 2;
     padding: 12px;
     border-radius: 50%;
+    cursor: pointer;
 }
 .product-detail-item > img:nth-child(2){
     width: 100%;
     height: 360px;
     object-fit: cover;
     border-radius:0 0 3% 3% ;
-}
-.product-detail-item-close:hover{
-    cursor: pointer;
 }
 .product-info-item{
     margin: 24px 24px 0px 24px;
