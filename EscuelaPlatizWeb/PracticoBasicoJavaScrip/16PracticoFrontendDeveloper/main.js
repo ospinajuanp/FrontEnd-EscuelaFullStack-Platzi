@@ -67,27 +67,32 @@ const productListRender = [];
 productListRender.push({
     name:'Bike',
     price:120,
-    img:'https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
+    img:'https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    detail:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda similique amet architecto excepturi sint deleniti optio. Quasi ab odio, id repellendus, iure fugit optio voluptas laboriosam provident ratione, dicta qui!'
 })
 productListRender.push({
     name:'Screen',
     price:220,
-    img:'https://images.pexels.com/photos/6005438/pexels-photo-6005438.jpeg'
+    img:'https://images.pexels.com/photos/6005438/pexels-photo-6005438.jpeg',
+    detail:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda similique amet architecto excepturi sint deleniti optio. Quasi ab odio, id repellendus, iure fugit optio voluptas laboriosam provident ratione, dicta qui!'
 })
 productListRender.push({
     name:'Phone',
     price:250,
-    img:'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    img:'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    detail:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda similique amet architecto excepturi sint deleniti optio. Quasi ab odio, id repellendus, iure fugit optio voluptas laboriosam provident ratione, dicta qui!'
 })
 productListRender.push({
     name:'Toy car',
     price:5,
-    img:'https://images.pexels.com/photos/772393/pexels-photo-772393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    img:'https://images.pexels.com/photos/772393/pexels-photo-772393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    detail:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda similique amet architecto excepturi sint deleniti optio. Quasi ab odio, id repellendus, iure fugit optio voluptas laboriosam provident ratione, dicta qui!'
 })
 productListRender.push({
     name:'Laptop',
     price:150,
-    img:'https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    img:'https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    detail:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda similique amet architecto excepturi sint deleniti optio. Quasi ab odio, id repellendus, iure fugit optio voluptas laboriosam provident ratione, dicta qui!'
 })
 
 function renderProducts (productList){
@@ -127,8 +132,7 @@ function renderProducts (productList){
         productCard.appendChild(productInfo)
         
         containerCards.appendChild(productCard)
-    }
-    
+    }    
 }
 
 renderProducts(productListRender);
