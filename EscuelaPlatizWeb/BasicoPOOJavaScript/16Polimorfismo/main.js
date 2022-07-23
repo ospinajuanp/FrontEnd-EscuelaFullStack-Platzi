@@ -1,23 +1,3 @@
-class Comment{
-  constructor({
-    content,
-    studentName,
-    studentRol = "estudiante",
-  }){
-    this.content = content;
-    this.studentName = studentName;
-    this.studentRol = studentRol;
-    this.like = 0;
-  }
-
-  publicar(){
-    console.log(`${this.studentName} (${this.studentRol})`);
-    console.log(`${this.like} likes`);
-    console.log(`${this.content}`);
-  }
-
-}
-
 function videoPlay(id){
   const urlSecreta = "https://platzi.com/clases/2332-javascript-poo/"
   const resultadoUrl = urlSecreta+id;
@@ -162,13 +142,6 @@ class Student {
     get getLearningPaths(){
       return this.learningPaths
     }
-    publicarComentario(commentContent){
-      const comment = new Comment({
-        content:commentContent,
-        studentName:this.name
-      })
-      comment.publicar()
-    }
 }
 
 class FreeStudent extends Student{
@@ -206,22 +179,6 @@ class ExpertStudent extends Student{
   }
 }
 
-class TeacherStudent extends Student{
-  constructor(props){
-    super(props)
-  }
-  approvedCourse(newCourse){
-    this.approvedCourses.push(newCourse)
-  }
-  publicarComentario(commentContent){
-    const comment = new Comment({
-      content:commentContent,
-      studentName:this.name,
-      studentRol:"Profesor",
-    })
-    comment.publicar()
-  }
-}
 
 
 
@@ -299,7 +256,7 @@ const escuelaJs = new LearningPath({
 });
 
 // CREACION DE ESTUDIANTES
-const juan = new FreeStudent({
+const juanStudent = new FreeStudent({
   name: "JuanDC",
   username: "juandc",
   email: "juanito@juanito.com",
@@ -310,7 +267,7 @@ const juan = new FreeStudent({
 });
 
 
-const miguelito = new BasicStudent({
+const miguelitoStudent = new BasicStudent({
   name: "Miguelito",
   username: "migelitofeliz",
   email: "miguelito@juanito.com",
@@ -321,9 +278,7 @@ const miguelito = new BasicStudent({
   ],
 });
 
-const freddy = new TeacherStudent({
-  name: "freddy",
-  username: "freddy",
-  email: "freddy@juanito.com",
-  instagram: "freddy_feliz",
-});
+console.log(juanStudent);
+console.log(miguelitoStudent);
+
+
