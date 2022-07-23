@@ -1,3 +1,15 @@
+function videoPlay(id){
+  const urlSecreta = "https://platzi.com/clases/2332-javascript-poo/"
+  const resultadoUrl = urlSecreta+id;
+  console.log(`Reproduciendo ${resultadoUrl}`);  
+}
+
+function videoStop(id){
+  const urlSecreta = "https://platzi.com/clases/2332-javascript-poo/"
+  const resultadoUrl = urlSecreta+id;
+  console.log(`Pausado ${resultadoUrl}`);  
+}
+
 class Class{
   constructor({
     nameClass,
@@ -14,15 +26,25 @@ class Class{
   get getClass(){
     return this
   }
+  reproducir(){
+    videoPlay(this.video)
+  }
+  pausar(){
+    videoStop(this.video)
+  }
 }
 
 class Courses{
   constructor({
     nameCourse,
     classes = [],
+    isFree = false,
+    lang = "spanish",
   }){
     this._nameCourse = nameCourse
     this.classes = classes
+    this.isFree = isFree
+    this.lang = lang
   }
   get nameCourse(){
     return this._nameCourse;
@@ -122,22 +144,60 @@ class Student {
     }
 }
 
+class FreeStudent extends Student{
+  constructor(props){
+    super(props)
+  }
+  approvedCourse(newCourse){
+    if (newCourse.isFree){
+      this.approvedCourses.push(newCourse)
+    }else{
+      console.warn(`Lo siento, ${this.name}, solo puedes tomar cursos abiertos`)
+    }
+  }
+}
+
+class BasicStudent extends Student{
+  constructor(props){
+    super(props)
+  }
+  approvedCourse(newCourse){
+    if (newCourse.lang !== "english"){
+      this.approvedCourses.push(newCourse)
+    }else{
+      console.warn(`Lo siento, ${this.name}, no puedes tomar cursos en ingles`)
+    }
+  }
+}
+
+class ExpertStudent extends Student{
+  constructor(props){
+    super(props)
+  }
+  approvedCourse(newCourse){
+    this.approvedCourses.push(newCourse)
+  }
+}
+
+
+
+
 // CREACION DE CLASES
 const clase1 = new Class({
   nameClass:'Clases en javascript',
-  video:'https://platzi.com/clases/2332-javascript-poo/38621-clases-en-javascript/'
+  video:'38621-clases-en-javascript/'
 })
 const clase2 = new Class({
   nameClass:'Ventajas de la programación orientada a objetos',
-  video:'https://platzi.com/clases/2332-javascript-poo/38622-ventajas-de-la-programacion-orientada-a-objetos/'
+  video:'38622-ventajas-de-la-programacion-orientada-a-objetos/'
 })
 const clase3 = new Class({
   nameClass:'Que es Abstracion',
-  video:'https://platzi.com/clases/2332-javascript-poo/38623-que-es-abstraccion/'
+  video:'38623-que-es-abstraccion/'
 })
 const clase4 = new Class({
   nameClass:'Abstracion',
-  video:'https://platzi.com/clases/2332-javascript-poo/38624-abstraccion-en-javascript/'
+  video:'38624-abstraccion-en-javascript/'
 })
 
 // CREACION DE CURSOS
@@ -146,14 +206,16 @@ const cursoProgramacionBasica = new Courses({
   classes:[
     clase1,
     clase2
-  ]
+  ],
+  isFree : true,
 })
 const cursoDefinitivoHTML = new Courses({
   nameCourse:"Curso Definitivo de HTML y CSS",  
   classes:[
     clase1,
     clase3
-  ]
+  ],
+  lang : "english",
 })
 const cursoPracticoHTML = new Courses({
   nameCourse:"Curso Practico de HTML y CSS",  
@@ -194,7 +256,7 @@ const escuelaJs = new LearningPath({
 });
 
 // CREACION DE ESTUDIANTES
-const juanStudent = new Student({
+const juanStudent = new FreeStudent({
   name: "JuanDC",
   username: "juandc",
   email: "juanito@juanito.com",
@@ -205,7 +267,7 @@ const juanStudent = new Student({
 });
 
 
-const miguelitoStudent = new Student({
+const miguelitoStudent = new BasicStudent({
   name: "Miguelito",
   username: "migelitofeliz",
   email: "miguelito@juanito.com",
