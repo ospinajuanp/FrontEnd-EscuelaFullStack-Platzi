@@ -68,7 +68,8 @@ img{
     height: 100vh;
     display: flex;
     flex-direction: row;
-    position: relative;
+    position: absolute;
+    top: 0rem;
     background: rgba(0,0,0,0.6);
 
 
@@ -167,20 +168,23 @@ img{
         }
     }
     .content-content{
-        width: 37.5rem - 4rem;
+        width: 37.5rem;
         min-height: 28rem;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        place-content: center;
-        place-items: center;
-        gap: 2rem;
+        gap: 1rem;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+    
 
         .content-content__tittle{
             font-size: 3.5rem;
             font-weight: 700;
         }
         .content-content__content{
+            padding: 0 2rem;
             color: $MediumGray;
             font-size: 1.5rem;
             text-align: center;
@@ -189,6 +193,7 @@ img{
         .content-content__btn{
             width: 16rem;
             height: 4.4rem;
+            margin: 1.6rem;
             border: none;
             border-radius: 1.6rem;
             color: $AlmostWhite;
@@ -199,13 +204,12 @@ img{
 
         }
         .content-content__companies{
-            width: 100%;
-            margin-block-start: 2rem;
+            width: 90%;
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            gap: 3rem;
             img{
-                width: 6rem;
+                object-fit: fill;
             }
         }
     }

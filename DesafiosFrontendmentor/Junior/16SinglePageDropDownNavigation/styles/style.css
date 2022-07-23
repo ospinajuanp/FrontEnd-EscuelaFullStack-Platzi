@@ -54,7 +54,8 @@ img {
   height: 100vh;
   display: flex;
   flex-direction: row;
-  position: relative;
+  position: absolute;
+  top: 0rem;
   background: rgba(0, 0, 0, 0.6);
 }
 .container-menu__background .container-menu__menu__collapsed {
@@ -159,20 +160,22 @@ img {
   background-size: contain;
 }
 .container-content .content-content {
-  width: 33.5rem;
+  width: 37.5rem;
   min-height: 28rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  place-content: center;
-  place-items: center;
-  gap: 2rem;
+  gap: 1rem;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
 }
 .container-content .content-content .content-content__tittle {
   font-size: 3.5rem;
   font-weight: 700;
 }
 .container-content .content-content .content-content__content {
+  padding: 0 2rem;
   color: hsl(0deg, 0%, 41%);
   font-size: 1.5rem;
   text-align: center;
@@ -181,6 +184,7 @@ img {
 .container-content .content-content .content-content__btn {
   width: 16rem;
   height: 4.4rem;
+  margin: 1.6rem;
   border: none;
   border-radius: 1.6rem;
   color: hsl(0deg, 0%, 98%);
@@ -190,14 +194,13 @@ img {
   background: hsl(0deg, 0%, 8%);
 }
 .container-content .content-content .content-content__companies {
-  width: 100%;
-  margin-block-start: 2rem;
+  width: 90%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  gap: 3rem;
 }
 .container-content .content-content .content-content__companies img {
-  width: 6rem;
+  object-fit: fill;
 }
 
 .todo {
