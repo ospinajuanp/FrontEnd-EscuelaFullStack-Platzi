@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  
+    <!-- inactive -->
+    <div class="container-menu__background">
+      <div class="container-menu__menu__collapsed">
+        <figure>
+          <img src="./images/icon-close-menu.svg" alt="close menu">
+        </figure>
+        
+
+        <div class="container-collapsed-features">
+          <div class="container-collapsed-features-on inactive">
+            Features <div class="arrow-collapsed arrow-down"></div>
+          </div>
+          <div class="container-collapsed-features-off ">
+
+            <div class="collapsed-features-off">
+              Features <div class="arrow-collapsed arrow-up"></div>
+            </div>
+
+            <div class="container-features">
+
+              <div class="features-item">
+                <div class="features-item__img todo"></div>
+                <div class="features-item__content">Todo List</div>
+              </div>
+
+              <div class="features-item">
+                <div class="features-item__img calendar"></div>
+                <div class="features-item__content">Calendar</div>
+              </div>
+
+              <div class="features-item">
+                <div class="features-item__img reminders"></div>
+                <div class="features-item__content">Reminders</div>
+              </div>
+
+              <div class="features-item">
+                <div class="features-item__img planning"></div>
+                <div class="features-item__content">Planning</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="container-collapsed">
+          <div class="container-collapsed-on inactive">
+            Company <div class="arrow-collapsed arrow-down"></div>
+          </div>
+          <div class="container-collapsed-off ">
+            <div class="collapsed-off">
+              Company <div class="arrow-collapsed arrow-up"></div>
+            </div>
+            <div class="container-company">
+              <div class="company-item">
+                <div class="company-item__content">History</div>
+              </div>
+              <div class="company-item">
+                <div class="company-item__content">Our Team</div>
+              </div>
+              <div class="company-item">
+                <div class="company-item__content">Blog</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>Careers</div>
+
+        <div>About</div>
+
+        <div class="session">
+          <button class="session-btn">Login</button>
+          <button class="session-btn btn-primary">Register</button>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

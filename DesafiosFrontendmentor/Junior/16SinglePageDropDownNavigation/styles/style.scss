@@ -1,0 +1,177 @@
+/*
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+$AlmostWhite: hsl(0, 0%, 98%);
+$MediumGray: hsl(0, 0%, 41%);
+$AlmostBlack: hsl(0, 0%, 8%);
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+html{
+    font-size: 62.2%;
+    font-family: 'Epilogue', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.5rem;
+}
+
+img{
+    width: 100%;
+}
+@mixin start-img{
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+.container-menu{
+    width: 100%;
+    height: 7rem;
+    padding: 2rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .container-menu__items{
+        min-width: 50%;
+
+    }
+    .menu-left{
+
+        figure{
+            width: 7rem;
+        }
+    }
+    .menu-right{
+        display: flex;
+        justify-content: end;
+
+        figure{
+            width: 3rem;
+        }
+    }
+    
+    
+}
+.container-menu__background{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background: rgba(0,0,0,0.6);
+
+
+    .container-menu__menu__collapsed{
+        width: 70%;
+        height: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        position: absolute;
+        right: 0;
+        background: $AlmostWhite;
+        figure{
+            align-self: end;
+
+            img{
+                width: 3rem;
+            }
+        }
+
+        .container-collapsed-features,
+        .container-collapsed{
+            width: 100%;
+            
+            .container-collapsed-features-on,
+            .container-collapsed-on,
+            .collapsed-features-off,
+            .collapsed-off{
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+            }
+            .arrow-collapsed{
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            .arrow-down{
+                background: url(../images/icon-arrow-down.svg);
+                @include start-img()
+            }
+            .arrow-up{
+                background: url(../images/icon-arrow-up.svg);
+                @include start-img()
+            }
+            .container-features,
+            .container-company{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 2rem 0rem 0 2.4rem;
+
+                .features-item{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1.3rem;
+                    .features-item__img{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+            }
+
+
+        }
+        .session{
+
+            .session-btn{
+                width: 100%;
+                height: 3.2rem;
+                margin-block-start: 1.6rem;
+                border: none;
+                border-radius: 1.3rem;
+                background: $AlmostWhite;
+                cursor: pointer;
+            }
+            .btn-primary{
+                border: 1px solid $MediumGray;
+            }
+        }
+    }
+}
+
+
+
+.todo{
+    background: url(../images/icon-todo.svg);
+    @include start-img()
+}
+.calendar{
+    background: url(../images/icon-calendar.svg);
+    @include start-img()
+}
+.reminders{
+    background: url(../images/icon-calendar.svg);
+    @include start-img()
+}
+.planning{
+    background: url(../images/icon-planning.svg);
+    @include start-img()
+}
+
+
+.inactive{
+    display: none !important;
+}

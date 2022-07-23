@@ -1,0 +1,181 @@
+/*
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+html {
+  font-size: 62.2%;
+  font-family: "Epilogue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+.container-menu {
+  width: 100%;
+  height: 7rem;
+  padding: 2rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container-menu .container-menu__items {
+  min-width: 50%;
+}
+.container-menu .menu-left figure {
+  width: 7rem;
+}
+.container-menu .menu-right {
+  display: flex;
+  justify-content: end;
+}
+.container-menu .menu-right figure {
+  width: 3rem;
+}
+
+.container-menu__background {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+}
+.container-menu__background .container-menu__menu__collapsed {
+  width: 70%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  position: absolute;
+  right: 0;
+  background: hsl(0deg, 0%, 98%);
+}
+.container-menu__background .container-menu__menu__collapsed figure {
+  align-self: end;
+}
+.container-menu__background .container-menu__menu__collapsed figure img {
+  width: 3rem;
+}
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed {
+  width: 100%;
+}
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features .container-collapsed-features-on,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features .container-collapsed-on,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features .collapsed-features-off,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features .collapsed-off,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed .container-collapsed-features-on,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed .container-collapsed-on,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed .collapsed-features-off,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed .collapsed-off {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features .arrow-collapsed,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed .arrow-collapsed {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features .arrow-down,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed .arrow-down {
+  background: url(../images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features .arrow-up,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed .arrow-up {
+  background: url(../images/icon-arrow-up.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features .container-features,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features .container-company,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed .container-features,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed .container-company {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0rem 0 2.4rem;
+}
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features .container-features .features-item,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features .container-company .features-item,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed .container-features .features-item,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed .container-company .features-item {
+  display: flex;
+  flex-direction: row;
+  gap: 1.3rem;
+}
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features .container-features .features-item .features-item__img,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed-features .container-company .features-item .features-item__img,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed .container-features .features-item .features-item__img,
+.container-menu__background .container-menu__menu__collapsed .container-collapsed .container-company .features-item .features-item__img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.container-menu__background .container-menu__menu__collapsed .session .session-btn {
+  width: 100%;
+  height: 3.2rem;
+  margin-block-start: 1.6rem;
+  border: none;
+  border-radius: 1.3rem;
+  background: hsl(0deg, 0%, 98%);
+  cursor: pointer;
+}
+.container-menu__background .container-menu__menu__collapsed .session .btn-primary {
+  border: 1px solid hsl(0deg, 0%, 41%);
+}
+
+.todo {
+  background: url(../images/icon-todo.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.calendar {
+  background: url(../images/icon-calendar.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.reminders {
+  background: url(../images/icon-calendar.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.planning {
+  background: url(../images/icon-planning.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.inactive {
+  display: none !important;
+}
+
+/*# sourceMappingURL=style.css.map */
