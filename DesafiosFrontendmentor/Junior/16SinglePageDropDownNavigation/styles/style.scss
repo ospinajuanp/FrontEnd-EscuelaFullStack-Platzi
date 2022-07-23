@@ -151,7 +151,65 @@ img{
         }
     }
 }
+.container-content{
+    width: 37.5rem;
+    background: white;
+    .content-img{
+        
+        figure{
+            width: 37.5rem;
+            height: 30rem;
+            background-image: url(../images/image-hero-mobile.png);
+            background-position: start;
+            background-repeat: no-repeat;
+            background-size: contain;
+            
+        }
+    }
+    .content-content{
+        width: 37.5rem - 4rem;
+        min-height: 28rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        place-items: center;
+        gap: 2rem;
 
+        .content-content__tittle{
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+        .content-content__content{
+            color: $MediumGray;
+            font-size: 1.5rem;
+            text-align: center;
+            line-height: 2.4rem;
+        }
+        .content-content__btn{
+            width: 16rem;
+            height: 4.4rem;
+            border: none;
+            border-radius: 1.6rem;
+            color: $AlmostWhite;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            background: $AlmostBlack;
+
+        }
+        .content-content__companies{
+            width: 100%;
+            margin-block-start: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            img{
+                width: 6rem;
+            }
+        }
+    }
+}
 
 
 .todo{

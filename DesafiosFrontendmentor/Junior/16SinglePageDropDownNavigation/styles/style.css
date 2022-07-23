@@ -146,6 +146,60 @@ img {
   border: 1px solid hsl(0deg, 0%, 41%);
 }
 
+.container-content {
+  width: 37.5rem;
+  background: white;
+}
+.container-content .content-img figure {
+  width: 37.5rem;
+  height: 30rem;
+  background-image: url(../images/image-hero-mobile.png);
+  background-position: start;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.container-content .content-content {
+  width: 33.5rem;
+  min-height: 28rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  gap: 2rem;
+}
+.container-content .content-content .content-content__tittle {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.container-content .content-content .content-content__content {
+  color: hsl(0deg, 0%, 41%);
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 2.4rem;
+}
+.container-content .content-content .content-content__btn {
+  width: 16rem;
+  height: 4.4rem;
+  border: none;
+  border-radius: 1.6rem;
+  color: hsl(0deg, 0%, 98%);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  background: hsl(0deg, 0%, 8%);
+}
+.container-content .content-content .content-content__companies {
+  width: 100%;
+  margin-block-start: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.container-content .content-content .content-content__companies img {
+  width: 6rem;
+}
+
 .todo {
   background: url(../images/icon-todo.svg);
   background-repeat: no-repeat;
