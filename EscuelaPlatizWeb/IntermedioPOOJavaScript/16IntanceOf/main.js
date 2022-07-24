@@ -151,27 +151,42 @@ function Student ({
     }
     this.approvedCourse = approvedCourse;
     
-    if (isArray(learningPaths)){
-      this.learningPaths = []
-      for (learningPathIndex in learningPaths){
-        if (learningPaths[learningPathIndex] instanceof LearningPath){
-          console.log("Entre "+ learningPathIndex)
-          this.learningPaths.push(learningPaths[learningPathIndex]);
+    const private = {
+      "_learningPaths" : []
+    }
+
+    Object.defineProperty(this, "learningPaths",{
+      get(){
+        return private["_learningPaths"];
+      },
+      set(newlearningPaths){
+        if (newlearningPaths instanceof LearningPath){
+          private["_learningPaths"].push(newlearningPaths);
         }else{
-          console.warn(`${learningPaths[learningPathIndex]} <- no es verdadero learningPaths`)
-          return;
+          console.warn(`${newlearningPaths} <- no es una instancia de learningPaths`)
         }
+      }
+    })
+
+
+    if (isArray(learningPaths)){
+      this._learningPaths = []
+      for (learningPathIndex in learningPaths){
+        this.learningPaths = learningPaths[learningPathIndex]
       }
     }else{
       console.warn(`${learningPaths} <- no es un array`)
     }
 }
+
 const escuelaDesarrolloWeb = new LearningPath({
   name:"EscuelaWeb",
 })
+
 const escuelaData = new LearningPath({
   name:"EscuelaData",
 })
+
 const juan = new Student({
   name : "juanito",
   email : "juanitos@frijolitos.com",
