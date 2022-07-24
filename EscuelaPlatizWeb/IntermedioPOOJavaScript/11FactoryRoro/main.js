@@ -37,29 +37,67 @@ function isObject(subject) {
     return copySubject;
   }
   
-  const studentBase = {
-    name: undefined,
-    email: undefined,
-    age: undefined,
-    approvedCourses: undefined,
-    learningPaths: undefined,
-    socialMedia: {
-      twitter: undefined,
-      instagram: undefined,
-      facebook: undefined,
-    },
-  };
+//   const studentBase = {
+//     name: undefined,
+//     email: undefined,
+//     age: undefined,
+//     approvedCourses: undefined,
+//     learningPaths: undefined,
+//     socialMedia: {
+//       twitter: undefined,
+//       instagram: undefined,
+//       facebook: undefined,
+//     },
+//   };
   
-  const juan = deepCopy(studentBase);
-//   Object.defineProperties(juan,"name",{
-//     value:"Juanito",
-//     configurable:false,
-//   })
-// CONFIGURAR MI OBJETO ESTE SEGURO (NO DEJA BORRAR)
-Object.seal(juan);
-// CONFIGURAR MI OBJETO ESTE SEGURO (NO DEJA BORRAR, NO DEJA MODIFICAR)
-//Object.freeze(juan);
-// VALIDAD MI OBJETO ESTE SEGURO (NO DEJA BORRAR)
-Object.isSealed(juan)
-// VALIDAD MI OBJETO ESTE SEGURO (NO DEJA BORRAR, NO DEJA MODIFICAR)
-Object.isFrozen(juan)
+//   const juan = deepCopy(studentBase);
+// //   Object.defineProperties(juan,"name",{
+// //     value:"Juanito",
+// //     configurable:false,
+// //   })
+// // CONFIGURAR MI OBJETO ESTE SEGURO (NO DEJA BORRAR)
+// Object.seal(juan);
+// // CONFIGURAR MI OBJETO ESTE SEGURO (NO DEJA BORRAR, NO DEJA MODIFICAR)
+// //Object.freeze(juan);
+// // VALIDAD MI OBJETO ESTE SEGURO (NO DEJA BORRAR)
+// Object.isSealed(juan)
+// // VALIDAD MI OBJETO ESTE SEGURO (NO DEJA BORRAR, NO DEJA MODIFICAR)
+// Object.isFrozen(juan)
+
+
+function requiredParam(param){
+  throw new Error(`${param} es obligatorio!`)
+}
+
+function createStudent (
+  {
+    name = requiredParam(name),
+    email = requiredParam(email),
+    age,
+    twitter,
+    instagram,
+    facebook,
+    approvedCourse = [],
+    learningPaths = [],
+  } = {})
+{
+  return {
+    name,
+    email,
+    age,
+    approvedCourse,
+    learningPaths,
+    socialMedia : {
+      twitter,
+      instagram,
+      facebook,
+    },
+  }
+}
+
+const juan = createStudent({
+  name : "juanito",
+  age : 18,
+  email : "juanitos@frijolitos.com",
+  twitter : "jnito"
+})
