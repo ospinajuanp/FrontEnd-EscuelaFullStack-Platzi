@@ -6,6 +6,14 @@ const btnCollapsedCloseFeaturesMenu = document.querySelector('.container-collaps
 const btnCollapsedOpenCompanyMenu = document.querySelector('.container-collapsed-on')
 const btnCollapsedCloseCompanyMenu = document.querySelector('.container-collapsed-off')
 
+const btnToggleMenuFeature = document.querySelector('.itemOne')
+const btnToggleMenuCompany = document.querySelector('.itemTwo')
+const MenuFeatureDesktop = document.querySelector('.menu__itemOne-tap')
+const MenuCompanyDesktop = document.querySelector('.menu__itemTwo-tap')
+
+
+
+
 btnOpenMenu.addEventListener('click', toggleMenuMobile)
 btnCloseMenu.addEventListener('click', toggleMenuMobile)
 
@@ -14,6 +22,10 @@ btnCollapsedCloseFeaturesMenu.addEventListener('click', toggleCloseCollapsedMenu
 
 btnCollapsedOpenCompanyMenu.addEventListener('click', toggleOpenCompanyMenuMobile)
 btnCollapsedCloseCompanyMenu.addEventListener('click', toggleCloseCompanyMenuMobile)
+
+btnToggleMenuFeature.addEventListener('click', toggleFeaturesMenuDesktop)
+btnToggleMenuCompany.addEventListener('click', toggleCompanyMenuDesktop)
+
 
 
 function toggleMenuMobile (){
@@ -34,4 +46,12 @@ function toggleOpenCompanyMenuMobile (){
 function toggleCloseCompanyMenuMobile (){
     btnCollapsedCloseCompanyMenu.classList.add('inactive')
     btnCollapsedOpenCompanyMenu.classList.remove('inactive')
+}
+function toggleFeaturesMenuDesktop (){
+    MenuFeatureDesktop.classList.toggle('inactive')
+    MenuCompanyDesktop.classList.add('inactive')
+}
+function toggleCompanyMenuDesktop (){
+    MenuCompanyDesktop.classList.toggle('inactive')
+    MenuFeatureDesktop.classList.add('inactive')
 }

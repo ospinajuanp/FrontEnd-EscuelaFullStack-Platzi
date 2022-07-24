@@ -19,10 +19,15 @@ html {
 
 body {
   font-size: 1.5rem;
+  background: #ebebeb;
 }
 
 img {
   width: 100%;
+}
+
+.container-desktop-menu {
+  display: none;
 }
 
 .container-menu {
@@ -70,7 +75,7 @@ img {
   gap: 2.4rem;
   position: absolute;
   right: 0;
-  background: hsl(0deg, 0%, 98%);
+  background: #ebebeb;
 }
 .container-menu__background .container-menu__menu__collapsed figure {
   align-self: end;
@@ -143,7 +148,7 @@ img {
   margin-block-start: 1.6rem;
   border: none;
   border-radius: 1.3rem;
-  background: hsl(0deg, 0%, 98%);
+  background: #ebebeb;
   cursor: pointer;
 }
 .container-menu__background .container-menu__menu__collapsed .session .btn-primary {
@@ -152,7 +157,7 @@ img {
 
 .container-content {
   width: 100%;
-  background: white;
+  background: #ebebeb;
 }
 .container-content .content-img figure {
   width: 100%;
@@ -192,7 +197,7 @@ img {
   margin: 1.6rem;
   border: none;
   border-radius: 1.6rem;
-  color: hsl(0deg, 0%, 98%);
+  color: #ebebeb;
   font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
@@ -241,9 +246,146 @@ img {
 }
 
 @media (min-width: 37.6rem) {
+  .container-desktop-menu {
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    place-items: center;
+  }
+  .container-desktop-menu .desktop-menu-left {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .container-desktop-menu .desktop-menu-left .desktop-menu-left__logo {
+    max-width: 20%;
+  }
+  .container-desktop-menu .desktop-menu-left .desktop-menu-left__logo figure {
+    max-width: 8rem;
+  }
+  .container-desktop-menu .desktop-menu-left .desktop-menu-left__content {
+    max-width: 80%;
+    padding-inline-start: 2rem;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+  .container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemOne,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemTwo,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemThree,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemFour {
+    cursor: pointer;
+  }
+  .container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemOne .itemOne,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemOne .itemTwo,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemTwo .itemOne,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemTwo .itemTwo,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemThree .itemOne,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemThree .itemTwo,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemFour .itemOne,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemFour .itemTwo {
+    display: flex;
+    flex-direction: row;
+  }
+  .container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemOne .itemOne .arrow-desktop,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemOne .itemTwo .arrow-desktop,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemTwo .itemOne .arrow-desktop,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemTwo .itemTwo .arrow-desktop,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemThree .itemOne .arrow-desktop,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemThree .itemTwo .arrow-desktop,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemFour .itemOne .arrow-desktop,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemFour .itemTwo .arrow-desktop {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-inline-start: 1rem;
+  }
+  .container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemOne .itemOne .arrow-down,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemOne .itemTwo .arrow-down,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemTwo .itemOne .arrow-down,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemTwo .itemTwo .arrow-down,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemThree .itemOne .arrow-down,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemThree .itemTwo .arrow-down,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemFour .itemOne .arrow-down,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemFour .itemTwo .arrow-down {
+    background: url(../images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+  }
+  .container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemOne .itemOne .arrow-up,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemOne .itemTwo .arrow-up,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemTwo .itemOne .arrow-up,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemTwo .itemTwo .arrow-up,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemThree .itemOne .arrow-up,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemThree .itemTwo .arrow-up,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemFour .itemOne .arrow-up,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .desktop-menu__itemFour .itemTwo .arrow-up {
+    background: url(../images/icon-arrow-up.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+  }
+  .container-desktop-menu .desktop-menu-left .desktop-menu-left__content .menu__itemOne-tap,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .menu__itemTwo-tap {
+    margin-block-start: 1rem;
+    margin-inline-start: -4rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    border-radius: 1rem;
+    background: #fafafa;
+    box-shadow: -10px 10px 24px #afafaf, 0px 0px 24px #afafaf;
+  }
+  .container-desktop-menu .desktop-menu-left .desktop-menu-left__content .menu__itemOne-tap .menu__itemOne-tap-item,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .menu__itemOne-tap .menu__itemTwo-tap-item,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .menu__itemTwo-tap .menu__itemOne-tap-item,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .menu__itemTwo-tap .menu__itemTwo-tap-item {
+    display: flex;
+    flex-direction: row;
+    gap: 1.3rem;
+  }
+  .container-desktop-menu .desktop-menu-left .desktop-menu-left__content .menu__itemOne-tap .menu__itemOne-tap-item .menu__itemOne-tap-item__img,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .menu__itemOne-tap .menu__itemTwo-tap-item .menu__itemOne-tap-item__img,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .menu__itemTwo-tap .menu__itemOne-tap-item .menu__itemOne-tap-item__img,
+.container-desktop-menu .desktop-menu-left .desktop-menu-left__content .menu__itemTwo-tap .menu__itemTwo-tap-item .menu__itemOne-tap-item__img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .container-desktop-menu .desktop-menu-left .desktop-menu-left__content .menu__itemTwo-tap {
+    margin-inline-start: 0rem;
+  }
+  .container-desktop-menu .desktop-menu-right {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    gap: 4rem;
+  }
+  .container-desktop-menu .desktop-menu-right div {
+    cursor: pointer;
+    padding: 1rem;
+  }
+  .container-desktop-menu .desktop-menu-right a {
+    text-decoration: none;
+    color: hsl(0deg, 0%, 8%);
+  }
+  .container-desktop-menu .desktop-menu-right .desktop-menu-right__register {
+    border: 0.1rem solid hsl(0deg, 0%, 8%);
+    border-radius: 1rem;
+  }
+  .container-menu {
+    display: none;
+  }
   .container-content {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: row-reverse;
     place-items: center;
@@ -267,27 +409,26 @@ img {
   .container-content .content-content {
     width: 50%;
     height: 60rem;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
-    padding: 0 0 0 20rem;
+    padding: 0 0 0 12%;
   }
   .container-content .content-content .content-content__tittle {
-    font-size: 10.5rem;
+    font-size: 400%;
   }
   .container-content .content-content .content-content__content {
     text-align: justify;
-    font-size: 3.2rem;
-    line-height: 3.4rem;
+    font-size: 150%;
   }
   .container-content .content-content .content-content__btn {
     width: 22rem;
-    height: 6.8rem;
+    height: 6rem;
   }
   .container-content .content-content .content-content__companies {
     justify-content: center;
   }
   .container-content .content-content .content-content__companies img {
-    width: 15rem;
+    width: 10rem;
   }
 }
 
