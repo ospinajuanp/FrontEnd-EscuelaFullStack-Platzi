@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .statusActivate{
+            height: 20px;
+            border: 1px solid green;
+            margin: 10px 0;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            list-style: none;
+            background: linear-gradient(0deg, green, rgb(2, 84, 2));
+        }
+        .statusDesactivate{
+            height: 20px;
+            border: 1px solid green;
+            margin: 10px 0;
+            text-align: center;
+            text-decoration: none;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const products = [
+            { title: 'Burger', price: 121 },
+            { title: 'Pizza', price: 20 },
+        ];
+        const app = document.getElementById('app');
+        const lis = products.map(product => {
+            return `<li>${product.title} - ${product.price}</li>`;
+        })
+        app.innerHTML = lis.join('');
+    </script>
+    <div id="appTarea"></div>
+    <script>
+        const tareas = [
+        { title : 'Ejercicio', description : 'Necesito hacer ejercicio mas seguido', statusComplete : true },
+        { title : 'Dormir', description : 'Necesito ir a dormir', statusComplete : true },
+        { title : 'Comprar', description : 'Necesito ir a comprar jabon por que no tengo', statusComplete : false },
+        ]
+        const appTarea = document.getElementById('appTarea');
+        const list = tareas.map(tarea => {
+            return `<li class=${tarea.statusComplete ? 'statusActivate' : 'statusDesactivate'}>${tarea.title} - ${tarea.description}</li>`
+        })
+        appTarea.innerHTML += `
+        <br>
+        <h2>Lista de tareas</h2>`;
+        appTarea.innerHTML += list.join('')
+    </script>
+</body>
+</html>
