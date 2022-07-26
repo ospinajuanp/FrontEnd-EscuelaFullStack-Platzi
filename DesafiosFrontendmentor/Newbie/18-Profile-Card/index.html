@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <link rel="stylesheet" href="./src/style/style.css">
   <title>Frontend Mentor | Profile card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,18 +16,52 @@
   </style>
 </head>
 <body>
-  Victor Crest
-  26
-  London
 
-  80K
-  Followers
+  <main class="conatainer">
 
-  803K
-  Likes
+    <div class="card">
 
-  1.4K
-  Photos
+      <div class="top">
+        
+      </div>
+
+      <div class="middle">
+        <figure class="middle-img__user">
+          <img src="" alt="">
+        </figure>
+      </div>
+
+      <div class="bottom">
+        <div class="userData">
+          <div class="userData__content">
+            <div class="userData-content__name">Victor Crest <span class="userData-content__age">26</span>
+            </div>
+            <div class="userData-content__country">London</div>
+          </div>
+          <div></div>
+        </div>
+
+        <div class="userStat">
+          <div class="userStat__Follow">
+            <div class="userStat__count">80K</div>
+            <div class="userStat__text">Followers</div>
+          </div>
+          <div class="userStat__Likes">
+            <div class="userStat__count">803K</div>
+            <div class="userStat__text">Likes</div>
+          </div>
+          <div class="userStat__Photos">
+            <div class="userStat__count">1.4K</div>
+            <div class="userStat__text">Photos</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
