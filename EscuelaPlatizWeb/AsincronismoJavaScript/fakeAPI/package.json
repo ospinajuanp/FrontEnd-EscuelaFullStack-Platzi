@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "callback": "node src/callback/challenge.js",
-    "promise": "node src/promise/challenge.js"
+    "promise": "node src/promise/challenge.js",
+    "promisePost": "node src/promise/challenge-post.js",
+    "asyncAwait": "node src/asyncAwait/challenge.js"
   },
   "keywords": [
     "javascript"
