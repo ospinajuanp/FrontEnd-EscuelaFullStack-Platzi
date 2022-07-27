@@ -28,3 +28,4 @@ fetchData(`${API}/products`)
         console.log(category.name)
     })
     .catch(error => console.log(error))
+
