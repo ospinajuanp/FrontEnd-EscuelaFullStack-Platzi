@@ -1,0 +1,87 @@
+/*
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+:root{
+    --VeryDarkBlue: #222831;
+    --DarkBlue: #393E46;
+    --Blue: #00ADB5;
+    --white: #EEEEEE;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+html{
+    font-size: 62.2%;
+    font-family: "Roboto", sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.5rem;
+}
+main{
+    width: 100;
+    height: 100vh;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    color: var(--Blue);
+    background: var(--VeryDarkBlue);
+}
+.container{
+    min-width: 40rem;
+    max-width: 60rem;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    border: .1rem solid var(--DarkBlue);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.container-title{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    font-size: 2.4rem;
+    /* text-align: center; */
+    border-block-end: .1rem solid var(--DarkBlue);
+    background: var(--white);
+}
+.container-img{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    /* text-align: center; */
+    border-block-end: .1rem solid var(--DarkBlue);
+}
+img{
+    width: 50%;
+    max-height: 30rem;;
+    object-fit: cover;
+}
+.container-name{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    font-size: 2rem;
+    /* text-align: center; */
+    background: var(--white);
+}
