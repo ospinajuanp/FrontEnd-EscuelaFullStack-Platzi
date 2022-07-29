@@ -1,0 +1,154 @@
+/*
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+html {
+  font-size: 62.2%;
+  font-family: "Overpass", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+.container .container-hd {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-block: 10rem;
+}
+.container .container-hd .hd-img {
+  width: 100%;
+  height: 10rem;
+}
+.container .container-hd .hd-img figure {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  border-radius: 50%;
+  background: hsl(216deg, 12%, 8%);
+  border: 0.1rem solid hsl(213deg, 19%, 18%);
+}
+.container .container-hd .hd-content {
+  height: 30rem;
+}
+.container .container-hd .hd-content .hd-content__title {
+  height: 6rem;
+}
+.container .container-hd .hd-content .hd-content__text {
+  height: 20rem;
+}
+.container .container-hd .hd-buttons {
+  width: 100%;
+  height: 10rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .container-hd .hd-buttons .hd-buttons__option {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+.container .container-hd .hd-buttons .hd-buttons__option a {
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  border-radius: 50%;
+  background: hsl(216deg, 12%, 8%);
+  border: 0.1rem solid hsl(213deg, 19%, 18%);
+}
+.container .container-hd .hd-buttons .hd-buttons__option .select-back {
+  background: hsl(216deg, 12%, 54%);
+}
+.container .container-hd .hd-buttons .hd-buttons__option .select-select {
+  background: hsl(25deg, 97%, 53%);
+}
+.container .container-hd .hd-buttons .hd-buttons__submit {
+  cursor: pointer;
+  width: 100%;
+  height: 3rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  background: hsl(25deg, 97%, 53%);
+}
+.container .container-hd .hd-buttons .hd-buttons__submit:hover {
+  color: hsl(25deg, 97%, 53%);
+  background: hsl(0deg, 0%, 100%);
+}
+.container .container-ty {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.container {
+  width: 100%;
+  height: 97vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: hsl(216deg, 12%, 8%);
+  overflow: hidden;
+}
+
+.bg {
+  width: 45rem;
+  height: 60rem;
+  border-radius: 2rem;
+  background: hsl(213deg, 19%, 18%);
+}
+
+.content-title {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2.8rem;
+}
+
+.content-text {
+  color: hsl(217deg, 12%, 63%);
+  font-size: 2rem;
+}
+
+.inactive {
+  display: none !important;
+}
+
+/*# sourceMappingURL=style.css.map */

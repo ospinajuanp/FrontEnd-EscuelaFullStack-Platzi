@@ -1,0 +1,181 @@
+/*
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+
+$Orange: hsl(25, 97%, 53%);
+$White: hsl(0, 0%, 100%);
+$LightGrey: hsl(217, 12%, 63%);
+$MediumGrey: hsl(216, 12%, 54%);
+$DarkBlue: hsl(213, 19%, 18%);
+$VeryDarkBlue: hsl(216, 12%, 8%);
+$FontSizeText: 2rem;
+$FontSizeTitle: 2.8rem;
+// - Family: [Overpass](https://fonts.google.com/specimen/Overpass)
+// - Weights: 400, 700
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+html{
+    font-size: 62.2%;
+    font-family: 'Overpass', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.5rem;
+}
+
+// mixin generacion de clases genericas
+@mixin flexC ($justify:center, $align:center){
+    padding: 3rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+}  
+@mixin flexCircle (){
+    display: flex;
+    place-content: center;
+    place-items: center;
+    border-radius: 50%;
+    background: $VeryDarkBlue;
+    border: .1rem solid $DarkBlue;
+}  
+
+
+
+// clases contenido HTML
+.container{
+
+    .container-hd{
+        @include flexC(center,start);
+        padding-block: 10rem;
+        
+        .hd-img{
+            width: 100%;
+            height: 10rem;
+
+            figure{
+                width: 2.5rem;
+                height: 2.5rem;
+                @include flexCircle()
+                
+            }
+        }
+        .hd-content{
+            height: 30rem;
+
+            .hd-content__title{
+                height: 6rem;
+                
+
+            }
+            .hd-content__text{
+                height: 20rem;
+                
+
+            }
+        }
+        .hd-buttons{
+            width: 100%;
+            height: 10rem;
+            @include flexC();
+            
+            .hd-buttons__option{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                margin-bottom: 2rem;
+                    
+                a{
+                    cursor: pointer;
+                    width: 5rem;
+                    height: 5rem;
+                    @include flexCircle();
+                }
+                .select-back{
+                    background: $MediumGrey;
+                }
+                .select-select{
+                    background: $Orange;
+                }
+                
+            }
+            .hd-buttons__submit{
+                cursor: pointer;
+                width: 100%;
+                height: 3rem;
+                @include flexC();
+                border-radius: 3rem;
+                background: $Orange;
+                
+                &:hover{
+                    color: $Orange;
+                    background: $White;
+                }
+            }
+        }
+    }
+
+
+
+    .container-ty{
+        @include flexC(center,start);
+
+        .ty-img{
+
+        }
+        .ty-content{
+
+            .ty-content__title{
+
+
+            }
+            .ty-content__text{
+
+
+            }
+        }
+    }
+}
+
+// clases globales
+
+.container{
+    width: 100%;
+    height: 97vh;
+    @include flexC(); 
+    color: white;
+    background: $VeryDarkBlue;
+    overflow: hidden;
+}
+.bg{
+    width: 45rem;
+    height: 60rem;
+    border-radius: 2rem;
+    background: $DarkBlue;
+}
+.content-title{
+    color: $White;
+    font-size: $FontSizeTitle;
+}
+.content-text{
+    color: $LightGrey;
+    font-size: $FontSizeText;
+}
+.inactive{
+    display: none!important;
+}
