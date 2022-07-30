@@ -1,0 +1,12 @@
+{
+  "name": "17thedogapi",
+  "version": "1.0.0",
+  "description": "Create api of the dog api",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ospinajuanp",
+  "license": "MIT",
+  "type": "module"
+}
