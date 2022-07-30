@@ -1,0 +1,136 @@
+/*
+    1. Posicionamiento
+    2. Modelo de caja
+    3. Tipografia
+    4. Visuales
+    5. Otros
+*/
+html {
+  font-size: 62.2%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+.container-header {
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  place-content: center;
+  place-items: center;
+  background: #21a8f6;
+}
+
+.container-footer {
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  place-content: center;
+  place-items: center;
+  background: #21a8f6;
+}
+
+.container-content {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  place-content: flex-start;
+  place-items: center;
+  min-height: 80vh;
+  padding: 4rem 0;
+  justify-content: center;
+  align-items: flex-start;
+}
+.container-content .card-dog {
+  width: 15rem;
+  min-height: 20rem;
+  border: 0.1rem solid #000;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.container-content .card-dog .card-dog__raza {
+  width: 100%;
+  min-height: 4.5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  place-content: center;
+  place-items: center;
+  background: none;
+  text-align: center;
+  color: #fff;
+  background: #000;
+  z-index: 3;
+  position: relative;
+}
+.container-content .card-dog .card-dog__img {
+  width: 100%;
+  min-height: 16rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  place-content: center;
+  place-items: center;
+  background: none;
+  max-height: 16rem;
+  z-index: 1;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+.container-content .card-dog .card-dog__img img {
+  max-width: 16rem;
+  max-height: 16rem;
+  object-fit: fill;
+  object-position: center;
+}
+.container-content .card-dog .card-dog__characteristics {
+  width: 100%;
+  min-height: 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  place-content: center;
+  place-items: center;
+  background: #000;
+  color: #fff;
+  z-index: 3;
+  position: relative;
+}
+.container-content .card-dog .card-dog__fav {
+  width: 100%;
+  min-height: 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  place-content: center;
+  place-items: center;
+  background: black;
+  color: #fff;
+  border-top: 0.1rem solid #fff;
+}
+.container-content .card-dog .card-dog__fav:active {
+  background: red;
+}
+
+/*# sourceMappingURL=style.css.map */
