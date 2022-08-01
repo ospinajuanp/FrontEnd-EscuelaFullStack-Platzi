@@ -20,7 +20,32 @@ body {
 }
 
 main {
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  place-content: center;
+  place-items: center;
+  background: none;
+  height: auto;
   position: relative;
+}
+
+#reloadRandom {
+  margin: 4rem 0;
+  padding: 2rem 8rem;
+  border: 0.1rem solid #21a8f6;
+  border-radius: 1.5rem;
+  background: white;
+  text-align: center;
+  color: #21a8f6;
+  cursor: pointer;
+}
+#reloadRandom:hover {
+  border-color: red;
+  color: red;
 }
 
 .container-header {

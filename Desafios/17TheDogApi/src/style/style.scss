@@ -31,7 +31,24 @@ body{
 }
 
 main{
+    @include containerWidth(10vh,column,center);
+    height: auto;
     position: relative
+}
+#reloadRandom{
+    margin: 4rem 0;
+    padding: 2rem 8rem;
+    border: .1rem solid #21a8f6;
+    border-radius: 1.5rem;
+    background: white;
+    text-align: center;
+    color: #21a8f6;
+    cursor: pointer;
+    
+    &:hover{
+        border-color: red;
+        color: red;
+    }
 }
 .container-header{
     @include containerWidth(10vh,column,center,#21a8f6);
@@ -105,15 +122,3 @@ main{
 
     }
 }
-
-// .container-content{
-
-//     .card-dog__favorites{
-//         .card-dog__fav{
-//             cursor: default;
-//         }
-//         .card-dog__fav:active{
-//             background: black;
-//         }
-//     }
-// }
