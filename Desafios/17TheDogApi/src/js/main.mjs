@@ -21,14 +21,19 @@ const formatReturn = `&mime_types=jpg`
 // const favImg = `&image_id=`
 
 // URLS
-const urlRandomDogs = `${API_URL}${EP_IMG_RANDOM}${API_KEY}${formatReturn}${maxReturn}`;
-let urlFavImg = `${API_URL}${EP_IMG_FAVOURITES}${API_KEY}`;
-let urlSaveFavImg = `${API_URL}${EP_IMG_FAVOURITES}${API_KEY}`;
-let urlDeleteFavImg = (id) => `${API_URL}${EP_IMG_FAVOURITES}/${id}/${API_KEY}`;
+const urlRandomDogs = `${API_URL}${EP_IMG_RANDOM}?${formatReturn}${maxReturn}`;
+let urlFavImg = `${API_URL}${EP_IMG_FAVOURITES}`;
+let urlSaveFavImg = `${API_URL}${EP_IMG_FAVOURITES}`;
+let urlDeleteFavImg = (id) => `${API_URL}${EP_IMG_FAVOURITES}/${id}`;
 
 // GET -  traer datos de la URL
 const getData = async (urlData) => { 
-    const response = (await fetch(urlData)).json();
+    const response = (await fetch(urlData,{
+        method:'GET',
+        headers:{
+            'X-API-KEY':API_KEY
+        },
+    })).json();
     return response;
 }
 
@@ -92,6 +97,7 @@ const saveDogFav = async (item) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'X-API-KEY':API_KEY
         },
         body:JSON.stringify({
             image_id:`${id}`
@@ -120,6 +126,7 @@ const deleteDogFav = async (item) => {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
+            'X-API-KEY':API_KEY
         },
     });
     // validacion de error
@@ -153,6 +160,7 @@ const insertDog = async () => {
         // TRAER DATA FAVORITE
         let dogsDataFavorites = await getData(urlFavImg);
         renderDogsFavorites(dogsDataFavorites);
+        console.log(dogsDataFavorites);
         idsDogsFav = []
         dogsDataFavorites.forEach(item => {
             let idDog = item.id
