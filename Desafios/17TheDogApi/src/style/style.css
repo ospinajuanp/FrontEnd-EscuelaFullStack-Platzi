@@ -19,6 +19,10 @@ body {
   font-size: 1.5rem;
 }
 
+main {
+  position: relative;
+}
+
 .container-header {
   width: 100%;
   min-height: 10vh;
@@ -43,23 +47,27 @@ body {
   background: #21a8f6;
 }
 
+#faile-load-page {
+  text-align: center;
+  font-size: 4rem;
+  padding: 4rem 0;
+  color: purple;
+}
+
 .container-content {
   width: 100%;
-  min-height: 80vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
   place-content: flex-start;
   place-items: center;
-  min-height: 80vh;
   padding: 4rem 0;
   justify-content: center;
   align-items: flex-start;
 }
 .container-content .card-dog__random, .container-content .card-dog__favorites {
   width: 15rem;
-  min-height: 20rem;
   border: 0.1rem solid #000;
   border-radius: 1rem;
   overflow: hidden;
@@ -132,13 +140,6 @@ body {
 }
 .container-content .card-dog__random .card-dog__fav:active, .container-content .card-dog__favorites .card-dog__fav:active {
   background: red;
-}
-
-.container-content .card-dog__favorites .card-dog__fav {
-  cursor: default;
-}
-.container-content .card-dog__favorites .card-dog__fav:active {
-  background: black;
 }
 
 /*# sourceMappingURL=style.css.map */
