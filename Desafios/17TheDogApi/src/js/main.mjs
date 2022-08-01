@@ -27,31 +27,6 @@ const getData = async (urlData) => {
     return response;
 }
 
-const saveDogFav = async (item) => {
-    let id = item.target.id
-    let rest = await fetch(urlSaveFavImg,{
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body:JSON.stringify({
-            image_id:`${id}`
-        }
-        )
-    }
-    );
-    const data = await rest.json();
-}
-
-let idsDogs = []
-
-const addEventClick = () => { 
-idsDogs.forEach(item => {
-    let btnEvent = document.getElementById(`${item}`)
-    btnEvent.addEventListener('click', saveDogFav.bind(item))
-})
-}
-
 const renderDogs = (dogsData,card) => { 
     for (let index = 0; index < dogsData.length; index++) {
         let view = `
@@ -86,6 +61,30 @@ const renderDogsFavorites = (dogsData,card) => {
             `
             containerFav.innerHTML+=view;                
         }
+}
+
+let idsDogs = []
+
+const addEventClick = () => { 
+idsDogs.forEach(item => {
+    let btnEvent = document.getElementById(`${item}`)
+    btnEvent.addEventListener('click', saveDogFav.bind(item))
+})
+}
+
+const saveDogFav = async (item) => {
+    let id = item.target.id
+    let rest = await fetch(urlSaveFavImg,{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body:JSON.stringify({
+            image_id:`${id}`
+        }
+        )
+    }
+    );
 }
 
 const insertDog = async () => { 
