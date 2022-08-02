@@ -3,19 +3,21 @@ const container = document.getElementById('container-content')
 const containerFav = document.getElementById('container-content-fav')
 const faileLoad = document.getElementById('faile-load-page')
 const reloadRandom = document.getElementById('reloadRandom')
+const upDogForm = document.getElementById('upDogForm')
 
 
 
-// API KEY
+// API CREDENTIALS
 const API_KEY = APIKEY();
 const API_URL = APIURL();
 
 // ENDPOINT - IMG RANDOM
 const EP_IMG_RANDOM = '/images/search';
 const EP_IMG_FAVOURITES = '/favourites';
+const EP_IMG_UPLOAD = '/images/upload';
 
 // PARAMETERS 
-const numberMaxReturn = 5;
+const numberMaxReturn = 6;
 const maxReturn = `&limit=${numberMaxReturn}`;
 const formatReturn = `&mime_types=jpg`
 // const favImg = `&image_id=`
@@ -25,6 +27,7 @@ const urlRandomDogs = `${API_URL}${EP_IMG_RANDOM}?${formatReturn}${maxReturn}`;
 let urlFavImg = `${API_URL}${EP_IMG_FAVOURITES}`;
 let urlSaveFavImg = `${API_URL}${EP_IMG_FAVOURITES}`;
 let urlDeleteFavImg = (id) => `${API_URL}${EP_IMG_FAVOURITES}/${id}`;
+let urlUploadImg = `${API_URL}${EP_IMG_UPLOAD}`;
 
 // GET -  traer datos de la URL
 const getData = async (urlData) => { 
@@ -160,7 +163,6 @@ const insertDog = async () => {
         // TRAER DATA FAVORITE
         let dogsDataFavorites = await getData(urlFavImg);
         renderDogsFavorites(dogsDataFavorites);
-        console.log(dogsDataFavorites);
         idsDogsFav = []
         dogsDataFavorites.forEach(item => {
             let idDog = item.id
@@ -177,3 +179,25 @@ insertDog()
 
 // boton de reload random dogs
 reloadRandom.addEventListener('click',insertDog)
+
+
+const uploadDogsPhoto = async () => {
+    const formData =  document.getElementById('uploadingDogForm')
+    const formDataInstance = new FormData(formData)
+
+    const res = await fetch(urlUploadImg,{
+        method:'POST',
+        headers:{
+            'X-API-KEY':API_KEY,
+            // 'Content-Type': 'multipart/form-data',
+        },
+        body:formDataInstance,
+    })
+    const data = await res.json()
+
+    if(data.approved != 1){
+        faileLoad.innerText='Error'
+    }
+}
+
+upDogForm.addEventListener('click', uploadDogsPhoto)

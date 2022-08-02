@@ -12,11 +12,10 @@
     <header class="container-header">
         <h1>The Dog Api</h1>
     </header>
-    <main >
+    <main >        
         <h2 id="faile-load-page"></h2>
         <h2 style="text-align: center">Random Dog Images</h2>
-        <div class="container-content" id="container-content">
-            
+        <div class="container-content" id="container-content">            
             <!-- <div class="card-dog">
                 <div class="card-dog__raza">terri</div>
                 <div class="card-dog__img">
@@ -29,12 +28,17 @@
                 <div class="card-dog__fav">💘 Fav</div>
             </div>
              -->
-
         </div>
         <button id="reloadRandom">Next random dog image</button>
+        <section id="uploadingDog">
+            <h2>Upload a photo of a dog</h2>
+            <form id="uploadingDogForm">
+                <input type="file" id="file" name="file">
+                <button type="button" id="upDogForm">Upload picture</button>
+            </form>
+        </section>
         <h2 style="text-align: center">Favorites Dog Images</h2>
         <div class="container-content" id="container-content-fav">
-
         </div>
         
     </main>
