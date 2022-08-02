@@ -113,12 +113,12 @@ const saveDogFav = async (item) => {
     }else{
         let dogsDataFavorites = await getData(urlFavImg);
         renderDogsFavorites(dogsDataFavorites);
-        idsDogs = []
-        dogsDataRandom.forEach(item => {
+        idsDogsFav = []
+        dogsDataFavorites.forEach(item => {
             let idDog = item.id
-            idsDogs.push(`${idDog}`)
+            idsDogsFav.push(`${idDog}`)
         })
-        addEventClickFav()
+        addEventClickDele()
     }
 }
 
