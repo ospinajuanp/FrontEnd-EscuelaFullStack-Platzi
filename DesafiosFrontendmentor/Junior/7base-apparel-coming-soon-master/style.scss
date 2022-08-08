@@ -20,3 +20,90 @@ body{
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@mixin paddingContent {
+    padding: 3rem 5rem;
+}
+
+
+.container-page{
+    width: 100%;
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 10rem;
+
+    .nav {
+        align-self: flex-start;
+        @include paddingContent();
+    }
+    
+    .img {
+        width: 100%;
+        height: 45rem;
+        background: url('./images/hero-mobile.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    
+    .title {
+        text-align: center;
+        font-size: 3.2rem;
+        font-weight: 100;
+        @include paddingContent();
+        span{
+            color: #ee8c8c;
+        }
+    }
+    
+    .text {
+        color: #f8bfbf;
+        @include paddingContent();
+    }
+    
+    .form-email {
+        width: 100%;
+        height: 5rem;
+        outline: none;
+        @include paddingContent();
+        div{
+            width: 100%;
+            height: 4.4rem;
+            border: .1rem solid #ee8c8c;
+            border-radius: 10rem;
+            overflow: hidden;
+            
+            input{
+                padding-left: 2rem;
+                width: 80%;
+                height: 4.3rem;
+                border: none;
+                :focus,
+                :active{
+                    border: none;
+                }
+            }
+    
+            button{
+                width: 20%;
+                height: 4.3rem;
+                color: white;
+                border: none;
+                border-radius: 10rem;
+                font-size: 2rem;
+                background: linear-gradient(135deg, rgba(248,191,191,1) 0%, rgba(238,140,140,1) 50%);
+            }
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    height: 3vh;
+    position: absolute;
+    bottom: 0;
+}
