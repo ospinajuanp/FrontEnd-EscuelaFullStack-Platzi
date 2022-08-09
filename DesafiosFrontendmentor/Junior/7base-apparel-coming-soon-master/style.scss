@@ -28,7 +28,7 @@ body{
 
 .container-page{
     width: 100%;
-    height: 97vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,4 +106,64 @@ footer{
     height: 3vh;
     position: absolute;
     bottom: 0;
+}
+@mixin paddingContentDesktop {
+    padding: 0rem 15rem;
+}
+
+@media  (min-width: 600px){
+    .container-page{
+        display: grid;
+        grid-template-areas: 
+        "nav    nav     nav     img"
+        "title  title   title   img"
+        "text   text    text    img"
+        "form   form    form    img"
+        ;
+        padding-bottom: 3rem;
+        
+        .nav{
+            grid-area: nav;
+            align-self: center;
+            @include paddingContentDesktop()
+        }
+        .img{
+            grid-area: img;
+            min-width: 750px;
+            height: 100%;
+            background: url('./images/hero-desktop.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .title{
+            grid-area: title;
+            font-size: 7rem;
+            @include paddingContentDesktop();
+
+            
+        }
+        .text{
+            grid-area: text;
+            font-size: 3rem;
+            @include paddingContentDesktop();
+
+        }
+        .form-email{
+            grid-area: form;
+            align-self: start;
+            width: calc(100% - 20rem);
+            margin: 0 auto;
+            
+            div{
+                height: 5rem;
+                input{
+                    height: 4.9rem;
+                }
+                button{
+                    height: 4.9rem;
+                }
+            }
+        }
+    }
 }

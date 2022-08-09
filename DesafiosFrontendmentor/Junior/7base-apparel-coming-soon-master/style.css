@@ -30,7 +30,7 @@ body {
 
 .container-page {
   width: 100%;
-  height: 97vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,6 +100,53 @@ footer {
   height: 3vh;
   position: absolute;
   bottom: 0;
+}
+
+@media (min-width: 600px) {
+  .container-page {
+    display: grid;
+    grid-template-areas: "nav    nav     nav     img" "title  title   title   img" "text   text    text    img" "form   form    form    img";
+    padding-bottom: 3rem;
+  }
+  .container-page .nav {
+    grid-area: nav;
+    align-self: center;
+    padding: 0rem 15rem;
+  }
+  .container-page .img {
+    grid-area: img;
+    min-width: 750px;
+    height: 100%;
+    background: url("./images/hero-desktop.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .container-page .title {
+    grid-area: title;
+    font-size: 7rem;
+    padding: 0rem 15rem;
+  }
+  .container-page .text {
+    grid-area: text;
+    font-size: 3rem;
+    padding: 0rem 15rem;
+  }
+  .container-page .form-email {
+    grid-area: form;
+    align-self: start;
+    width: calc(100% - 20rem);
+    margin: 0 auto;
+  }
+  .container-page .form-email div {
+    height: 5rem;
+  }
+  .container-page .form-email div input {
+    height: 4.9rem;
+  }
+  .container-page .form-email div button {
+    height: 4.9rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
