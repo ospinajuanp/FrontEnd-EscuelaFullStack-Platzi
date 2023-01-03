@@ -8,13 +8,13 @@ function getRandomNumber(num = 3){
 function getOptionSelect (numberOption){
     switch(numberOption){
         case 1:
-            return 'Piedra'
+            return 'Piedra 🥌'
             break;
         case 2:
-            return 'Papel'
+            return 'Papel 📋'
             break;
         case 3:
-            return 'Tijera'
+            return 'Tijera ✂'
             break;
         default:
             console.error(`Eleccion invalidad`)
@@ -24,7 +24,10 @@ function getOptionSelect (numberOption){
 
 function playGame() {
     playerOption = prompt(`Escoja una opcion
-    1.Piedra, 2.Papel 3.Tijera, 4.Salir`);
+    1.Piedra 🥌
+    2.Papel 📋 
+    3.Tijera ✂ 
+    4.Salir 🚪`);
     
     playerOption = parseInt(playerOption)
 
