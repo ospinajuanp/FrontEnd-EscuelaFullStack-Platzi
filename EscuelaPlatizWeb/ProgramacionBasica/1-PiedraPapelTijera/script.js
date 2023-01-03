@@ -3,7 +3,7 @@ let playerOption, machineOption;
 alert('Bienvenido al juego de piedra papel o tijera')
 
 function getRandomNumber(num = 3){
-    return Math.floor(Math.random() * num);
+    return Math.floor((Math.random() * num) + 1);
 }
 function getOptionSelect (numberOption){
     switch(numberOption){
@@ -31,10 +31,9 @@ function playGame() {
     machineOption = parseInt(getRandomNumber())
 
     if(playerOption==4){
+        alert('Gracias por jugar!')
         return
     }
-    alert(`${playerOption} - ${machineOption}`)
-
     if((playerOption<1) || (playerOption>3) || (playerOption==null)){
         alert('Ingreso errado')
         playGame()
