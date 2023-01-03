@@ -45,12 +45,16 @@ function playGame() {
         alert(`Empate Jugador Eligion ${getOptionSelect(playerOption)} y la maquina Eligio ${getOptionSelect(machineOption)}`)
         playGame()
     }
-    if((playerOption == 1 && machineOption == 2) || (playerOption == 2 && machineOption == 3 ) || (playerOption == 3 && machineOption == 1)){
-        alert(`Perdio Jugador Eligion ${getOptionSelect(playerOption)} y la maquina Eligio ${getOptionSelect(machineOption)}`)
-        playGame()
-    }
+    //* This code use when i wanna use conditional if in defeat game 
+    // if((playerOption == 1 && machineOption == 2) || (playerOption == 2 && machineOption == 3 ) || (playerOption == 3 && machineOption == 1)){
+        // alert(`Perdio Jugador Eligion ${getOptionSelect(playerOption)} y la maquina Eligio ${getOptionSelect(machineOption)}`)
+        // playGame()
+    // }
     if((playerOption == 1 && machineOption == 3) || (playerOption == 2 && machineOption == 3) || (playerOption == 3 && machineOption == 2)){
         alert(`Gano Jugador Eligion ${getOptionSelect(playerOption)} y la maquina Eligio ${getOptionSelect(machineOption)}`)
+        playGame()
+    }else{
+        alert(`Perdio Jugador Eligion ${getOptionSelect(playerOption)} y la maquina Eligio ${getOptionSelect(machineOption)}`)
         playGame()
     }
 
