@@ -1,12 +1,12 @@
 let inputPets = [],attackEnemy=['Fire','Water','Earth','Block'];
-let infoMokepon = {hipodoge:{typeAttack:[1,4],live:30,valueDamage:[]},
-    capipepo:{typeAttack:[2,4],live:30,valueDamage:[]},
-    ratigueya:{typeAttack:[3,4],live:30,valueDamage:[]},
-    langostelvis:{typeAttack:[2,3,4],live:40,valueDamage:[]},
-    tucapalma:{typeAttack:[1,3,4],live:40,valueDamage:[]},
-    pudos:{typeAttack:[1,2,3,4],live:50,valueDamage:[]},
+let infoMokepon = {hipodoge:{typeAttack:[1,4],live:30,valueDamage:1},
+    capipepo:{typeAttack:[2,4],live:30,valueDamage:2},
+    ratigueya:{typeAttack:[3,4],live:30,valueDamage:3},
+    langostelvis:{typeAttack:[2,3,4],live:40,valueDamage:4},
+    tucapalma:{typeAttack:[1,3,4],live:40,valueDamage:5},
+    pudos:{typeAttack:[1,2,3,4],live:50,valueDamage:6},
 }
-let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy;
+let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy,damagePlayer,damageEnemy;
 let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy;
 
 function chooseDisableActiveButton (buttonChoose,stateButton){
@@ -35,6 +35,8 @@ function checkSelectPet (petsSelect){
             insertText(spanPetPlayer,pets.pet)            
             livePetPlayer = infoMokepon[pets.pet].live;
             livePetEnemy = infoMokepon[selectPetEnemy()].live;
+            damagePlayer = infoMokepon[pets.pet].valueDamage;
+            damageEnemy = infoMokepon[selectPetEnemy()].valueDamage;
             chooseLivesPets()
             if(infoMokepon[pets.pet].typeAttack.includes(1)){
                 chooseDisableActiveButton(buttonFire,false)
@@ -84,10 +86,16 @@ function playerWonDefeat (){
     }else if(selectAttackPlayer == 'Block' || selectAttackEnemy == 'Block'){
         return 'Blocking 🛡'
     }else if ((selectAttackPlayer == 'Fire' && selectAttackEnemy == 'Water') || (selectAttackPlayer == 'Water' && selectAttackEnemy == 'Earth') || (selectAttackPlayer == 'Earth' && selectAttackEnemy == 'Fire')){
-        livePetEnemy--
+        livePetEnemy-= damagePlayer
+        if (livePetEnemy< 0){
+            livePetEnemy = 0
+        }
         return 'Your Won ❕'
     }else {
-        livePetPlayer--
+        livePetPlayer-= damageEnemy
+        if (livePetPlayer< 0){
+            livePetPlayer = 0
+        }
         return 'Your Defeat ❗'
     }
 }
