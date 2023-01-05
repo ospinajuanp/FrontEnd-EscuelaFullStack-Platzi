@@ -1,5 +1,10 @@
 let inputPets = [],attackEnemy=['Fire','Water','Earth'];
 let selectAttackPlayer,selectAttackEnemy, livePetPlayer = 3,livePetEnemy = 3;
+let buttonPetPlayer,buttonFire, buttonWater, buttonEarth, buttonResetGame,spanPetPlayer,spanPetEnemy;
+
+function chooseDisableActiveButton (buttonChoose,stateButton){
+    buttonChoose.disabled = stateButton
+}
 
 function getRandomNumber(num = 6,numMin = 1){
     return Math.floor((Math.random() * num - numMin ) + 1);
@@ -10,18 +15,23 @@ function insertPet (spanSelect,pet){
 }
 
 function selectPetEnemy(){
-    let spanPetEnemy = document.getElementById('pet-Enemy')
+    spanPetEnemy = document.getElementById('pet-Enemy')
     let pet = inputPets[getRandomNumber()].pet.toString()
     insertPet(spanPetEnemy,pet)
     
 }
 
 function checkSelectPet (petsSelect){
-    let spanPetPlayer = document.getElementById('pet-Player')
+    spanPetPlayer = document.getElementById('pet-Player')
     for (pets of petsSelect){
         if(pets.petSelect.checked){
             insertPet(spanPetPlayer,pets.pet)
             selectPetEnemy()
+            chooseDisableActiveButton(buttonPetPlayer,true)
+            chooseDisableActiveButton(buttonFire,false)
+            chooseDisableActiveButton(buttonWater,false)
+            chooseDisableActiveButton(buttonEarth,false)
+            chooseDisableActiveButton(buttonResetGame,false)
             return
         }
     }
@@ -61,16 +71,29 @@ function chooseLivesPets(){
     spanLiveEnemy.innerHTML = livePetEnemy
 }
 
-function createMsgEndAttack (){
+function createMsgEndAttack (cleanMessage = false){
+    if(cleanMessage){
+        console.log('entre');
+        document.getElementById('message').innerHTML = ''
+    }
     while( livePetPlayer > 0 && livePetEnemy > 0 ){
         let msg = document.getElementById('message')
         let paragraph = document.createAttribute('p')
-        let resultPlay = playerWonDefeat()
-        chooseLivesPets()
-        msg.innerHTML += `Your pet attacked with ${selectAttackPlayer}, the enemy's pet attacked with ${selectAttackEnemy} - ${resultPlay}<br>`
+        if(cleanMessage){
+            chooseDisableActiveButton(buttonFire,true)
+            chooseDisableActiveButton(buttonWater,true)
+            chooseDisableActiveButton(buttonEarth,true)
+            chooseLivesPets()
+            msg.innerHTML = ` `
+        }else{
+            let resultPlay = playerWonDefeat()
+            chooseLivesPets()
+            msg.innerHTML += `Your pet attacked with ${selectAttackPlayer}, the enemy's pet attacked with ${selectAttackEnemy} - ${resultPlay}<br>`
+        }
         msg.appendChild(paragraph)
+        
     }
-
+    
 }
 
 function attackFire (){
@@ -90,16 +113,35 @@ function attackEarth (){
     selectAttackEnemy=attackEnemyRandom();
     createMsgEndAttack()
 }
+function resetGame (){
+    livePetPlayer = 3
+    livePetEnemy = 3
+    chooseDisableActiveButton(buttonPetPlayer,false)
+    chooseDisableActiveButton(buttonFire,true)
+    chooseDisableActiveButton(buttonWater,true)
+    chooseDisableActiveButton(buttonEarth,true)
+    chooseDisableActiveButton(buttonResetGame,true)
+    insertPet(spanPetPlayer,'__')
+    insertPet(spanPetEnemy,'__')
+    createMsgEndAttack(true)
+}
 
 function startGame(){
-    let buttonPetPlayer = document.getElementById('button-select_pet')
+    buttonPetPlayer = document.getElementById('button-select_pet')
+    buttonFire = document.getElementById('button-fire')
+    buttonWater = document.getElementById('button-water')
+    buttonEarth = document.getElementById('button-earth')
+    buttonResetGame = document.getElementById('button-reset')
     buttonPetPlayer.addEventListener('click',selectPetPlayer)
-    let buttonFire = document.getElementById('button-fire')
     buttonFire.addEventListener('click',attackFire)
-    let buttonWater = document.getElementById('button-water')
     buttonWater.addEventListener('click',attackWater)
-    let buttonPetEarth = document.getElementById('button-earth')
-    buttonPetEarth.addEventListener('click',attackEarth)
+    buttonEarth.addEventListener('click',attackEarth)
+    buttonResetGame.addEventListener('click',resetGame)
+    chooseDisableActiveButton(buttonFire,true)
+    chooseDisableActiveButton(buttonWater,true)
+    chooseDisableActiveButton(buttonEarth,true)
+    chooseDisableActiveButton(buttonResetGame,true)
+    
 }
 
 window.addEventListener('load', startGame )
