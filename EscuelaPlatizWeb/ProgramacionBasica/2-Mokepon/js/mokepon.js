@@ -7,7 +7,7 @@ let infoMokepon = {hipodoge:{typeAttack:[1,4],live:680,valueDamage:80},
     pudos:{typeAttack:[1,2,3,4],live:780,valueDamage:60},
 }
 let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy,damagePlayer,damageEnemy, petEnemy;
-let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy;
+let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy,sectionPet,sectionAttack,sectionReset;
 
 function chooseDisableActiveButton (buttonChoose,stateButton){
     buttonChoose.disabled = stateButton
@@ -31,6 +31,9 @@ function checkSelectPet (petsSelect){
     spanPetPlayer = document.getElementById('pet-Player')
     for (pets of petsSelect){
         if(pets.petSelect.checked){
+            sectionPet.style.display = 'none'
+            sectionAttack.style.display = 'block'
+            sectionReset.style.display = 'block'
             insertText(spanPetPlayer,pets.pet)            
             selectPetEnemy()
             livePetPlayer = infoMokepon[pets.pet].live;
@@ -175,6 +178,7 @@ function attackEarth (){
     selectAttackEnemy=attackEnemyRandom();
     createMsgEndAttack()
 }
+
 function attackBlock (){
     selectAttackPlayer = 'Block'
     selectAttackEnemy=attackEnemyRandom();
@@ -182,21 +186,29 @@ function attackBlock (){
 }
 
 function resetGame (){
+    sectionPet.style.display = 'block'
+    sectionAttack.style.display = 'none'
+    sectionReset.style.display = 'none'
     chooseDisableActiveButton(buttonPetPlayer,false)
     chooseDisableActiveButton(buttonFire,true)
     chooseDisableActiveButton(buttonWater,true)
     chooseDisableActiveButton(buttonEarth,true)
     chooseDisableActiveButton(buttonBlock,true)
     chooseDisableActiveButton(buttonResetGame,true)
-    createMsgEndAttack(true)    
+    createMsgEndAttack(true)
 }
 
 function startGame(){
+    sectionPet = document.getElementById('select_pet')
+    sectionAttack = document.getElementById('select_attack')
+    sectionReset = document.getElementById('reset')
     buttonPetPlayer = document.getElementById('button-select_pet')
     buttonFire = document.getElementById('button-fire')
     buttonWater = document.getElementById('button-water')
     buttonEarth = document.getElementById('button-earth')
     buttonBlock = document.getElementById('button-block')
+    sectionAttack.style.display = 'none'
+    sectionReset.style.display = 'none'
     buttonResetGame = document.getElementById('button-reset')
     buttonPetPlayer.addEventListener('click',selectPetPlayer)
     buttonFire.addEventListener('click',attackFire)
