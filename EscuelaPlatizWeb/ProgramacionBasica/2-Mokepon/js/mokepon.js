@@ -1,10 +1,10 @@
-let inputPets = [],attackEnemy=['Fire','Water','Earth'];
-let infoMokepon = {hipodoge:{typeAttack:[1],live:3},
-    capipepo:{typeAttack:[2],live:3},
-    ratigueya:{typeAttack:[3],live:3},
-    langostelvis:{typeAttack:[2,3],live:4},
-    tucapalma:{typeAttack:[1,3],live:4},
-    pudos:{typeAttack:[1,2,3],live:5},
+let inputPets = [],attackEnemy=['Fire','Water','Earth','Block'];
+let infoMokepon = {hipodoge:{typeAttack:[1,4],live:30},
+    capipepo:{typeAttack:[2,4],live:30},
+    ratigueya:{typeAttack:[3,4],live:30},
+    langostelvis:{typeAttack:[2,3,4],live:40},
+    tucapalma:{typeAttack:[1,3,4],live:40},
+    pudos:{typeAttack:[1,2,3,4],live:50},
 }
 let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy;
 let buttonPetPlayer,buttonFire, buttonWater, buttonEarth, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy;
@@ -13,18 +13,18 @@ function chooseDisableActiveButton (buttonChoose,stateButton){
     buttonChoose.disabled = stateButton
 }
 
-function getRandomNumber(num = 6,numMin = 1){
-    return Math.floor((Math.random() * num - numMin ) + 1);
+function getRandomNumber(num = 6){
+    return Math.floor((Math.random() * num ) + 1);
 }
 
-function insertPet (spanSelect,pet){
+function insertText (spanSelect,pet){
     spanSelect.innerHTML = pet
 }
 
 function selectPetEnemy(){
     spanPetEnemy = document.getElementById('pet-Enemy')
     let pet = inputPets[getRandomNumber()].pet.toString()
-    insertPet(spanPetEnemy,pet)
+    insertText(spanPetEnemy,pet)
     return pet
 }
 
@@ -32,7 +32,7 @@ function checkSelectPet (petsSelect){
     spanPetPlayer = document.getElementById('pet-Player')
     for (pets of petsSelect){
         if(pets.petSelect.checked){
-            insertPet(spanPetPlayer,pets.pet)            
+            insertText(spanPetPlayer,pets.pet)            
             livePetPlayer = infoMokepon[pets.pet].live;
             livePetEnemy = infoMokepon[selectPetEnemy()].live;
             chooseLivesPets()
@@ -65,12 +65,25 @@ function selectPetPlayer(){
 }
 
 function attackEnemyRandom (){
-    return attackEnemy[getRandomNumber(3)]
+    let randomNumAttack,attackEnemySelect,booleanCorrectAttack = true;
+    while(booleanCorrectAttack){
+        randomNumAttack = getRandomNumber(4)
+        if (infoMokepon[spanPetEnemy.innerHTML].typeAttack.includes(randomNumAttack)){
+            randomNumAttack--
+            attackEnemySelect= attackEnemy[randomNumAttack];
+            booleanCorrectAttack = false
+            return attackEnemySelect
+        }
+    }
+
+    // attackEnemy[]
 }
 
 function playerWonDefeat (){
-    if(selectAttackPlayer == selectAttackEnemy){
+    if((selectAttackPlayer == selectAttackEnemy) && (selectAttackPlayer != 'Block' || selectAttackEnemy != 'Block')){
         return 'DRAW ⚜'
+    }else if(selectAttackPlayer == 'Block' || selectAttackEnemy == 'Block'){
+        return 'Blocking 🛡'
     }else if ((selectAttackPlayer == 'Fire' && selectAttackEnemy == 'Water') || (selectAttackPlayer == 'Water' && selectAttackEnemy == 'Earth') || (selectAttackPlayer == 'Earth' && selectAttackEnemy == 'Fire')){
         livePetEnemy--
         return 'Your Won ❕'
@@ -89,13 +102,11 @@ function chooseLivesPets(){
 
 function createMsgEndAttack (cleanMessage = false){
     if(cleanMessage){
-        console.log('entre');
         document.getElementById('message').innerHTML = ''
     }
     while( livePetPlayer > 0 && livePetEnemy > 0 ){
         let msg = document.getElementById('message')
         let paragraph = document.createAttribute('p')
-        console.log((livePetPlayer < 1 || livePetEnemy < 1 ));
         if(cleanMessage) {
             chooseDisableActiveButton(buttonFire,true)
             chooseDisableActiveButton(buttonWater,true)
@@ -108,6 +119,7 @@ function createMsgEndAttack (cleanMessage = false){
                 chooseDisableActiveButton(buttonFire,true)
                 chooseDisableActiveButton(buttonWater,true)
                 chooseDisableActiveButton(buttonEarth,true)
+                
             }
             chooseLivesPets()
             msg.innerHTML += `Your pet attacked with ${selectAttackPlayer}, the enemy's pet attacked with ${selectAttackEnemy} - ${resultPlay}<br>`
@@ -135,17 +147,23 @@ function attackEarth (){
     selectAttackEnemy=attackEnemyRandom();
     createMsgEndAttack()
 }
+function attackBlock (){
+    selectAttackPlayer = 'Block'
+    selectAttackEnemy=attackEnemyRandom();
+    createMsgEndAttack()
+}
+
 function resetGame (){
-    livePetPlayer = 3
-    livePetEnemy = 3
     chooseDisableActiveButton(buttonPetPlayer,false)
     chooseDisableActiveButton(buttonFire,true)
     chooseDisableActiveButton(buttonWater,true)
     chooseDisableActiveButton(buttonEarth,true)
     chooseDisableActiveButton(buttonResetGame,true)
-    insertPet(spanPetPlayer,'__')
-    insertPet(spanPetEnemy,'__')
-    createMsgEndAttack(true)
+    createMsgEndAttack(true)    
+    insertText(spanPetPlayer,'__')
+    insertText(spanPetEnemy,'__')
+    insertText(spanLivePlayer,'__')
+    insertText(spanLiveEnemy,'__')
 }
 
 function startGame(){
@@ -153,11 +171,13 @@ function startGame(){
     buttonFire = document.getElementById('button-fire')
     buttonWater = document.getElementById('button-water')
     buttonEarth = document.getElementById('button-earth')
+    buttonBlock = document.getElementById('button-block')
     buttonResetGame = document.getElementById('button-reset')
     buttonPetPlayer.addEventListener('click',selectPetPlayer)
     buttonFire.addEventListener('click',attackFire)
     buttonWater.addEventListener('click',attackWater)
     buttonEarth.addEventListener('click',attackEarth)
+    buttonBlock.addEventListener('click',attackBlock)
     buttonResetGame.addEventListener('click',resetGame)
     chooseDisableActiveButton(buttonFire,true)
     chooseDisableActiveButton(buttonWater,true)
