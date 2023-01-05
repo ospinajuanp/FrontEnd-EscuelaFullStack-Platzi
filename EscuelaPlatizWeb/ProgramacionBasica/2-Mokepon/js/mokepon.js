@@ -1,4 +1,11 @@
 let inputPets = [],attackEnemy=['Fire','Water','Earth'];
+let infoMokepon = {hipodoge:{typeAttack:[1]},
+    capipepo:{typeAttack:[2]},
+    ratigueya:{typeAttack:[3]},
+    langostelvis:{typeAttack:[2,3]},
+    tucapalma:{typeAttack:[1,3]},
+    pudos:{typeAttack:[1,2,3]},
+}
 let selectAttackPlayer,selectAttackEnemy, livePetPlayer = 3,livePetEnemy = 3;
 let buttonPetPlayer,buttonFire, buttonWater, buttonEarth, buttonResetGame,spanPetPlayer,spanPetEnemy;
 
@@ -27,10 +34,17 @@ function checkSelectPet (petsSelect){
         if(pets.petSelect.checked){
             insertPet(spanPetPlayer,pets.pet)
             selectPetEnemy()
-            chooseDisableActiveButton(buttonPetPlayer,true)
-            chooseDisableActiveButton(buttonFire,false)
-            chooseDisableActiveButton(buttonWater,false)
-            chooseDisableActiveButton(buttonEarth,false)
+            if(infoMokepon[pets.pet].typeAttack.includes(1)){
+                chooseDisableActiveButton(buttonFire,false)
+            }
+            if(infoMokepon[pets.pet].typeAttack.includes(2)){
+                chooseDisableActiveButton(buttonWater,false)
+            }
+            if(infoMokepon[pets.pet].typeAttack.includes(3)){
+                chooseDisableActiveButton(buttonEarth,false)
+            }      
+
+            chooseDisableActiveButton(buttonPetPlayer,true)            
             chooseDisableActiveButton(buttonResetGame,false)
             return
         }
