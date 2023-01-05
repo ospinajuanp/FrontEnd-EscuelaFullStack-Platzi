@@ -7,7 +7,7 @@ let infoMokepon = {hipodoge:{typeAttack:[1,4],live:30},
     pudos:{typeAttack:[1,2,3,4],live:50},
 }
 let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy;
-let buttonPetPlayer,buttonFire, buttonWater, buttonEarth, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy;
+let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy;
 
 function chooseDisableActiveButton (buttonChoose,stateButton){
     buttonChoose.disabled = stateButton
@@ -47,6 +47,7 @@ function checkSelectPet (petsSelect){
             }      
 
             chooseDisableActiveButton(buttonPetPlayer,true)            
+            chooseDisableActiveButton(buttonBlock,false)
             chooseDisableActiveButton(buttonResetGame,false)
             return
         }
@@ -75,8 +76,6 @@ function attackEnemyRandom (){
             return attackEnemySelect
         }
     }
-
-    // attackEnemy[]
 }
 
 function playerWonDefeat (){
@@ -111,6 +110,7 @@ function createMsgEndAttack (cleanMessage = false){
             chooseDisableActiveButton(buttonFire,true)
             chooseDisableActiveButton(buttonWater,true)
             chooseDisableActiveButton(buttonEarth,true)
+            chooseDisableActiveButton(buttonBlock,true)
             chooseLivesPets()
             msg.innerHTML = ` `
         }else{
@@ -119,6 +119,7 @@ function createMsgEndAttack (cleanMessage = false){
                 chooseDisableActiveButton(buttonFire,true)
                 chooseDisableActiveButton(buttonWater,true)
                 chooseDisableActiveButton(buttonEarth,true)
+                chooseDisableActiveButton(buttonBlock,true)
                 
             }
             chooseLivesPets()
@@ -158,6 +159,7 @@ function resetGame (){
     chooseDisableActiveButton(buttonFire,true)
     chooseDisableActiveButton(buttonWater,true)
     chooseDisableActiveButton(buttonEarth,true)
+    chooseDisableActiveButton(buttonBlock,true)
     chooseDisableActiveButton(buttonResetGame,true)
     createMsgEndAttack(true)    
     insertText(spanPetPlayer,'__')
@@ -182,6 +184,7 @@ function startGame(){
     chooseDisableActiveButton(buttonFire,true)
     chooseDisableActiveButton(buttonWater,true)
     chooseDisableActiveButton(buttonEarth,true)
+    chooseDisableActiveButton(buttonBlock,true)
     chooseDisableActiveButton(buttonResetGame,true)
     
 }
