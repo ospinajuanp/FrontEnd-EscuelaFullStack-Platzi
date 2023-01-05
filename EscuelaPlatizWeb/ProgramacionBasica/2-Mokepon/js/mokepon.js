@@ -1,10 +1,10 @@
 let inputPets = [],attackEnemy=['Fire','Water','Earth','Block'];
-let infoMokepon = {hipodoge:{typeAttack:[1,4],live:30},
-    capipepo:{typeAttack:[2,4],live:30},
-    ratigueya:{typeAttack:[3,4],live:30},
-    langostelvis:{typeAttack:[2,3,4],live:40},
-    tucapalma:{typeAttack:[1,3,4],live:40},
-    pudos:{typeAttack:[1,2,3,4],live:50},
+let infoMokepon = {hipodoge:{typeAttack:[1,4],live:30,valueDamage:[]},
+    capipepo:{typeAttack:[2,4],live:30,valueDamage:[]},
+    ratigueya:{typeAttack:[3,4],live:30,valueDamage:[]},
+    langostelvis:{typeAttack:[2,3,4],live:40,valueDamage:[]},
+    tucapalma:{typeAttack:[1,3,4],live:40,valueDamage:[]},
+    pudos:{typeAttack:[1,2,3,4],live:50,valueDamage:[]},
 }
 let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy;
 let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy;
