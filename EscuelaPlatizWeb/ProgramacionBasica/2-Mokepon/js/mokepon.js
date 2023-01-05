@@ -1,12 +1,12 @@
 let inputPets = [],attackEnemy=['Fire','Water','Earth','Block'];
-let infoMokepon = {hipodoge:{typeAttack:[1,4],live:68,valueDamage:7},
-    capipepo:{typeAttack:[2,4],live:53,valueDamage:3},
-    ratigueya:{typeAttack:[3,4],live:56,valueDamage:10},
-    langostelvis:{typeAttack:[2,3,4],live:85,valueDamage:3},
-    tucapalma:{typeAttack:[1,3,4],live:92,valueDamage:10},
-    pudos:{typeAttack:[1,2,3,4],live:78,valueDamage:2},
+let infoMokepon = {hipodoge:{typeAttack:[1,4],live:680,valueDamage:80},
+    capipepo:{typeAttack:[2,4],live:530,valueDamage:70},
+    ratigueya:{typeAttack:[3,4],live:560,valueDamage:90},
+    langostelvis:{typeAttack:[2,3,4],live:850,valueDamage:80},
+    tucapalma:{typeAttack:[1,3,4],live:920,valueDamage:70},
+    pudos:{typeAttack:[1,2,3,4],live:780,valueDamage:60},
 }
-let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy,damagePlayer,damageEnemy;
+let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy,damagePlayer,damageEnemy, petEnemy;
 let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy;
 
 function chooseDisableActiveButton (buttonChoose,stateButton){
@@ -23,9 +23,8 @@ function insertText (spanSelect,pet){
 
 function selectPetEnemy(){
     spanPetEnemy = document.getElementById('pet-Enemy')
-    let pet = inputPets[getRandomNumber()].pet.toString()
-    insertText(spanPetEnemy,pet)
-    return pet
+    petEnemy = inputPets[getRandomNumber()].pet.toString()
+    insertText(spanPetEnemy,petEnemy)
 }
 
 function checkSelectPet (petsSelect){
@@ -33,11 +32,12 @@ function checkSelectPet (petsSelect){
     for (pets of petsSelect){
         if(pets.petSelect.checked){
             insertText(spanPetPlayer,pets.pet)            
+            selectPetEnemy()
             livePetPlayer = infoMokepon[pets.pet].live;
-            livePetEnemy = infoMokepon[selectPetEnemy()].live;
-            damagePlayer = infoMokepon[pets.pet].valueDamage;
-            damageEnemy = infoMokepon[selectPetEnemy()].valueDamage;
+            livePetEnemy = infoMokepon[petEnemy].live;
             chooseLivesPets()
+            damagePlayer = infoMokepon[pets.pet].valueDamage;
+            damageEnemy = infoMokepon[petEnemy].valueDamage;
             if(infoMokepon[pets.pet].typeAttack.includes(1)){
                 chooseDisableActiveButton(buttonFire,false)
             }
@@ -84,15 +84,26 @@ function playerWonDefeat (){
     if((selectAttackPlayer == selectAttackEnemy) && (selectAttackPlayer != 'Block' || selectAttackEnemy != 'Block')){
         return 'DRAW ⚜'
     }else if(selectAttackPlayer == 'Block' || selectAttackEnemy == 'Block'){
+        if (selectAttackPlayer == 'Block'){
+            livePetPlayer+= Math.floor(damageEnemy*(Math.random() * 1))
+            if (livePetPlayer> 1000){
+                livePetPlayer=1000
+            }
+        }else{
+            livePetEnemy+= Math.floor(damagePlayer*(Math.random() * 1))
+            if (livePetEnemy> 1000){
+                livePetEnemy = 1000
+            }
+        }
         return 'Blocking 🛡'
     }else if ((selectAttackPlayer == 'Fire' && selectAttackEnemy == 'Water') || (selectAttackPlayer == 'Water' && selectAttackEnemy == 'Earth') || (selectAttackPlayer == 'Earth' && selectAttackEnemy == 'Fire')){
-        livePetEnemy-= damagePlayer
+        livePetEnemy-= Math.floor(damagePlayer*(Math.random() * 1))
         if (livePetEnemy< 0){
             livePetEnemy = 0
         }
         return 'Your Won ❕'
     }else {
-        livePetPlayer-= damageEnemy
+        livePetPlayer-= Math.floor(damageEnemy*(Math.random() * 1))
         if (livePetPlayer< 0){
             livePetPlayer = 0
         }
@@ -120,6 +131,10 @@ function createMsgEndAttack (cleanMessage = false){
             chooseDisableActiveButton(buttonEarth,true)
             chooseDisableActiveButton(buttonBlock,true)
             chooseLivesPets()
+            insertText(spanPetPlayer,'__')
+            insertText(spanPetEnemy,'__')
+            insertText(spanLivePlayer,'__')
+            insertText(spanLiveEnemy,'__')
             msg.innerHTML = ` `
         }else{
             let resultPlay = playerWonDefeat()
@@ -174,10 +189,6 @@ function resetGame (){
     chooseDisableActiveButton(buttonBlock,true)
     chooseDisableActiveButton(buttonResetGame,true)
     createMsgEndAttack(true)    
-    insertText(spanPetPlayer,'__')
-    insertText(spanPetEnemy,'__')
-    insertText(spanLivePlayer,'__')
-    insertText(spanLiveEnemy,'__')
 }
 
 function startGame(){
