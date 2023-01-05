@@ -79,7 +79,8 @@ function createMsgEndAttack (cleanMessage = false){
     while( livePetPlayer > 0 && livePetEnemy > 0 ){
         let msg = document.getElementById('message')
         let paragraph = document.createAttribute('p')
-        if(cleanMessage){
+        console.log((livePetPlayer < 1 || livePetEnemy < 1 ));
+        if(cleanMessage) {
             chooseDisableActiveButton(buttonFire,true)
             chooseDisableActiveButton(buttonWater,true)
             chooseDisableActiveButton(buttonEarth,true)
@@ -87,6 +88,11 @@ function createMsgEndAttack (cleanMessage = false){
             msg.innerHTML = ` `
         }else{
             let resultPlay = playerWonDefeat()
+            if(livePetPlayer < 1 || livePetEnemy < 1 ){
+                chooseDisableActiveButton(buttonFire,true)
+                chooseDisableActiveButton(buttonWater,true)
+                chooseDisableActiveButton(buttonEarth,true)
+            }
             chooseLivesPets()
             msg.innerHTML += `Your pet attacked with ${selectAttackPlayer}, the enemy's pet attacked with ${selectAttackEnemy} - ${resultPlay}<br>`
         }
