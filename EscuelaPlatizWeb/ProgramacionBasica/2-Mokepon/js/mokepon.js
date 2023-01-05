@@ -1,9 +1,10 @@
-let inputPets = [] 
+let inputPets = [],attackEnemy=['Fire','Water','Earth'];
+let SelectAttackPlayer,SelectAttackEnemy;
 
-
-function getRandomNumber(num = 6){
-    return Math.floor((Math.random() * num) + 1);
+function getRandomNumber(num = 6,numMin = 1){
+    return Math.floor((Math.random() * num - numMin ) + 1);
 }
+
 function insertPet (spanSelect,pet){
     spanSelect.innerHTML = pet
 }
@@ -26,6 +27,7 @@ function checkSelectPet (petsSelect){
     }
     alert('YOU HAVE NOT SELECTED ANY MOKEPON')
 }
+
 function selectPetPlayer(){
     inputPets.push({petSelect:document.getElementById('hipodoge'),pet:'hipodoge'})
     inputPets.push({petSelect:document.getElementById('capipepo'),pet:'capipepo'})
@@ -35,10 +37,34 @@ function selectPetPlayer(){
     inputPets.push({petSelect:document.getElementById('pudos'),pet:'pudos'})
     checkSelectPet(inputPets)
 }
+function attackEnemyRandom (){
+    return attackEnemy[getRandomNumber(3)]
+}
+
+function attackFire (){
+    SelectAttackPlayer = 'Fire'
+    SelectAttackEnemy=attackEnemyRandom()
+}
+
+function attackWater (){
+    SelectAttackPlayer = 'Water'
+    SelectAttackEnemy=attackEnemyRandom()
+}
+
+function attackEarth (){
+    SelectAttackPlayer = 'Earth'
+    SelectAttackEnemy=attackEnemyRandom();
+}
 
 function startGame(){
     let buttonPetPlayer = document.getElementById('button-select_pet')
     buttonPetPlayer.addEventListener('click',selectPetPlayer)
+    let buttonFire = document.getElementById('button-fire')
+    buttonFire.addEventListener('click',attackFire)
+    let buttonWater = document.getElementById('button-water')
+    buttonWater.addEventListener('click',attackWater)
+    let buttonPetEarth = document.getElementById('button-earth')
+    buttonPetEarth.addEventListener('click',attackEarth)
 }
 
 window.addEventListener('load', startGame )
