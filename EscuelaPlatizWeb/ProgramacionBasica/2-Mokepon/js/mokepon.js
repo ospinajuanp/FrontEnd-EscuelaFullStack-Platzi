@@ -1,5 +1,5 @@
 let inputPets = [],attackEnemy=['Fire','Water','Earth'];
-let SelectAttackPlayer,SelectAttackEnemy;
+let selectAttackPlayer,selectAttackEnemy, livePetPlayer = 3,livePetEnemy = 3;
 
 function getRandomNumber(num = 6,numMin = 1){
     return Math.floor((Math.random() * num - numMin ) + 1);
@@ -37,23 +37,58 @@ function selectPetPlayer(){
     inputPets.push({petSelect:document.getElementById('pudos'),pet:'pudos'})
     checkSelectPet(inputPets)
 }
+
 function attackEnemyRandom (){
     return attackEnemy[getRandomNumber(3)]
 }
 
+function playerWonDefeat (){
+    if(selectAttackPlayer == selectAttackEnemy){
+        return 'DRAW ⚜'
+    }else if ((selectAttackPlayer == 'Fire' && selectAttackEnemy == 'Water') || (selectAttackPlayer == 'Water' && selectAttackEnemy == 'Earth') || (selectAttackPlayer == 'Earth' && selectAttackEnemy == 'Fire')){
+        livePetEnemy--
+        return 'Your Won ❕'
+    }else {
+        livePetPlayer--
+        return 'Your Defeat ❗'
+    }
+}
+
+function chooseLivesPets(){
+    let spanLivePlayer = document.getElementById('petLives-Player')
+    let spanLiveEnemy = document.getElementById('petLives-Enemy')
+    spanLivePlayer.innerHTML = livePetPlayer
+    spanLiveEnemy.innerHTML = livePetEnemy
+}
+
+function createMsgEndAttack (){
+    while( livePetPlayer > 0 && livePetEnemy > 0 ){
+        let msg = document.getElementById('message')
+        let paragraph = document.createAttribute('p')
+        let resultPlay = playerWonDefeat()
+        chooseLivesPets()
+        msg.innerHTML += `Your pet attacked with ${selectAttackPlayer}, the enemy's pet attacked with ${selectAttackEnemy} - ${resultPlay}<br>`
+        msg.appendChild(paragraph)
+    }
+
+}
+
 function attackFire (){
-    SelectAttackPlayer = 'Fire'
-    SelectAttackEnemy=attackEnemyRandom()
+    selectAttackPlayer = 'Fire'
+    selectAttackEnemy=attackEnemyRandom()
+    createMsgEndAttack()
 }
 
 function attackWater (){
-    SelectAttackPlayer = 'Water'
-    SelectAttackEnemy=attackEnemyRandom()
+    selectAttackPlayer = 'Water'
+    selectAttackEnemy=attackEnemyRandom()
+    createMsgEndAttack()
 }
 
 function attackEarth (){
-    SelectAttackPlayer = 'Earth'
-    SelectAttackEnemy=attackEnemyRandom();
+    selectAttackPlayer = 'Earth'
+    selectAttackEnemy=attackEnemyRandom();
+    createMsgEndAttack()
 }
 
 function startGame(){
