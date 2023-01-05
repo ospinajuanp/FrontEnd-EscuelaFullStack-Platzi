@@ -1,13 +1,13 @@
 let inputPets = [],attackEnemy=['Fire','Water','Earth'];
-let infoMokepon = {hipodoge:{typeAttack:[1]},
-    capipepo:{typeAttack:[2]},
-    ratigueya:{typeAttack:[3]},
-    langostelvis:{typeAttack:[2,3]},
-    tucapalma:{typeAttack:[1,3]},
-    pudos:{typeAttack:[1,2,3]},
+let infoMokepon = {hipodoge:{typeAttack:[1],live:3},
+    capipepo:{typeAttack:[2],live:3},
+    ratigueya:{typeAttack:[3],live:3},
+    langostelvis:{typeAttack:[2,3],live:4},
+    tucapalma:{typeAttack:[1,3],live:4},
+    pudos:{typeAttack:[1,2,3],live:5},
 }
-let selectAttackPlayer,selectAttackEnemy, livePetPlayer = 3,livePetEnemy = 3;
-let buttonPetPlayer,buttonFire, buttonWater, buttonEarth, buttonResetGame,spanPetPlayer,spanPetEnemy;
+let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy;
+let buttonPetPlayer,buttonFire, buttonWater, buttonEarth, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy;
 
 function chooseDisableActiveButton (buttonChoose,stateButton){
     buttonChoose.disabled = stateButton
@@ -25,15 +25,17 @@ function selectPetEnemy(){
     spanPetEnemy = document.getElementById('pet-Enemy')
     let pet = inputPets[getRandomNumber()].pet.toString()
     insertPet(spanPetEnemy,pet)
-    
+    return pet
 }
 
 function checkSelectPet (petsSelect){
     spanPetPlayer = document.getElementById('pet-Player')
     for (pets of petsSelect){
         if(pets.petSelect.checked){
-            insertPet(spanPetPlayer,pets.pet)
-            selectPetEnemy()
+            insertPet(spanPetPlayer,pets.pet)            
+            livePetPlayer = infoMokepon[pets.pet].live;
+            livePetEnemy = infoMokepon[selectPetEnemy()].live;
+            chooseLivesPets()
             if(infoMokepon[pets.pet].typeAttack.includes(1)){
                 chooseDisableActiveButton(buttonFire,false)
             }
@@ -79,8 +81,8 @@ function playerWonDefeat (){
 }
 
 function chooseLivesPets(){
-    let spanLivePlayer = document.getElementById('petLives-Player')
-    let spanLiveEnemy = document.getElementById('petLives-Enemy')
+    spanLivePlayer = document.getElementById('petLives-Player')
+    spanLiveEnemy = document.getElementById('petLives-Enemy')
     spanLivePlayer.innerHTML = livePetPlayer
     spanLiveEnemy.innerHTML = livePetEnemy
 }
