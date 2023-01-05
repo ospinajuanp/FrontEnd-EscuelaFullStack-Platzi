@@ -120,7 +120,11 @@ function createMsgEndAttack (cleanMessage = false){
                 chooseDisableActiveButton(buttonWater,true)
                 chooseDisableActiveButton(buttonEarth,true)
                 chooseDisableActiveButton(buttonBlock,true)
-                
+                if(livePetEnemy == 0){
+                    alert('Congratulations You won the game')
+                }else{
+                    alert('Sorry you lost the game')
+                }
             }
             chooseLivesPets()
             msg.innerHTML += `Your pet attacked with ${selectAttackPlayer}, the enemy's pet attacked with ${selectAttackEnemy} - ${resultPlay}<br>`
