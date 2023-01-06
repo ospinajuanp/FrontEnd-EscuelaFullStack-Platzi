@@ -1,0 +1,142 @@
+body{
+    background-color: #000;
+}
+/* Estilo de la página principal */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mostrar dos elementos por fila */
+  grid-gap: 20px;
+}
+.post-link {
+  display: block;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: lightgrey;
+  text-decoration: none;
+}
+.post-link:hover {
+  background-color: grey;
+}
+/* Estilo de la página de publicación */
+.post {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  border-radius: 37px;
+  background: #a9abea;
+  box-shadow:  6px 6px 16px #cecece,
+             -6px -6px 16px #f2f2f2;
+  z-index: 1;
+  /* Animación para abrir y cerrar la página de publicación */
+  -webkit-animation: slidein 0.5s; /* Safari, Chrome y Opera */
+  -moz-animation: slidein 0.5s; /* Firefox */
+  -ms-animation: slidein 0.5s; /* Internet Explorer */
+  -o-animation: slidein 0.5s; /* Opera */
+  animation: slidein 0.5s;
+}
+/* Keyframes de la animación */
+@-webkit-keyframes slidein {
+  from {
+    transform: translate(-50%, -100%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+@-moz-keyframes slidein {
+  from {
+    transform: translate(-50%, -100%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+@-ms-keyframes slidein {
+  from {
+    transform: translate(-50%, -100%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+@-o-keyframes slidein {
+  from {
+    transform: translate(-50%, -100%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes slidein {
+  from {
+    transform: translate(-50%, -100%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Keyframes de la animación */
+@-webkit-keyframes slideout {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -100%);
+  }
+}
+@-moz-keyframes slideout {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -100%);
+  }
+}
+@-moz-keyframes slideout {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -100%);
+  }
+}
+@-ms-keyframes slideout {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -100%);
+  }
+}
+@-o-keyframes slideout {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -100%);
+  }
+}
+@keyframes slideout {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -100%);
+  }
+}
+/* Estilo para cerrar la página de publicación */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
