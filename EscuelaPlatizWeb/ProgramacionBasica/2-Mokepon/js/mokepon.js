@@ -32,8 +32,8 @@ function checkSelectPet (petsSelect){
     for (pets of petsSelect){
         if(pets.petSelect.checked){
             sectionPet.style.display = 'none'
-            sectionAttack.style.display = 'block'
-            sectionReset.style.display = 'block'
+            sectionAttack.style.display = 'flex'
+            sectionReset.style.display = 'flex'
             insertText(spanPetPlayer,pets.pet)            
             selectPetEnemy()
             livePetPlayer = infoMokepon[pets.pet].live;
@@ -186,7 +186,7 @@ function attackBlock (){
 }
 
 function resetGame (){
-    sectionPet.style.display = 'block'
+    sectionPet.style.display = 'flex'
     sectionAttack.style.display = 'none'
     sectionReset.style.display = 'none'
     chooseDisableActiveButton(buttonPetPlayer,false)
