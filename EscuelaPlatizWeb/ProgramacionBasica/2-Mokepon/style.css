@@ -1,28 +1,67 @@
 :root{
     --size-width-content : 340px;
-
+    --primary-color: #A75D5D;
+    --secondary-color: #D3756B;
+    --tertiary-color: #F0997D;
+    --accentuate-color: #FFC3A1;
+    --light-color:#fff;
+    --dar-color:#000;
+}
+body{
+    text-align: center;
+    background-color: #b0b0b0;
 }
 h1{
-    color: lightblue;
+    color: var(--tertiary-color);
 }
-
+h2{
+    color: var(--primary-color) ;
+}
+input{
+    display: none;
+}
 .titulo{
     width: var(--size-width-content);
     height: 50px;
-    background-color: black;
 }
-label{
-    background-color: tomato;
-    width: var(--size-width-content);
-    height: 50px;
+#select_pet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-input{
-    background-color: aqua;
+.card-mokepon{
     width: var(--size-width-content);
-    height: 50px;
+    height: 20px;
+    padding: 4px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    color: var(--accentuate-color);
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
 }
-button{
-    background-color: blueviolet;
-    width: var(--size-width-content);
-    height: 50px;
+.card-mokepon:hover{
+    color: var(--primary-color);
+    border: 1px solid var(--tertiary-color) ;
+    background-color: var(--accentuate-color);
+}
+input:checked + label{
+    color: var(--light-color);
+    border: 1px solid var(--dar-color) ;
+    background-color: var(--tertiary-color);
+}
+#button-select_pet{
+    width: calc(var(--size-width-content) - 20%) ;
+    height: 30px;
+    border-radius: 5px;
+    padding: 4px;
+    color: var(--light-color);
+    background-color: var(--dar-color);
+    border: 1px solid var(--accentuate-color) ;
+}
+#button-select_pet:hover{
+    color: var(--dar-color);
+    background-color: var(--light-color);
+    border: 1px solid var(--primary-color) ;
 }
