@@ -76,7 +76,39 @@ input:checked + label{
     background-color: var(--light-color);
     border: 1px solid var(--primary-color) ;
 }
+#select_attack{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    
+}
+#select_attack p{
+    width: var(--size-width-content);
+    height: 20px;
+    padding: 4px;
+    border-radius: 5px;
+    color: var(--accentuate-color);
+    background-color: var(--primary-color);
+}
+#pet-Player,#pet-Enemy,#petLives-Player,#petLives-Enemy{
+    color: var(--light-color);
+}
+#message,#reset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 0vh;
+    max-height: 20vh;
+    overflow: auto;
+}
+.button-attack{
+    background-color: transparent;
+    border: none;
+}
 
-.inactiveWin{
-    display: none;
+.button-attack:hover{
+    color: var(--light-color);    
 }
