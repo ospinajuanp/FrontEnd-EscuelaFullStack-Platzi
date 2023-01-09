@@ -6,10 +6,16 @@
     --accentuate-color: #FFC3A1;
     --light-color:#fff;
     --dar-color:#000;
+    --primary-font-family: 'Fredoka One', cursive;
+    --secondary-font-family:'Yeon Sung', cursive;
 }
 body{
     text-align: center;
     background-color: #b0b0b0;
+    
+}
+h1,h2,button{
+    font-family: var(--primary-font-family);
 }
 h1{
     color: var(--tertiary-color);
@@ -19,6 +25,9 @@ h2{
 }
 input{
     display: none;
+}
+label{
+    font-family: var(--secondary-font-family);
 }
 .titulo{
     width: var(--size-width-content);
@@ -52,7 +61,7 @@ input:checked + label{
     background-color: var(--tertiary-color);
 }
 #button-select_pet{
-    width: calc(var(--size-width-content) - 20%) ;
+    width: calc(var(--size-width-content) - 110px) ;
     height: 30px;
     border-radius: 5px;
     padding: 4px;
