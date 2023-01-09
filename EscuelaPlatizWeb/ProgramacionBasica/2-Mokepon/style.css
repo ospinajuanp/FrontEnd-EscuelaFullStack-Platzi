@@ -1,8 +1,28 @@
+:root{
+    --size-width-content : 340px;
+
+}
 h1{
     color: lightblue;
 }
+
 .titulo{
-    width: 310px;
+    width: var(--size-width-content);
     height: 50px;
     background-color: black;
+}
+label{
+    background-color: tomato;
+    width: var(--size-width-content);
+    height: 50px;
+}
+input{
+    background-color: aqua;
+    width: var(--size-width-content);
+    height: 50px;
+}
+button{
+    background-color: blueviolet;
+    width: var(--size-width-content);
+    height: 50px;
 }
