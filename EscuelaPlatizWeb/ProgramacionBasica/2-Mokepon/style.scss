@@ -1,0 +1,113 @@
+$size-width-content : 340px;
+$primary-color: #A75D5D;
+$secondary-color: #D3756B;
+$tertiary-color: #F0997D;
+$accentuate-color: #FFC3A1;
+$light-color:#fff;
+$dar-color:#000;
+$primary-font-family: 'Fredoka One', cursive;
+$secondary-font-family:'Yeon Sung', cursive;
+
+body{
+    text-align: center;
+    background-color: #b0b0b0;
+    
+}
+h1,h2,button{
+    font-family: var($primary-font-family);
+}
+h1{
+    -webkit-text-stroke: 0.1px var($accentuate-color);
+    color: var($tertiary-color);
+}
+h2{
+    -webkit-text-stroke: 0.1px var($accentuate-color);
+    color: var($dar-color) ;
+}
+input{
+    display: none;
+}
+label{
+    font-family: var($secondary-font-family);
+}
+.titulo{
+    width: var($size-width-content);
+    height: 50px;
+}
+#select_pet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card-mokepon{
+    width: var($size-width-content);
+    height: 20px;
+    padding: 4px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    color: var($accentuate-color);
+    border: 1px solid var($secondary-color);
+    background-color: var($primary-color);
+}
+.card-mokepon:hover{
+    color: var($primary-color);
+    border: 1px solid var($tertiary-color) ;
+    background-color: var($accentuate-color);
+}
+input:checked + label{
+    color: var($light-color);
+    border: 1px solid var($dar-color) ;
+    background-color: var($tertiary-color);
+}
+#button-select_pet{
+    width: calc(var($size-width-content) - 110px) ;
+    height: 30px;
+    border-radius: 5px;
+    padding: 4px;
+    color: var($light-color);
+    background-color: var($dar-color);
+    border: 1px solid var($accentuate-color) ;
+}
+#button-select_pet:hover{
+    color: var($dar-color);
+    background-color: var($light-color);
+    border: 1px solid var($primary-color) ;
+}
+#select_attack{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    
+}
+#select_attack p{
+    width: var($size-width-content);
+    height: 20px;
+    padding: 4px;
+    border-radius: 5px;
+    color: var($accentuate-color);
+    background-color: var($primary-color);
+}
+#pet-Player,#pet-Enemy,#petLives-Player,#petLives-Enemy{
+    color: var($light-color);
+}
+#message,#reset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 0vh;
+    max-height: 20vh;
+    overflow: auto;
+}
+.button-attack{
+    background-color: transparent;
+    border: none;
+}
+
+.button-attack:hover{
+    color: var($light-color);    
+}
