@@ -14,24 +14,24 @@ body{
     
 }
 h1,h2,button{
-    font-family: var($primary-font-family);
+    font-family: $primary-font-family;
 }
 h1{
-    -webkit-text-stroke: 0.1px var($accentuate-color);
-    color: var($tertiary-color);
+    -webkit-text-stroke: 0.1px $accentuate-color;
+    color: $tertiary-color;
 }
 h2{
-    -webkit-text-stroke: 0.1px var($accentuate-color);
-    color: var($dar-color) ;
+    -webkit-text-stroke: 0.1px $accentuate-color;
+    color: $dar-color;
 }
 input{
     display: none;
 }
 label{
-    font-family: var($secondary-font-family);
+    font-family: $secondary-font-family;
 }
 .titulo{
-    width: var($size-width-content);
+    width: $size-width-content;
     height: 50px;
 }
 #select_pet{
@@ -42,38 +42,38 @@ label{
     height: 100vh;
 }
 .card-mokepon{
-    width: var($size-width-content);
+    width: $size-width-content;
     height: 20px;
     padding: 4px;
     margin-bottom: 8px;
     border-radius: 5px;
-    color: var($accentuate-color);
-    border: 1px solid var($secondary-color);
-    background-color: var($primary-color);
+    color: $accentuate-color;
+    border: 1px solid $secondary-color;
+    background-color: $primary-color;
 }
 .card-mokepon:hover{
-    color: var($primary-color);
-    border: 1px solid var($tertiary-color) ;
-    background-color: var($accentuate-color);
+    color: $primary-color;
+    border: 1px solid $tertiary-color;
+    background-color: $accentuate-color;
 }
 input:checked + label{
-    color: var($light-color);
-    border: 1px solid var($dar-color) ;
-    background-color: var($tertiary-color);
+    color: $light-color;
+    border: 1px solid $dar-color;
+    background-color: $tertiary-color;
 }
 #button-select_pet{
-    width: calc(var($size-width-content) - 110px) ;
+    width: calc($size-width-content - 110px) ;
     height: 30px;
     border-radius: 5px;
     padding: 4px;
-    color: var($light-color);
-    background-color: var($dar-color);
-    border: 1px solid var($accentuate-color) ;
+    color: $light-color;
+    background-color: $dar-color;
+    border: 1px solid $accentuate-color;
 }
 #button-select_pet:hover{
-    color: var($dar-color);
-    background-color: var($light-color);
-    border: 1px solid var($primary-color) ;
+    color: $dar-color;
+    background-color: $light-color;
+    border: 1px solid $primary-color;
 }
 #select_attack{
     display: flex;
@@ -81,18 +81,17 @@ input:checked + label{
     justify-content: center;
     align-items: center;
     height: 50vh;
-    
-}
-#select_attack p{
-    width: var($size-width-content);
-    height: 20px;
-    padding: 4px;
-    border-radius: 5px;
-    color: var($accentuate-color);
-    background-color: var($primary-color);
+    p{
+        width: $size-width-content;
+        height: 20px;
+        padding: 4px;
+        border-radius: 5px;
+        color: $accentuate-color;
+        background-color: $primary-color;
+    }
 }
 #pet-Player,#pet-Enemy,#petLives-Player,#petLives-Enemy{
-    color: var($light-color);
+    color: $light-color;
 }
 #message,#reset{
     display: flex;
@@ -109,5 +108,5 @@ input:checked + label{
 }
 
 .button-attack:hover{
-    color: var($light-color);    
+    color: $light-color;
 }

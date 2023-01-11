@@ -4,17 +4,17 @@ body {
 }
 
 h1, h2, button {
-  font-family: var("Fredoka One", cursive);
+  font-family: "Fredoka One", cursive;
 }
 
 h1 {
-  -webkit-text-stroke: 0.1px var(#FFC3A1);
-  color: var(#F0997D);
+  -webkit-text-stroke: 0.1px #FFC3A1;
+  color: #F0997D;
 }
 
 h2 {
-  -webkit-text-stroke: 0.1px var(#FFC3A1);
-  color: var(#000);
+  -webkit-text-stroke: 0.1px #FFC3A1;
+  color: #000;
 }
 
 input {
@@ -22,11 +22,11 @@ input {
 }
 
 label {
-  font-family: var("Yeon Sung", cursive);
+  font-family: "Yeon Sung", cursive;
 }
 
 .titulo {
-  width: var(340px);
+  width: 340px;
   height: 50px;
 }
 
@@ -39,42 +39,42 @@ label {
 }
 
 .card-mokepon {
-  width: var(340px);
+  width: 340px;
   height: 20px;
   padding: 4px;
   margin-bottom: 8px;
   border-radius: 5px;
-  color: var(#FFC3A1);
-  border: 1px solid var(#D3756B);
-  background-color: var(#A75D5D);
+  color: #FFC3A1;
+  border: 1px solid #D3756B;
+  background-color: #A75D5D;
 }
 
 .card-mokepon:hover {
-  color: var(#A75D5D);
-  border: 1px solid var(#F0997D);
-  background-color: var(#FFC3A1);
+  color: #A75D5D;
+  border: 1px solid #F0997D;
+  background-color: #FFC3A1;
 }
 
 input:checked + label {
-  color: var(#fff);
-  border: 1px solid var(#000);
-  background-color: var(#F0997D);
+  color: #fff;
+  border: 1px solid #000;
+  background-color: #F0997D;
 }
 
 #button-select_pet {
-  width: calc(var(340px) - 110px);
+  width: 230px;
   height: 30px;
   border-radius: 5px;
   padding: 4px;
-  color: var(#fff);
-  background-color: var(#000);
-  border: 1px solid var(#FFC3A1);
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #FFC3A1;
 }
 
 #button-select_pet:hover {
-  color: var(#000);
-  background-color: var(#fff);
-  border: 1px solid var(#A75D5D);
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #A75D5D;
 }
 
 #select_attack {
@@ -84,18 +84,17 @@ input:checked + label {
   align-items: center;
   height: 50vh;
 }
-
 #select_attack p {
-  width: var(340px);
+  width: 340px;
   height: 20px;
   padding: 4px;
   border-radius: 5px;
-  color: var(#FFC3A1);
-  background-color: var(#A75D5D);
+  color: #FFC3A1;
+  background-color: #A75D5D;
 }
 
 #pet-Player, #pet-Enemy, #petLives-Player, #petLives-Enemy {
-  color: var(#fff);
+  color: #fff;
 }
 
 #message, #reset {
@@ -114,7 +113,7 @@ input:checked + label {
 }
 
 .button-attack:hover {
-  color: var(#fff);
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
