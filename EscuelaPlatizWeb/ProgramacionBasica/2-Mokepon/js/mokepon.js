@@ -198,6 +198,16 @@ function resetGame (){
     createMsgEndAttack(true)
 }
 
+// Get the modal
+let modal,btn,span;
+
+function openImg (){
+    modal.style.display = "block";
+}
+function closeImg(){
+    modal.style.display = "none";
+}
+
 function startGame(){
     sectionPet = document.getElementById('select_pet')
     sectionAttack = document.getElementById('select_attack')
@@ -216,6 +226,13 @@ function startGame(){
     buttonEarth.addEventListener('click',attackEarth)
     buttonBlock.addEventListener('click',attackBlock)
     buttonResetGame.addEventListener('click',resetGame)
+
+    modal = document.getElementById("myModal");
+    buttonImg = document.getElementById("myBtn");
+    span = document.getElementsByClassName("close")[0];
+    buttonImg.addEventListener('click',openImg)
+    span.addEventListener('click',closeImg)
+    
     chooseDisableActiveButton(buttonFire,true)
     chooseDisableActiveButton(buttonWater,true)
     chooseDisableActiveButton(buttonEarth,true)
@@ -225,3 +242,5 @@ function startGame(){
 }
 
 window.addEventListener('load', startGame )
+
+
