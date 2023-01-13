@@ -1,3 +1,21 @@
+// English documentation
+// This code is a CSS style sheet that is used to style the elements in the HTML page of the Mokepon game. Some of the things this CSS code does are:
+
+// Sets fonts for titles and buttons.
+// Sets the text alignment and background of the page.
+// Sets the styling for sections, radio buttons, and available pet tags.
+// Sets the style for attack buttons and for the modal that appears when a pet is selected.
+// Uses variables to set consistent colors and sizes throughout the code.
+
+// Documentación En Español
+// Este código es una hoja de estilo CSS que se utiliza para estilizar los elementos en la página HTML del juego Mokepon. Algunas de las cosas que este código CSS hace son:
+
+// Establece fuentes para los títulos y botones.
+// Establece el alineamiento del texto y el fondo de la página.
+// Establece el estilo para las secciones, los botones de radio y las etiquetas de las mascotas disponibles.
+// Establece el estilo para los botones de ataque y para el modal que aparece cuando se selecciona una mascota.
+// Utiliza variables para establecer colores y tamaños consistentes a lo largo del código.
+
 $size-width-content : 340px;
 $primary-color: #A75D5D;
 $secondary-color: #D3756B;
@@ -14,7 +32,8 @@ $secondary-font-family:'Yeon Sung', cursive;
 
 body{
     text-align: center;
-    background-color: #b0b0b0;
+    object-fit: cover;
+    background-image: url('https://i.blogs.es/57cc6f/pokemon-escarlata-y-pokemon-purpura-_-presentacion-2-11-screenshot/1366_2000.jpeg');
     
 }
 h1,h2,button{
@@ -98,6 +117,7 @@ input:checked + label{
     color: $light-color;
 }
 #message,#reset{
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,10 +155,13 @@ input:checked + label{
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
+    padding-left: 40px;
     border: 1px solid #888;
-    width: 80%;
+    width: 20%;
     min-height: 10vh;
     max-height: 100vh;
+    border-radius: 30px;
+    border: 3px solid #000;
     
     img{
         max-width: 250px;
