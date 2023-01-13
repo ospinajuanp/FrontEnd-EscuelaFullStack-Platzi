@@ -97,6 +97,7 @@ function insertText (spanSelect,pet){
 function selectPetEnemy(){
     spanPetEnemy = document.getElementById('pet-Enemy')
     petEnemy = inputPets[getRandomNumber()].pet.toString()
+    console.log(petEnemy);
     insertText(spanPetEnemy,petEnemy)
 }
 
@@ -107,6 +108,7 @@ function checkSelectPet (petsSelect){
             sectionPet.style.display = 'none'
             sectionAttack.style.display = 'flex'
             sectionReset.style.display = 'flex'
+            console.log(spanPetPlayer);
             insertText(spanPetPlayer,pets.pet)            
             selectPetEnemy()
             livePetPlayer = infoMokepon[pets.pet].live;

@@ -175,7 +175,7 @@ input:checked + label {
 .select_attack--cards_card h2, .select_attack--cards_card p {
   display: block;
   width: 100%;
-  height: 30px;
+  height: 20px;
 }
 .select_attack--cards_card h2 {
   font-size: 30px;
@@ -188,7 +188,7 @@ input:checked + label {
 .select_attack--cards_card picture {
   display: block;
   width: 100%;
-  height: 140px;
+  height: 100px;
 }
 .select_attack--cards_card picture img {
   height: 100%;
