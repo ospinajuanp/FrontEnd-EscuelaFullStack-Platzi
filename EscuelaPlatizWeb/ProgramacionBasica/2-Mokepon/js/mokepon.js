@@ -1,4 +1,4 @@
-let inputPets = [],attackEnemy=['Fire','Water','Earth','Block'];
+let inputPets = [],attackEnemy=['Fire','Water','Earth','Block'], imgUrl;
 let infoMokepon = {hipodoge:{typeAttack:[1,4],live:680,valueDamage:80},
     capipepo:{typeAttack:[2,4],live:530,valueDamage:70},
     ratigueya:{typeAttack:[3,4],live:560,valueDamage:90},
@@ -7,7 +7,7 @@ let infoMokepon = {hipodoge:{typeAttack:[1,4],live:680,valueDamage:80},
     pudos:{typeAttack:[1,2,3,4],live:780,valueDamage:60},
 }
 let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy,damagePlayer,damageEnemy, petEnemy;
-let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy,sectionPet,sectionAttack,sectionReset;
+let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy,sectionPet,sectionAttack,sectionReset, buttonImgSrc,buttonHipodoge;
 
 function chooseDisableActiveButton (buttonChoose,stateButton){
     buttonChoose.disabled = stateButton
@@ -201,14 +201,48 @@ function resetGame (){
 // Get the modal
 let modal,btn,span;
 
-function openImg (){
+function openImg (position=0){
+    buttonImgSrc = document.getElementById('imgSelect')
+    if(buttonImgSrc){
+        buttonImgSrc.remove()
+    }    
+    let modalContent = document.getElementById('modalContent')
+    let imageSrc = document.createElement("img");
+    imageSrc.id = 'imgSelect'
+    let urlImage = imgUrl[position]
+    console.log(urlImage);
+    imageSrc.src = `${urlImage}`
+    // imageSrc.setAttribute("src", urlImage);
+    // imageSrc["src"] = urlImage;
+    modalContent.appendChild(imageSrc);
+
     modal.style.display = "block";
 }
 function closeImg(){
     modal.style.display = "none";
 }
 
+function openHipodoge(){
+    openImg(0)
+}
+function openCapipepo(){
+    openImg(1)
+}
+function openRatigueya(){
+    openImg(2)
+}
+function openLangostelvis(){
+    openImg(3)
+}
+function openTucapalma(){
+    openImg(4)
+}
+function openPudos(){
+    openImg(5)
+}
+
 function startGame(){
+    imgUrl=['https://i.pinimg.com/564x/68/d5/aa/68d5aac309542bb5946aa3b96647c44e.jpg','https://i.pinimg.com/564x/f5/1a/5c/f51a5c44e941662c74ff28bcd406ddd2.jpg','https://i.pinimg.com/564x/78/65/09/786509601d7148e0ceb3de9bf1a408c1.jpg','https://i.pinimg.com/564x/de/f9/92/def9920aafb66c1f58a89788d78bcc2a.jpg','https://i.pinimg.com/736x/53/d3/d5/53d3d5db78dd8297327b92f976d1f922.jpg','https://i.pinimg.com/564x/b9/7b/05/b97b0585b90b3fcfa223b172c9e47f0c.jpg']
     sectionPet = document.getElementById('select_pet')
     sectionAttack = document.getElementById('select_attack')
     sectionReset = document.getElementById('reset')
@@ -227,10 +261,26 @@ function startGame(){
     buttonBlock.addEventListener('click',attackBlock)
     buttonResetGame.addEventListener('click',resetGame)
 
+
+    buttonHipodoge = document.getElementById('hipodoge')
+    buttonCapipepo = document.getElementById('capipepo')
+    buttonRatigueya = document.getElementById('ratigueya')
+    buttonLangostelvis = document.getElementById('langostelvis')
+    buttonTucapalma = document.getElementById('tucapalma')
+    buttonPudos = document.getElementById('pudos')
+    buttonHipodoge.addEventListener('click',openHipodoge)
+    buttonCapipepo.addEventListener('click',openCapipepo)
+    buttonRatigueya.addEventListener('click',openRatigueya)
+    buttonLangostelvis.addEventListener('click',openLangostelvis)
+    buttonTucapalma.addEventListener('click',openTucapalma)
+    buttonPudos.addEventListener('click',openPudos)
+
     modal = document.getElementById("myModal");
-    buttonImg = document.getElementById("myBtn");
+    // buttonImg = document.getElementById("myBtn");
     span = document.getElementsByClassName("close")[0];
-    buttonImg.addEventListener('click',openImg)
+    
+
+    // buttonImg.addEventListener('click',openImg)
     span.addEventListener('click',closeImg)
     
     chooseDisableActiveButton(buttonFire,true)

@@ -8,6 +8,10 @@ $dar-color:#000;
 $primary-font-family: 'Fredoka One', cursive;
 $secondary-font-family:'Yeon Sung', cursive;
 
+*{
+    transition: all 0.5 linear;
+}
+
 body{
     text-align: center;
     background-color: #b0b0b0;
@@ -133,6 +137,13 @@ input:checked + label{
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    min-height: 10vh;
+    max-height: 100vh;
+    
+    img{
+        max-width: 250px;
+        height: 100%;
+    }
 }
 
 /* The Close Button */
