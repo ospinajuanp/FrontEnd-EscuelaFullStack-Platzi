@@ -79,7 +79,7 @@ let infoMokepon = {hipodoge:{typeAttack:[1,4],live:680,valueDamage:80},
     tucapalma:{typeAttack:[1,3,4],live:920,valueDamage:70},
     pudos:{typeAttack:[1,2,3,4],live:780,valueDamage:60},
 }
-let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy,damagePlayer,damageEnemy, petEnemy;
+let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy,damagePlayer,damageEnemy, petEnemy,randomNumberSelectPet ;
 let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy,sectionPet,sectionAttack,sectionReset, buttonImgSrc,buttonHipodoge,modal,span;
 
 function chooseDisableActiveButton (buttonChoose,stateButton){
@@ -94,11 +94,25 @@ function insertText (spanSelect,pet){
     spanSelect.innerHTML = pet
 }
 
+function viewPetEnemy (){
+    buttonImgGameEnemy = document.getElementById('imgSelectEnemyGame')
+    if(buttonImgGameEnemy){
+        buttonImgGameEnemy.remove()
+    }
+    let imgPetEnemyGame = document.createElement("img");
+    let urlImage = imgUrl[randomNumberSelectPet]
+    imgPetEnemyGame.id = 'imgSelectEnemyGame'
+    imgPetEnemyGame.src = `${urlImage}`
+    containerImgPetEnemy.appendChild(imgPetEnemyGame);
+}
+
 function selectPetEnemy(){
     spanPetEnemy = document.getElementById('pet-Enemy')
-    petEnemy = inputPets[getRandomNumber()].pet.toString()
-    console.log(petEnemy);
+    randomNumberSelectPet  = getRandomNumber()
+    petEnemy = inputPets[randomNumberSelectPet].pet.toString()
+
     insertText(spanPetEnemy,petEnemy)
+    viewPetEnemy()
 }
 
 function checkSelectPet (petsSelect){
@@ -282,7 +296,7 @@ function resetGame (){
 
 function openImg (position=0){
     buttonImgSrc = document.getElementById('imgSelect')
-    buttonImgGame = document.getElementById('imgSelectGame')
+    buttonImgGame = document.getElementById('imgSelectPlayerGame')
     if(buttonImgSrc){
         buttonImgSrc.remove()
     }
@@ -293,7 +307,7 @@ function openImg (position=0){
     let imageSrc = document.createElement("img");
     let imgPetPlayerGame = document.createElement("img");
     let urlImage = imgUrl[position]
-    imgPetPlayerGame.id = 'imgSelectGame'
+    imgPetPlayerGame.id = 'imgSelectPlayerGame'
     imgPetPlayerGame.src = `${urlImage}`
     containerImgPetPlayer.appendChild(imgPetPlayerGame);
     imageSrc.id = 'imgSelect'
