@@ -38,7 +38,7 @@ button {
   color: #F0997D;
 }
 .select_attack--cards {
-  width: 340px;
+  width: 400px;
   height: 230px;
   display: flex;
   flex-direction: row;
@@ -83,7 +83,7 @@ button {
   height: 100%;
 }
 .select_attack--type {
-  width: 340px;
+  width: 400px;
   height: 48px;
   margin-bottom: 24px;
 }
@@ -93,7 +93,21 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  gap: 16px;
+}
+.select_attack--type p button {
+  font-weight: 900;
+  min-width: 90px;
+  max-width: 160px;
+  border-radius: 16px;
+  border: 1px solid #000;
+  cursor: pointer;
+  color: #fff;
+  background-color: #FFC3A1;
+}
+.select_attack--type p button:hover {
+  color: #FFC3A1;
+  background-color: #fff;
+  border: 1px solid #A75D5D;
 }
 
 /*# sourceMappingURL=sectionAttack.css.map */

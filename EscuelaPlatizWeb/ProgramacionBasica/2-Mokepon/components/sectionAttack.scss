@@ -1,4 +1,4 @@
-$size-width-content : 340px;
+$size-width-content : 400px;
 $primary-color: #A75D5D;
 $secondary-color: #D3756B;
 $tertiary-color: #F0997D;
@@ -105,11 +105,24 @@ button{
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
-            gap: 16px;
 
             button{
+                font-weight: 900;
+                min-width: 90px;
+                max-width: 160px;
+                border-radius: 16px;
+                border: 1px solid $dar-color;
+                cursor: pointer;
+                color: $light-color;
+                background-color: $accentuate-color;
+                &:hover{
+                    color: $accentuate-color;
+                    background-color: $light-color;
+                    border: 1px solid $primary-color;
 
+                }
             }
+
         }
     }
 }
