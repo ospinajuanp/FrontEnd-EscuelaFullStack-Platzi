@@ -163,14 +163,21 @@ function playerWonDefeat (){
         return 'DRAW ⚜'
     }else if(selectAttackPlayer == 'Block' || selectAttackEnemy == 'Block'){
         if (selectAttackPlayer == 'Block'){
-            livePetPlayer+= Math.floor(damageEnemy*(Math.random() * 1))
+            livePetPlayer+= Math.floor(damageEnemy*(Math.random() * (0.5 - (-1)) + (-1)))
             if (livePetPlayer> 1000){
                 livePetPlayer=1000
             }
+            if (livePetPlayer < 0){
+                livePetPlayer=0
+            }
+
         }else{
-            livePetEnemy+= Math.floor(damagePlayer*(Math.random() * 1))
+            livePetEnemy+= Math.floor(damagePlayer*(Math.random() * (0.5 - (-1)) + (-1)))
             if (livePetEnemy> 1000){
                 livePetEnemy = 1000
+            }
+            if (livePetEnemy< 0){
+                livePetEnemy = 0
             }
         }
         return 'Blocking 🛡'
