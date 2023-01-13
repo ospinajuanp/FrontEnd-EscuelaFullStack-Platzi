@@ -282,16 +282,24 @@ function resetGame (){
 
 function openImg (position=0){
     buttonImgSrc = document.getElementById('imgSelect')
+    buttonImgGame = document.getElementById('imgSelectGame')
     if(buttonImgSrc){
         buttonImgSrc.remove()
-    }    
+    }
+    if(buttonImgGame){
+        buttonImgGame.remove()
+    }
     let modalContent = document.getElementById('modalContent')
     let imageSrc = document.createElement("img");
-    imageSrc.id = 'imgSelect'
+    let imgPetPlayerGame = document.createElement("img");
     let urlImage = imgUrl[position]
+    imgPetPlayerGame.id = 'imgSelectGame'
+    imgPetPlayerGame.src = `${urlImage}`
+    containerImgPetPlayer.appendChild(imgPetPlayerGame);
+    imageSrc.id = 'imgSelect'
     imageSrc.src = `${urlImage}`
     modalContent.appendChild(imageSrc);
-
+    
     modal.style.display = "block";
 }
 
@@ -342,6 +350,10 @@ function startGame(){
     buttonEarth.addEventListener('click',attackEarth)
     buttonBlock.addEventListener('click',attackBlock)
     buttonResetGame.addEventListener('click',resetGame)
+
+    containerImgPetPlayer = document.getElementById('imgPetPlayerGame')
+    containerImgPetEnemy = document.getElementById('imgPetEnemyGame')
+
     buttonHipodoge = document.getElementById('hipodoge')
     buttonCapipepo = document.getElementById('capipepo')
     buttonRatigueya = document.getElementById('ratigueya')
