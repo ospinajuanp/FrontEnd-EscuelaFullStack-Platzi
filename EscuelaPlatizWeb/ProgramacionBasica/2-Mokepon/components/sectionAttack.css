@@ -1,0 +1,84 @@
+* {
+  transition: all 0.5 linear;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  object-fit: cover;
+  background-image: url("https://i.blogs.es/57cc6f/pokemon-escarlata-y-pokemon-purpura-_-presentacion-2-11-screenshot/1366_2000.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+button {
+  font-family: "Fredoka One", cursive;
+}
+
+input {
+  display: none;
+}
+
+#select_attack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+#select_attack p {
+  width: 340px;
+  height: auto;
+  padding: 4px;
+  border-radius: 5px;
+  color: #FFC3A1;
+  background-color: #A75D5D;
+}
+
+#pet-Player, #pet-Enemy, #petLives-Player, #petLives-Enemy {
+  color: #fff;
+}
+
+#reset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  min-height: 0vh;
+  max-height: 20vh;
+  overflow: auto;
+}
+
+#message {
+  background-color: #A75D5D;
+  color: #fff;
+  width: 340px;
+  height: 20vh;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.button-attack {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.button-attack:hover {
+  background-color: #D3756B;
+  color: #000;
+  border: 0.1px solid #000;
+  border-radius: 20px;
+}
+
+.button-attack:disabled {
+  display: none;
+}
+
+/*# sourceMappingURL=sectionAttack.css.map */
