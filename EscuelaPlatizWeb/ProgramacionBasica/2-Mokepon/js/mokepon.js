@@ -72,12 +72,12 @@ La función init() es la encargada de inicializar los eventos y variables necesa
 */
 
 let inputPets = [],attackEnemy=['Fire','Water','Earth','Block'], imgUrl;
-let infoMokepon = {hipodoge:{typeAttack:[1,4],live:680,valueDamage:80},
-    capipepo:{typeAttack:[2,4],live:530,valueDamage:70},
-    ratigueya:{typeAttack:[3,4],live:560,valueDamage:90},
-    langostelvis:{typeAttack:[2,3,4],live:850,valueDamage:80},
-    tucapalma:{typeAttack:[1,3,4],live:920,valueDamage:70},
-    pudos:{typeAttack:[1,2,3,4],live:780,valueDamage:60},
+let infoMokepon = {Hipodoge:{typeAttack:[1,4],live:680,valueDamage:80},
+    Capipepo:{typeAttack:[2,4],live:530,valueDamage:70},
+    Ratigueya:{typeAttack:[3,4],live:560,valueDamage:90},
+    Langostelvis:{typeAttack:[2,3,4],live:850,valueDamage:80},
+    Tucapalma:{typeAttack:[1,3,4],live:920,valueDamage:70},
+    Pudos:{typeAttack:[1,2,3,4],live:780,valueDamage:60},
 }
 let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy,damagePlayer,damageEnemy, petEnemy,randomNumberSelectPet ;
 let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy,sectionPet,sectionAttack,sectionReset, buttonImgSrc,buttonHipodoge,modal,span;
@@ -150,12 +150,12 @@ function checkSelectPet (petsSelect){
 }
 
 function selectPetPlayer(){
-    inputPets.push({petSelect:document.getElementById('hipodoge'),pet:'hipodoge'})
-    inputPets.push({petSelect:document.getElementById('capipepo'),pet:'capipepo'})
-    inputPets.push({petSelect:document.getElementById('ratigueya'),pet:'ratigueya'})
-    inputPets.push({petSelect:document.getElementById('langostelvis'),pet:'langostelvis'})
-    inputPets.push({petSelect:document.getElementById('tucapalma'),pet:'tucapalma'})
-    inputPets.push({petSelect:document.getElementById('pudos'),pet:'pudos'})
+    inputPets.push({petSelect:document.getElementById('hipodoge'),pet:'Hipodoge'})
+    inputPets.push({petSelect:document.getElementById('capipepo'),pet:'Capipepo'})
+    inputPets.push({petSelect:document.getElementById('ratigueya'),pet:'Ratigueya'})
+    inputPets.push({petSelect:document.getElementById('langostelvis'),pet:'Langostelvis'})
+    inputPets.push({petSelect:document.getElementById('tucapalma'),pet:'Tucapalma'})
+    inputPets.push({petSelect:document.getElementById('pudos'),pet:'Pudos'})
     checkSelectPet(inputPets)
 }
 
