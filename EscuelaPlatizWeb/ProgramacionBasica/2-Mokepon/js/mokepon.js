@@ -7,7 +7,7 @@ let infoMokepon = {hipodoge:{typeAttack:[1,4],live:680,valueDamage:80},
     pudos:{typeAttack:[1,2,3,4],live:780,valueDamage:60},
 }
 let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy,damagePlayer,damageEnemy, petEnemy;
-let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy,sectionPet,sectionAttack,sectionReset, buttonImgSrc,buttonHipodoge;
+let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy,sectionPet,sectionAttack,sectionReset, buttonImgSrc,buttonHipodoge,modal,span;
 
 function chooseDisableActiveButton (buttonChoose,stateButton){
     buttonChoose.disabled = stateButton
@@ -198,9 +198,6 @@ function resetGame (){
     createMsgEndAttack(true)
 }
 
-// Get the modal
-let modal,btn,span;
-
 function openImg (position=0){
     buttonImgSrc = document.getElementById('imgSelect')
     if(buttonImgSrc){
@@ -210,14 +207,12 @@ function openImg (position=0){
     let imageSrc = document.createElement("img");
     imageSrc.id = 'imgSelect'
     let urlImage = imgUrl[position]
-    console.log(urlImage);
     imageSrc.src = `${urlImage}`
-    // imageSrc.setAttribute("src", urlImage);
-    // imageSrc["src"] = urlImage;
     modalContent.appendChild(imageSrc);
 
     modal.style.display = "block";
 }
+
 function closeImg(){
     modal.style.display = "none";
 }
@@ -225,18 +220,23 @@ function closeImg(){
 function openHipodoge(){
     openImg(0)
 }
+
 function openCapipepo(){
     openImg(1)
 }
+
 function openRatigueya(){
     openImg(2)
 }
+
 function openLangostelvis(){
     openImg(3)
 }
+
 function openTucapalma(){
     openImg(4)
 }
+
 function openPudos(){
     openImg(5)
 }
@@ -260,8 +260,6 @@ function startGame(){
     buttonEarth.addEventListener('click',attackEarth)
     buttonBlock.addEventListener('click',attackBlock)
     buttonResetGame.addEventListener('click',resetGame)
-
-
     buttonHipodoge = document.getElementById('hipodoge')
     buttonCapipepo = document.getElementById('capipepo')
     buttonRatigueya = document.getElementById('ratigueya')
@@ -274,23 +272,14 @@ function startGame(){
     buttonLangostelvis.addEventListener('click',openLangostelvis)
     buttonTucapalma.addEventListener('click',openTucapalma)
     buttonPudos.addEventListener('click',openPudos)
-
     modal = document.getElementById("myModal");
-    // buttonImg = document.getElementById("myBtn");
     span = document.getElementsByClassName("close")[0];
-    
-
-    // buttonImg.addEventListener('click',openImg)
-    span.addEventListener('click',closeImg)
-    
+    span.addEventListener('click',closeImg)    
     chooseDisableActiveButton(buttonFire,true)
     chooseDisableActiveButton(buttonWater,true)
     chooseDisableActiveButton(buttonEarth,true)
     chooseDisableActiveButton(buttonBlock,true)
-    chooseDisableActiveButton(buttonResetGame,true)
-    
+    chooseDisableActiveButton(buttonResetGame,true)    
 }
 
 window.addEventListener('load', startGame )
-
-
