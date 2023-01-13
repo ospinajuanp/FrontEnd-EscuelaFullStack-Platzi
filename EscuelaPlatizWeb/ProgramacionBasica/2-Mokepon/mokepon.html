@@ -35,7 +35,6 @@ Además, el HTML incluye una hoja de estilo que estiliza los elementos en la pá
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Yeon+Sung&display=swap" rel="stylesheet">
     <title>Mokepon! 🔥💧🌱</title>
-    <script src="./js/mokepon.js"></script>
 </head>
 <body>
     <section id="select_pet">
@@ -43,10 +42,16 @@ Además, el HTML incluye una hoja de estilo que estiliza los elementos en la pá
         <h2>Choose your pet</h2>
 
         <!-- <button id="myBtn">Open Modal</button> -->
-        <div id="myModal" class="modal">
+        <!-- <div id="myModal" class="modal">
             <div id="modalContent" class="modal-content">
                 <span class="close">&times;</span>
-                <!-- <img id='imgSelect'src="https://i.pinimg.com/564x/5f/d5/9d/5fd59d8a654946435fa21116feb4f651.jpg" alt="image"> -->
+                <img id='imgSelect'src="https://i.pinimg.com/564x/5f/d5/9d/5fd59d8a654946435fa21116feb4f651.jpg" alt="image">
+            </div>
+        </div> -->
+        
+        <div id="container__modal" class="container__modal">
+            <div id="container__modal--content" class="container__modal--content">
+                <img class="container__modal--content-img" id='container__modal--content-img'src="https://i.pinimg.com/564x/5f/d5/9d/5fd59d8a654946435fa21116feb4f651.jpg" alt="image">
             </div>
         </div>
         
@@ -136,5 +141,6 @@ Además, el HTML incluye una hoja de estilo que estiliza los elementos en la pá
         </div>
     </section>
     
+    <script src="./js/mokepon.js"></script>
 </body>
 </html>

@@ -80,7 +80,7 @@ let infoMokepon = {Hipodoge:{typeAttack:[1,4],live:680,valueDamage:80},
     Pudos:{typeAttack:[1,2,3,4],live:780,valueDamage:60},
 }
 let selectAttackPlayer,selectAttackEnemy, livePetPlayer,livePetEnemy,damagePlayer,damageEnemy, petEnemy,randomNumberSelectPet ;
-let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy,sectionPet,sectionAttack,sectionReset, buttonImgSrc,buttonHipodoge,modal,span;
+let buttonPetPlayer,buttonFire, buttonWater, buttonEarth,buttonBlock, buttonResetGame,spanPetPlayer,spanPetEnemy,spanLivePlayer,spanLiveEnemy,sectionPet,sectionAttack,sectionReset, buttonImgSrc,buttonHipodoge,modal,span,containerModal,containerModalContent;
 
 function chooseDisableActiveButton (buttonChoose,stateButton){
     buttonChoose.disabled = stateButton
@@ -122,7 +122,6 @@ function checkSelectPet (petsSelect){
             sectionPet.style.display = 'none'
             sectionAttack.style.display = 'flex'
             sectionReset.style.display = 'flex'
-            console.log(spanPetPlayer);
             insertText(spanPetPlayer,pets.pet)            
             selectPetEnemy()
             livePetPlayer = infoMokepon[pets.pet].live;
@@ -295,26 +294,41 @@ function resetGame (){
 }
 
 function openImg (position=0){
-    buttonImgSrc = document.getElementById('imgSelect')
+    // buttonImgSrc = document.getElementById('imgSelect')
     buttonImgGame = document.getElementById('imgSelectPlayerGame')
-    if(buttonImgSrc){
-        buttonImgSrc.remove()
+
+    imgSelectPlayer = document.getElementById('container__modal--content-img')
+    containerModal.style.display = "block";
+
+    if(imgSelectPlayer){
+        imgSelectPlayer.remove()
     }
+    // if(buttonImgSrc){
+    //     buttonImgSrc.remove()
+    // }
     if(buttonImgGame){
         buttonImgGame.remove()
     }
-    let modalContent = document.getElementById('modalContent')
-    let imageSrc = document.createElement("img");
+    // let modalContent = document.getElementById('modalContent')
+    // let imageSrc = document.createElement("img");
     let imgPetPlayerGame = document.createElement("img");
+    let imgSelectPlayerCircle = document.createElement("img");
     let urlImage = imgUrl[position]
+
+    imgSelectPlayerCircle.id = 'container__modal--content-img'
+    imgSelectPlayerCircle.className = 'container__modal--content-img'
+    imgSelectPlayerCircle.src = `${urlImage}`
+    containerModalContent.appendChild(imgSelectPlayerCircle);
+    
     imgPetPlayerGame.id = 'imgSelectPlayerGame'
     imgPetPlayerGame.src = `${urlImage}`
     containerImgPetPlayer.appendChild(imgPetPlayerGame);
-    imageSrc.id = 'imgSelect'
-    imageSrc.src = `${urlImage}`
-    modalContent.appendChild(imageSrc);
+
+    // imageSrc.id = 'imgSelect'
+    // imageSrc.src = `${urlImage}`
+    // modalContent.appendChild(imageSrc);
     
-    modal.style.display = "block";
+    // modal.style.display = "block";
 }
 
 function closeImg(){
@@ -347,6 +361,9 @@ function openPudos(){
 
 function startGame(){
     imgUrl=['https://i.pinimg.com/564x/68/d5/aa/68d5aac309542bb5946aa3b96647c44e.jpg','https://i.pinimg.com/564x/f5/1a/5c/f51a5c44e941662c74ff28bcd406ddd2.jpg','https://i.pinimg.com/564x/78/65/09/786509601d7148e0ceb3de9bf1a408c1.jpg','https://i.pinimg.com/564x/de/f9/92/def9920aafb66c1f58a89788d78bcc2a.jpg','https://i.pinimg.com/736x/53/d3/d5/53d3d5db78dd8297327b92f976d1f922.jpg','https://i.pinimg.com/564x/b9/7b/05/b97b0585b90b3fcfa223b172c9e47f0c.jpg']
+    containerModal = document.getElementById('container__modal')
+    containerModalContent = document.getElementById('container__modal--content')
+    containerModal.style.display = 'none'
     sectionPet = document.getElementById('select_pet')
     sectionAttack = document.getElementById('select_attack')
     sectionReset = document.getElementById('reset')
@@ -364,10 +381,8 @@ function startGame(){
     buttonEarth.addEventListener('click',attackEarth)
     buttonBlock.addEventListener('click',attackBlock)
     buttonResetGame.addEventListener('click',resetGame)
-
     containerImgPetPlayer = document.getElementById('imgPetPlayerGame')
     containerImgPetEnemy = document.getElementById('imgPetEnemyGame')
-
     buttonHipodoge = document.getElementById('hipodoge')
     buttonCapipepo = document.getElementById('capipepo')
     buttonRatigueya = document.getElementById('ratigueya')
