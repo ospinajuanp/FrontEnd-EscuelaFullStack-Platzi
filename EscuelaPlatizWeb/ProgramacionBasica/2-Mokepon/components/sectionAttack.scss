@@ -114,9 +114,9 @@ button{
                 border: 1px solid $dar-color;
                 cursor: pointer;
                 color: $light-color;
-                background-color: $accentuate-color;
+                background-color: $secondary-color;
                 &:hover{
-                    color: $accentuate-color;
+                    color: $dar-color;
                     background-color: $light-color;
                     border: 1px solid $primary-color;
 
@@ -124,6 +124,16 @@ button{
             }
 
         }
+    }
+
+    &--message{
+        width: $size-width-content;
+        height: 80px;
+        background-color: $secondary-color;
+        border-radius: 16px;
+        overflow: auto;
+        padding: 8px;
+        margin-bottom: 24px;
     }
 }
 
