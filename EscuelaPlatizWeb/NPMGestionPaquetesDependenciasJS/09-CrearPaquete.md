@@ -1,0 +1,37 @@
+# Creacion de Paquete para NPM
+
+- Validar el nombre del paquete en la web [NPM](https://www.npmjs.com/)
+- Crear [github](https://github.com/new) con el nombre exacto de nuestro paquete
+- [Clonamos](https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository) el proyecto de github a nuestro equipo 
+- Ingresamos a la carpeta de nuestro proyecto 
+    - cd nameFolderProject
+- Inicializamos nuestro paquete 
+    - npm init -y (configuración previa de nuestro github)
+- Abrimos nuestro editor (en nuestro caso usamos wsl ubuntu en windows) 
+    - code .
+- Modificamos nuestro package.json para terminar de llenar la información que se puso por default
+- Creamos una carpeta y archivo para nuestro lógica en js 
+    - src/index.js
+- Creamos una nueva carpeta bin y un archivo global.js - La base de nuestro proyecto y nuestro comando para instalar en npm
+    - #!/usr/bin/env node 
+    - let random = require('../src/index.js'); 
+    - random.funnyCommit();
+- En nuestro package.json abajo de nuestro homepage, agregamos bin 
+  - "bin":{"nameProject":"./bin/global.js"}
+- Agregamos también el indicador que es un paquete global 
+    - "preferGlobal":true
+- Para probarlo podemos colocar en la terminal 
+    - npm link
+- para instalarlo 
+    - npm install -g ruteProject
+- podemos ejecutar nuestro package
+    - nameProject
+- Crear/login cuenta la web [NPM](https://www.npmjs.com/)
+- login en la consola de NPM
+    - npm adduser
+    - user
+    - password
+- npm publish
+    - si tienes validación en 2 pasos, ejecutar validación
+- En la web [NPM](https://www.npmjs.com/)
+    - user > packages > buscamos nuestro paquete 
