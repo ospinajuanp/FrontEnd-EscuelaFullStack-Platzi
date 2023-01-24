@@ -1,0 +1,15 @@
+{
+  "name": "ecmascripthistoriayversionesjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "":[
+    "javascript",
+    "ecmascript"
+  ],
+  "author": "ospinajuanp <juanpo996@gmail.com>",
+  "license": "MIT"
+}
