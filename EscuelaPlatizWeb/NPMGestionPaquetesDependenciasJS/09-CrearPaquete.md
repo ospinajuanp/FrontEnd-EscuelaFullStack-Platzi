@@ -23,6 +23,7 @@
 - Para probarlo podemos colocar en la terminal 
     - npm link
 - para instalarlo 
+    - pwd (para identificar la ruta donde esta nuestro proyecto)
     - npm install -g ruteProject
 - podemos ejecutar nuestro package
     - nameProject
