@@ -212,3 +212,63 @@ Voy a estar usando sass pero para otros es equivalente o buscar en google -> loa
 - después de esto ahora podemos ejecutar nuestro build/dev
     - npm run dev
 
+## fuentes font-family
+
+- en nuestro archivo main.css 
+- eliminamos nuestro import
+  - @import "https://fonts.googleapis.com/css?family=Ubuntu:300,400,500";
+- vamos agregar lo siguiente
+    - @font-face{
+        - font-family: 'ubuntu';
+        - src: 	url('../assets/fonts/ubuntu-regular.woff2') format('woff2'),
+                url('../assets/fonts/ubuntu-regular.woff') format('woff');
+        - font-weight: 400;
+        - font-style: normal;
+    - }
+- npm install url-loader file-loader -D
+- En nuestro archivo de configuración de webpack necesitamos modificar 
+- los output
+    - output: {
+        - path: path.resolve(__dirname,'dist'),
+        - filename: 'main.js',
+        - assetModuleFilename: 'assets/[hash][ext][query]',
+    - },
+- los module
+    - module :{
+        - rules: [
+            - {
+                - test: /\.m?js$/,// Test declara que extensión de archivos aplicara el loader
+                - exclude: /node_modules/,// Exclude permite omitir archivos o carpetas especificas
+                - use: {loader: "babel-loader"},// Use es un arreglo u objeto donde dices que loader aplicaras
+            - },
+            - {
+                - test: /\.css$/i, // Test declara que extensión de archivos aplicara el loader
+                - use: [MiniCssExtractPlugin.loader,"css-loader",] // Use es un arreglo u objeto donde dices que loader aplicaras
+            - },
+            - {
+                - test: /\.png/i, // Test declara que extensión de archivos aplicara el loader
+                - type: 'asset/resource' // De esta forma usamos el loader de webpack para las img
+            - }, // En este caso vamos a usar el loader de webpack para tratar las imágenes 
+            - {
+                - test: /\.(woff|woff2)$/i,
+                - type: 'asset/resource',
+            - },
+        - ]
+    - },
+- los plugins
+    - plugins:[
+        - new HtmlWebpackPlugin({
+            - inject:true,
+            - template:'./public/index.html', (aquí va el html con el que vamos a trabajar)
+            - filename:'./index.html' (el nombre de salida que va tener nuestro html)
+        - }),
+        - new MiniCssExtractPlugin(), (este es el que usamos para poder transformar el css o pre-procesadores)
+        - new CopyPlugin({ (este es el que usamos para poder mover archivo/s o carpeta/s)
+            - patterns: [
+                - {
+                    - from: path.resolve(__dirname, "src", "assets"), (de donde vamos a mover lo/s archivo/s o carpeta/s)
+                    - to: "assets" (hacia donde vamos mover lo/s archivo/s o carpeta/s)
+                - }
+            - ]
+        - })
+    - ],

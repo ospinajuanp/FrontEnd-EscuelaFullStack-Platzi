@@ -8,6 +8,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname,'dist'),
         filename: 'main.js',
+        assetModuleFilename: 'assets/[hash][ext][query]',
     },
     resolve:{
         extensions:['.js']
@@ -26,7 +27,11 @@ module.exports = {
             {
                 test: /\.png/i, // Test declara que extensión de archivos aplicara el loader
                 type: 'asset/resource' // De esta forma usamos el loader de webpack para las img
-            } // En este caso vamos a usar el loader de webpack para tratar las imágenes 
+            }, // En este caso vamos a usar el loader de webpack para tratar las imágenes 
+            {
+                test: /\.(woff|woff2)$/i,
+                type: 'asset/resource',
+            },
         ]
     },
     plugins:[
@@ -39,8 +44,8 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, "src", "assets/images"),
-                    to: "assets/images"
+                    from: path.resolve(__dirname, "src", "assets"),
+                    to: "assets"
                 }
             ]
         })
