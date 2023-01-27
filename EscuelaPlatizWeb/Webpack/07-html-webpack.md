@@ -68,3 +68,4 @@
 - debemos cambiar la estructura en nuestro HTML Eliminando nuestro script src ya que webpack va a generar esa conexión automáticamente
 - podemos ahora utilizar npm run build y asi generar nuestro webpack el build del js y también de nuestro html
 - ademas podemos crear otro script para ejecutar nuestro webpack en modo development con el fin de debuggear nuestro código
+    - "dev": "webpack --mode development --config webpack.config.js" (en nuestro package.json en el apartado de script)
