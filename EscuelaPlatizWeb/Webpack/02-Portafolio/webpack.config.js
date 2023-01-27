@@ -22,7 +22,11 @@ module.exports = {
             {
                 test: /\.(css|scss)$/i, // Test declara que extensión de archivos aplicara el loader
                 use: [MiniCssExtractPlugin.loader,"css-loader","sass-loader"] // Use es un arreglo u objeto donde dices que loader aplicaras
-            },
+            }, // En este caso vamos a usar el loader de mini-css-extract-plugin para tratar las css 
+            {
+                test: /\.png/i, // Test declara que extensión de archivos aplicara el loader
+                type: 'asset/resource' // De esta forma usamos el loader de webpack para las img
+            } // En este caso vamos a usar el loader de webpack para tratar las imágenes 
         ]
     },
     plugins:[
