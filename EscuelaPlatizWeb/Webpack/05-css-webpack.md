@@ -124,7 +124,7 @@ Voy a estar usando sass pero para otros es equivalente o buscar en google -> loa
 - npm install sass sass-loader -D
 - en nuestro index.js vamos a importar nuestro estilos
     - import './styles/vars.scss'
-- - En nuestro archivo de configuración de webpack necesitamos modificar los module
+- En nuestro archivo de configuración de webpack necesitamos modificar los module
     - module :{
         - rules: [
             - {
