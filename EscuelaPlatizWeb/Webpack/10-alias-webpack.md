@@ -231,7 +231,7 @@ Voy a estar usando sass pero para otros es equivalente o buscar en google -> loa
     - output: {
         - path: path.resolve(__dirname,'dist'),
         - filename: 'main.js',
-        - assetModuleFilename: 'assets/[hash][ext][query]',
+        - assetModuleFilename: 'assets/images/[hash][ext][query]',
     - },
 - los module
     - module :{
@@ -252,6 +252,9 @@ Voy a estar usando sass pero para otros es equivalente o buscar en google -> loa
             - {
                 - test: /\.(woff|woff2)$/i,
                 - type: 'asset/resource',
+                - generator: {
+                    - filename: "assets/fonts/[hash][ext]",
+                - },
             - },
         - ]
     - },
@@ -266,7 +269,7 @@ Voy a estar usando sass pero para otros es equivalente o buscar en google -> loa
         - new CopyPlugin({ (este es el que usamos para poder mover archivo/s o carpeta/s)
             - patterns: [
                 - {
-                    - from: path.resolve(__dirname, "src", "assets"), (de donde vamos a mover lo/s archivo/s o carpeta/s)
+                    - from: path.resolve(__dirname, "src", "assets/images"), (de donde vamos a mover lo/s archivo/s o carpeta/s)
                     - to: "assets" (hacia donde vamos mover lo/s archivo/s o carpeta/s)
                 - }
             - ]
@@ -282,7 +285,7 @@ Voy a estar usando sass pero para otros es equivalente o buscar en google -> loa
 - en la parte superior de nuestro webpack.config.js colocamos lo siguiente
     - const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
     - const TerserPlugin = require('terser-webpack-plugin')
-- y en la parte de abajo de plugin colocamos lo siguiente
+- y en la parte de plugin colocamos lo siguiente
     - plugins:[
         - new HtmlWebpackPlugin({
             - inject:true,
@@ -309,5 +312,29 @@ Voy a estar usando sass pero para otros es equivalente o buscar en google -> loa
             - new TerserPlugin()
         - ]
     - },
+- después de esto ahora podemos ejecutar nuestro build/dev
+    - npm run dev
+
+## alias webpack
+
+- y en la parte de resolve modificamos lo siguiente
+    - resolve:{
+        - extensions:['.js'],
+        - alias:{
+            - '@utils':path.resolve(__dirname,'src/utils/'),
+            - '@template':path.resolve(__dirname,'src/templates/'),
+            - '@styles':path.resolve(__dirname,'src/styles/'),
+            - '@images':path.resolve(__dirname,'src/assets/images/'),
+        - },
+    - },
+- y en la parte de index.js modificamos lo siguiente
+    - import Template from '@templates/Template.js';
+    - import '@styles/main.css'
+    - import '@styles/vars.scss'
+- y en la parte de templates.js modificamos lo siguiente
+    - import getData from '@utils/getData.js';
+    - import gitHub from '@images/github.png'
+    - import twitter from '@images/twitter.png'
+    - import instagram from '@images/instagram.png'
 - después de esto ahora podemos ejecutar nuestro build/dev
     - npm run dev

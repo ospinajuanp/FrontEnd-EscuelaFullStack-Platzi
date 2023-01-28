@@ -11,10 +11,16 @@ module.exports = {
     output: {
         path: path.resolve(__dirname,'dist'),
         filename: '[name].[contenthash].js',
-        assetModuleFilename: 'assets/[hash][ext][query]',
+        assetModuleFilename: 'assets/images/[hash][ext][query]',
     },
     resolve:{
-        extensions:['.js']
+        extensions:['.js'],
+        alias:{
+            '@utils':path.resolve(__dirname,'src/utils/'),
+            '@templates':path.resolve(__dirname,'src/templates/'),
+            '@styles':path.resolve(__dirname,'src/styles/'),
+            '@images':path.resolve(__dirname,'src/assets/images/'),
+        },
     },
     module :{
         rules: [
@@ -34,6 +40,9 @@ module.exports = {
             {
                 test: /\.(woff|woff2)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: "assets/fonts/[hash][ext]",
+                },
             },
         ]
     },
@@ -49,8 +58,8 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, "src", "assets"),
-                    to: "assets",
+                    from: path.resolve(__dirname, "src", "assets/images"),
+                    to: "assets/images",
                 }
             ]
         })
