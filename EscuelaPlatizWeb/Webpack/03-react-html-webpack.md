@@ -94,3 +94,39 @@
     		- open: true, // para abrir nuestro navegar automáticamente 
         - }
     - }
+&nbsp;
+## TERMINAL
+&nbsp;
+- npm install html-loader html-webpack-plugin -D
+&nbsp;
+## VSCODE
+&nbsp;
+- en la parte superior de nuestro webpack.config.js colocamos lo siguiente
+    - const HtmlWebpackPlugin = require('html-webpack-plugin')
+- en module vamos a cargar el loader para html
+        - module :{
+            - rules: [
+                - {
+                - test: /\.(m?js|jsx)$/, (Test declara que extensión de archivos aplicara el loader)
+                - exclude: /node_modules/, (Exclude permite omitir archivos o carpetas especificas)
+                - use: {loader: "babel-loader"}, (Use es un arreglo u objeto donde dices que loader aplicaras)
+                - },
+                - {
+                - test: /\.html$/, (Test declara que extensión de archivos aplicara el loader)
+                - use: {loader: "html-loader"}, (Use es un arreglo u objeto donde dices que loader aplicaras)
+                - }
+            - ]
+        - },
+- y en la parte de abajo después de module colocamos lo siguiente
+    - plugins:[
+        - new HtmlWebpackPlugin({
+            - template:'./public/index.html',
+            - filename:'./index.html'
+        - })
+    - ],
+- podemos crear un script en nuestro paquete package.json para hacer mas amigable la ejecución 
+    - "scripts": {
+        - "start": "webpack serve",
+        - "build": "webpack --mode production",
+    - },
+- npm run start (asi lo ejecutamos)
