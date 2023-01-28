@@ -373,3 +373,13 @@ Voy a estar usando sass pero para otros es equivalente o buscar en google -> loa
     - const API = process.env.API
 - después de esto ahora podemos ejecutar nuestro build/dev
     - npm run build
+
+## webpack modo desarrollo
+
+- creamos un archivo llamado webpack.config.dev.js (el cual copiamos todo lo de archivo sin dev y eliminamos el apartado de optimización)
+- después del output en nuestro archivo webpack.config.dev.js ponemos 
+    - mode:'development',
+- y en nuestro package.js en los script cambiamos el dev por lo siguiente
+    - "dev": "webpack --config webpack.config.dev.js"
+- después de esto ahora podemos ejecutar nuestro dev
+    - npm run dev
