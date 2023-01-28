@@ -1,0 +1,3 @@
+[build]
+    publish = "disc"
+    command = "npm run build"
