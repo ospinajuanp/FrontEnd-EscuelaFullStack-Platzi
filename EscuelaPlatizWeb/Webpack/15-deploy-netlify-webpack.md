@@ -145,7 +145,7 @@ Voy a estar usando sass pero para otros es equivalente o buscar en google -> loa
 - después de esto ahora podemos ejecutar nuestro build/dev
     - npm run dev
 
-## copia de archivo src a nuestro disc
+## copia de archivo src a nuestro dist
 
 - npm install copy-webpack-plugin -D
 - en la parte superior de nuestro webpack.config.js colocamos lo siguiente
