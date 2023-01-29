@@ -38,15 +38,13 @@
 - Creamos la carpeta src
 - Creamos el archivo src/index.js con el siguiente código
     - import React from "react"; (importamos react)
-    - import ReactDOM from "react"; (importamos el render de react)
+    - import ReactDOM from "react-dom"; (importamos el render de react)
     - import App from './components/App.jsx'
     - ReactDOM.render(<App/>, document.getElementById('app'))
 - Creamos la carpeta src/components
 - Creamos el archivo src/components/App.jsx contiene el siguiente código
     - import React from "react";
-    - const App = () => {
-        - < h1>Hello React!</>
-    - }
+    - const App = () => < h1>Hello React!!!</>
     - export default App
 - Creamos la carpeta public
 - Creamos el archivo public/index.html (creamos la estructura inicial del mismo)
@@ -190,7 +188,7 @@
 - y en nuestro package.js en los script cambiamos el dev por lo siguiente
     - "dev": "webpack --config webpack.config.dev.js"
 ### optimizar
-- npm install css-minimizer-webpack-plugin terser-webpack-plugin clean-webpack -D
+- npm install css-minimizer-webpack-plugin terser-webpack-plugin clean-webpack-plugin -D
 - en la parte superior de nuestro webpack.config.js colocamos lo siguiente
     - const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
     - const TerserPlugin = require('terser-webpack-plugin')
