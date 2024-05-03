@@ -1,0 +1,34 @@
+@import "./../node_modules/@ibm//plex/scss/ibm-plex.scss";
+
+$--color-primary: #ffefe7;
+$--color-secondary: #ffdac6;
+$--color-tertiary: #babd8d;
+$--color-text-primary: #7c6a0a;
+$--color-text-secondary: #784f35;
+$--color-btn-primary: #fa9500;
+$--font-stack: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+}
+
+main {
+    background-color: $--color-primary;
+}
+
+footer {
+    width: 100%;
+    height: 500px;
+    background-color: $--color-btn-primary;
+}

@@ -1,0 +1,16 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@ibm/plex':
+    specifier: ^6.4.0
+    version: 6.4.0
+
+packages:
+
+  /@ibm/plex@6.4.0:
+    resolution: {integrity: sha512-P70hmNoSJhpV6fGG4++JEivoccUVuvkyZoXprsDmPTtv3s6QvL+Q8bK3HFSGmK/VgyLMDptoKPV7b/h/1xaWAw==}
+    dev: false
